@@ -147,7 +147,7 @@ outreg2 f_2 using ${stataOUT}tables/elso_`w'.tex", append ctitle(F2) `2keep' add
 *save ${szdOHout}ertekelesi_`w'.dta, replace
 *estimates save ${szdOHout}01_est_save_`w'.ster, replace
 
-drop if I1 == .
+drop if I1 == . //amelyik diáknál hiányzik az I1, ott az I2-F2 is hiányzik, így elég volt ezt az egyet szűrni.
 duplicates drop ${iskid}, force
 
 quietly graph matrix E1 E2 I1 I2 F1 F2, title(`w')
