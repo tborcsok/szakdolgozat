@@ -1,5 +1,5 @@
 *szakdolgozat
-*adatfájlok kibövitése
+*nyers adatok konvertálása, lényeges részek megtartása
 
 //alapbeállítások
 clear
