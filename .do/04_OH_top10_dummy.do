@@ -1,7 +1,5 @@
 *szakdolgozat
-*panel 2008-2010, 2009-2011, 2010-2012
 *5 évben végig top10 iskola dummy megalkotása
-*alternatively: 5 éves átlag iskolaminöség
 
 //alapbeállítások
 clear
