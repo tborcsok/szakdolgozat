@@ -1,9 +1,9 @@
 *szakdolgozat
 *FINAL COUNTDOWN
-*elemzÈsi idˆszak
-*note: igaz·bÛl a preserve restore nem kell, ugyanazt becs¸lnÈ
+*elemz√©si id√∂szak
+*note: igaz√°b√≥l a preserve restore nem kell, ugyanazt becs√ºln√©, ez csak a hiba kik√ºsz√∂b√∂l√©se ker√ºlt be
 
-//alapbe·llÌt·sok
+//alapbe√°ll√≠t√°sok
 clear
 clear matrix
 clear mata
@@ -14,11 +14,11 @@ set maxvar 32767
 *set segmentsize 128m
 
 
-//makrÛk defini·l·sa
+//makr√≥k defini√°l√°sa
 global outtype "as(eps)"  //change bw png and eps
 
-global szdOHout "E:/szakdoga_data_out/OHtÛl/"
-global szdOHinSMALL "E:/szakdoga_data_out/OHtÛl/alap/small_"
+global szdOHout "E:/szakdoga_data_out/OHt√≥l/"
+global szdOHinSMALL "E:/szakdoga_data_out/OHt√≥l/alap/small_"
 global stataOUT `""C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/"'
 
 local years "2008 2009 2010 2011 2012 2013 2014"
@@ -49,7 +49,7 @@ merge ${iskid} using ${szdOHout}04_E_dummys
 
 xtset azon ev
 
-//kÈt idˆszakos modellekhez
+//k√©t id√∂szakos modellekhez
 gen o_zpsc_8 = L2.o_zpsc if evfolyam == 10
 gen o_zpsc_10 = o_zpsc if evfolyam == 10
 
@@ -89,10 +89,10 @@ keep if evfolyam == 10
 *egen placeholder = std(csh_index)
 *replace csh_index = placeholder
 *drop placeholder
-label variable csh_index "A tanulÛ standardiz·lt csal·dih·ttÈr-indexe"
+label variable csh_index "A tanul√≥ standardiz√°lt csal√°dih√°tt√©r-indexe"
 
 
-//legkisebb iskol·k kidob·sa
+//legkisebb iskol√°k kidob√°sa
 *sort omid10
 *by omid10: gen freq_omid10 = _N
 *sort freq_omid10
@@ -149,7 +149,7 @@ drop freq_omid10
 	}
 	
 
-	//v·ltoz·s
+	//v√°ltoz√°s
 	preserve
 	drop if sum10_E1_lag == .
 	sort omid10
@@ -216,7 +216,7 @@ merge ${iskid} using ${szdOHout}04_E_I_F_dummys
 xtset azon ev
 
 
-//kÈt idˆszakos modellekhez
+//k√©t id√∂szakos modellekhez
 gen o_zpsc_8 = L2.o_zpsc if evfolyam == 10
 gen o_zpsc_10 = o_zpsc if evfolyam == 10
 
@@ -257,9 +257,9 @@ keep if evfolyam == 10
 *egen placeholder = std(csh_index)
 *replace csh_index = placeholder
 *drop placeholder
-label variable csh_index "A tanulÛ standardiz·lt csal·dih·ttÈr-indexe"
+label variable csh_index "A tanul√≥ standardiz√°lt csal√°dih√°tt√©r-indexe"
 
-//legkisebb iskol·k kidob·sa
+//legkisebb iskol√°k kidob√°sa
 *sort omid10
 *by omid10: gen freq_omid10 = _N
 *sort freq_omid10
@@ -311,7 +311,7 @@ drop freq_omid10
 		restore
 	}
 	
-	//v·ltoz·s
+	//v√°ltoz√°s
 	preserve
 	drop if sum10_E1_lag == .
 	sort omid10
