@@ -1,3 +1,3 @@
 ## Regressziós outputok
 
-Két külön fájlban találhatóak meg az indexek létrehozásakor futtatott regressziók és a végső elemzés során futtatott regressziók.
+Itt találhatóak a regressziós outputok az iskolaminőség-indexek létrehozására futtatott modellek és a végső elemzés moddeljei alapján kimentve.
