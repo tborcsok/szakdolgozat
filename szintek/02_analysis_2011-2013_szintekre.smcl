@@ -1,0 +1,1286 @@
+{smcl}
+{txt}{sf}{ul off}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal\02_analysis_2011-2013_szintekre.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res} 8 Apr 2016, 17:23:37
+{txt}(OKM 2011 Tanulói 8. és 2013 Tanulói 10. évfolyam)
+{p}
+(note: you are using old
+{bf:merge} syntax; see
+{bf:{help merge:[D] merge}} for new syntax)
+{p_end}
+{p 0 4 2}
+variable{txt} omid
+does not uniquely identify observations in
+the master data
+{p_end}
+{res}{txt}{p}
+(note: you are using old
+{bf:merge} syntax; see
+{bf:{help merge:[D] merge}} for new syntax)
+{p_end}
+{p 0 4 2}
+variable{txt} omid
+does not uniquely identify observations in
+the master data
+{p_end}
+{res}{txt}{col 8}panel variable:  {res}azon (unbalanced)
+{txt}{col 9}time variable:  {res}{col 25}ev, 2011 to 2013, but with gaps
+{txt}{col 17}delta:  {res}1 unit
+{txt}(117627 missing values generated)
+(108868 missing values generated)
+(117626 missing values generated)
+(108905 missing values generated)
+(123646 missing values generated)
+(123671 missing values generated)
+(132896 missing values generated)
+(96843 missing values generated)
+(95649 missing values generated)
+{res}{txt}(192492 missing values generated)
+(51526 real changes made)
+(192492 missing values generated)
+(51526 real changes made)
+(192492 missing values generated)
+(51526 real changes made)
+(192492 missing values generated)
+(51526 real changes made)
+(192492 missing values generated)
+(51526 real changes made)
+(192492 missing values generated)
+(51526 real changes made)
+{res}{txt}(96843 observations deleted)
+{col 8}panel variable:  {res}omid10 (unbalanced)
+{txt}(44123 observations deleted)
+(4101 observations deleted)
+
+Fixed-effects (within) regression               Number of obs      = {res}    35517
+{txt}Group variable: {res}omid10                          {txt}Number of groups   = {res}      618
+
+{txt}R-sq:  within  = {res}0.0592                         {txt}Obs per group: min = {res}        8
+{txt}       between = {res}0.8264                                        {txt}avg = {res}     57.5
+{txt}       overall = {res}0.2925                                        {txt}max = {res}      262
+
+                                                {txt}F({res}12{txt},{res}617{txt})          = {res}    68.34
+{txt}corr(u_i, Xb)  = {res}0.5677                         {txt}Prob > F           =    {res}0.0000
+
+{txt}{ralign 88:(Std. Err. adjusted for {res:618} clusters in omid10)}
+{hline 23}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 24}{c |}{col 36}    Robust
+{col 1}             o_zpsc_10{col 24}{c |}      Coef.{col 36}   Std. Err.{col 48}      t{col 56}   P>|t|{col 64}     [95% Con{col 77}f. Interval]
+{hline 23}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 12}sum10_1of5 {c |}{col 24}{res}{space 2} .3580161{col 36}{space 2} 2.300765{col 47}{space 1}    0.16{col 56}{space 3}0.876{col 64}{space 4}-4.160264{col 77}{space 3} 4.876296
+{txt}{space 12}sum10_2of5 {c |}{col 24}{res}{space 2}-.7178728{col 36}{space 2} 4.283622{col 47}{space 1}   -0.17{col 56}{space 3}0.867{col 64}{space 4}-9.130119{col 77}{space 3} 7.694373
+{txt}{space 12}sum10_3of5 {c |}{col 24}{res}{space 2}-1.370846{col 36}{space 2} 7.064495{col 47}{space 1}   -0.19{col 56}{space 3}0.846{col 64}{space 4}-15.24422{col 77}{space 3} 12.50252
+{txt}{space 12}sum10_4of5 {c |}{col 24}{res}{space 2} 49.46461{col 36}{space 2} 27.81604{col 47}{space 1}    1.78{col 56}{space 3}0.076{col 64}{space 4}-5.160989{col 77}{space 3} 104.0902
+{txt}{space 12}sum10_5of5 {c |}{col 24}{res}{space 2}-39.49351{col 36}{space 2} 21.65497{col 47}{space 1}   -1.82{col 56}{space 3}0.069{col 64}{space 4}-82.01989{col 77}{space 3} 3.032867
+{txt}{space 13}csh_index {c |}{col 24}{res}{space 2} 46.46646{col 36}{space 2} 1.809061{col 47}{space 1}   25.69{col 56}{space 3}0.000{col 64}{space 4}  42.9138{col 77}{space 3} 50.01913
+{txt}{space 22} {c |}
+sum10_1of5#c.csh_index {c |}
+{space 20}1  {c |}{col 24}{res}{space 2} 4.818905{col 36}{space 2} 2.555595{col 47}{space 1}    1.89{col 56}{space 3}0.060{col 64}{space 4}-.1998137{col 77}{space 3} 9.837623
+{txt}{space 22} {c |}
+sum10_2of5#c.csh_index {c |}
+{space 20}1  {c |}{col 24}{res}{space 2} 2.074779{col 36}{space 2} 4.828117{col 47}{space 1}    0.43{col 56}{space 3}0.668{col 64}{space 4}-7.406755{col 77}{space 3} 11.55631
+{txt}{space 22} {c |}
+sum10_3of5#c.csh_index {c |}
+{space 20}1  {c |}{col 24}{res}{space 2} 30.02115{col 36}{space 2}  8.05016{col 47}{space 1}    3.73{col 56}{space 3}0.000{col 64}{space 4} 14.21211{col 77}{space 3} 45.83018
+{txt}{space 22} {c |}
+sum10_4of5#c.csh_index {c |}
+{space 20}1  {c |}{col 24}{res}{space 2}-14.64813{col 36}{space 2} 31.45405{col 47}{space 1}   -0.47{col 56}{space 3}0.642{col 64}{space 4}-76.41811{col 77}{space 3} 47.12185
+{txt}{space 22} {c |}
+sum10_5of5#c.csh_index {c |}
+{space 20}1  {c |}{col 24}{res}{space 2} 38.69155{col 36}{space 2} 30.50531{col 47}{space 1}    1.27{col 56}{space 3}0.205{col 64}{space 4}-21.21526{col 77}{space 3} 98.59837
+{txt}{space 22} {c |}
+{space 19}nem {c |}
+{space 18}fiú  {c |}{col 24}{res}{space 2}-12.18829{col 36}{space 2} 1.882379{col 47}{space 1}   -6.47{col 56}{space 3}0.000{col 64}{space 4}-15.88494{col 77}{space 3}-8.491645
+{txt}{space 17}_cons {c |}{col 24}{res}{space 2} 1661.322{col 36}{space 2} 1.075782{col 47}{space 1} 1544.29{col 56}{space 3}0.000{col 64}{space 4} 1659.209{col 77}{space 3} 1663.434
+{txt}{hline 23}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+               sigma_u {c |} {res} 101.43314
+               {txt}sigma_e {c |} {res} 133.61801
+                   {txt}rho {c |} {res} .36559291{txt}   (fraction of variance due to u_i)
+{hline 23}{c BT}{hline 64}
+{stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_fe_10szint.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_fe_10szint.tex}
+{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_fe_10szint.txt""':seeout}
+(44123 observations deleted)
+(4101 observations deleted)
+
+Fixed-effects (within) regression               Number of obs      = {res}    35517
+{txt}Group variable: {res}omid10                          {txt}Number of groups   = {res}      618
+
+{txt}R-sq:  within  = {res}0.0593                         {txt}Obs per group: min = {res}        8
+{txt}       between = {res}0.8239                                        {txt}avg = {res}     57.5
+{txt}       overall = {res}0.2930                                        {txt}max = {res}      262
+
+                                                {txt}F({res}12{txt},{res}617{txt})          = {res}    67.84
+{txt}corr(u_i, Xb)  = {res}0.5680                         {txt}Prob > F           =    {res}0.0000
+
+{txt}{ralign 88:(Std. Err. adjusted for {res:618} clusters in omid10)}
+{hline 23}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 24}{c |}{col 36}    Robust
+{col 1}             o_zpsc_10{col 24}{c |}      Coef.{col 36}   Std. Err.{col 48}      t{col 56}   P>|t|{col 64}     [95% Con{col 77}f. Interval]
+{hline 23}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 12}sum10_1of5 {c |}{col 24}{res}{space 2}-7.847543{col 36}{space 2}  2.24774{col 47}{space 1}   -3.49{col 56}{space 3}0.001{col 64}{space 4}-12.26169{col 77}{space 3}-3.433395
+{txt}{space 12}sum10_2of5 {c |}{col 24}{res}{space 2}-5.701657{col 36}{space 2}  3.80644{col 47}{space 1}   -1.50{col 56}{space 3}0.135{col 64}{space 4}-13.17681{col 77}{space 3} 1.773492
+{txt}{space 12}sum10_3of5 {c |}{col 24}{res}{space 2}-26.46312{col 36}{space 2} 9.942952{col 47}{space 1}   -2.66{col 56}{space 3}0.008{col 64}{space 4}-45.98925{col 77}{space 3} -6.93699
+{txt}{space 12}sum10_4of5 {c |}{col 24}{res}{space 2}-33.65257{col 36}{space 2} 22.12629{col 47}{space 1}   -1.52{col 56}{space 3}0.129{col 64}{space 4}-77.10453{col 77}{space 3} 9.799389
+{txt}{space 12}sum10_5of5 {c |}{col 24}{res}{space 2}-42.21635{col 36}{space 2}  21.5113{col 47}{space 1}   -1.96{col 56}{space 3}0.050{col 64}{space 4}-84.46059{col 77}{space 3} .0278949
+{txt}{space 13}csh_index {c |}{col 24}{res}{space 2} 46.92087{col 36}{space 2} 1.796067{col 47}{space 1}   26.12{col 56}{space 3}0.000{col 64}{space 4} 43.39372{col 77}{space 3} 50.44801
+{txt}{space 22} {c |}
+sum10_1of5#c.csh_index {c |}
+{space 20}1  {c |}{col 24}{res}{space 2} 3.652246{col 36}{space 2} 2.433426{col 47}{space 1}    1.50{col 56}{space 3}0.134{col 64}{space 4}-1.126555{col 77}{space 3} 8.431048
+{txt}{space 22} {c |}
+sum10_2of5#c.csh_index {c |}
+{space 20}1  {c |}{col 24}{res}{space 2} 1.740965{col 36}{space 2} 4.496141{col 47}{space 1}    0.39{col 56}{space 3}0.699{col 64}{space 4}-7.088629{col 77}{space 3} 10.57056
+{txt}{space 22} {c |}
+sum10_3of5#c.csh_index {c |}
+{space 20}1  {c |}{col 24}{res}{space 2} -19.8728{col 36}{space 2} 13.78889{col 47}{space 1}   -1.44{col 56}{space 3}0.150{col 64}{space 4}-46.95165{col 77}{space 3} 7.206054
+{txt}{space 22} {c |}
+sum10_4of5#c.csh_index {c |}
+{space 20}1  {c |}{col 24}{res}{space 2} 19.04236{col 36}{space 2} 20.85043{col 47}{space 1}    0.91{col 56}{space 3}0.361{col 64}{space 4}-21.90405{col 77}{space 3} 59.98877
+{txt}{space 22} {c |}
+sum10_5of5#c.csh_index {c |}
+{space 20}1  {c |}{col 24}{res}{space 2} 38.25617{col 36}{space 2} 30.58004{col 47}{space 1}    1.25{col 56}{space 3}0.211{col 64}{space 4}-21.79742{col 77}{space 3} 98.30976
+{txt}{space 22} {c |}
+{space 19}nem {c |}
+{space 18}fiú  {c |}{col 24}{res}{space 2}-12.10416{col 36}{space 2} 1.882783{col 47}{space 1}   -6.43{col 56}{space 3}0.000{col 64}{space 4} -15.8016{col 77}{space 3}-8.406716
+{txt}{space 17}_cons {c |}{col 24}{res}{space 2} 1663.575{col 36}{space 2}   1.0643{col 47}{space 1} 1563.07{col 56}{space 3}0.000{col 64}{space 4} 1661.485{col 77}{space 3} 1665.665
+{txt}{hline 23}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+               sigma_u {c |} {res} 101.28036
+               {txt}sigma_e {c |} {res}  133.6119
+                   {txt}rho {c |} {res} .36491517{txt}   (fraction of variance due to u_i)
+{hline 23}{c BT}{hline 64}
+{stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_fe_10szint.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_fe_10szint.tex}
+{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_fe_10szint.txt""':seeout}
+(44123 observations deleted)
+(4101 observations deleted)
+
+Fixed-effects (within) regression               Number of obs      = {res}    35517
+{txt}Group variable: {res}omid10                          {txt}Number of groups   = {res}      618
+
+{txt}R-sq:  within  = {res}0.0594                         {txt}Obs per group: min = {res}        8
+{txt}       between = {res}0.8238                                        {txt}avg = {res}     57.5
+{txt}       overall = {res}0.2931                                        {txt}max = {res}      262
+
+                                                {txt}F({res}12{txt},{res}617{txt})          = {res}    70.99
+{txt}corr(u_i, Xb)  = {res}0.5677                         {txt}Prob > F           =    {res}0.0000
+
+{txt}{ralign 88:(Std. Err. adjusted for {res:618} clusters in omid10)}
+{hline 23}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 24}{c |}{col 36}    Robust
+{col 1}             o_zpsc_10{col 24}{c |}      Coef.{col 36}   Std. Err.{col 48}      t{col 56}   P>|t|{col 64}     [95% Con{col 77}f. Interval]
+{hline 23}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 12}sum10_1of5 {c |}{col 24}{res}{space 2}-1.999023{col 36}{space 2}  2.16234{col 47}{space 1}   -0.92{col 56}{space 3}0.356{col 64}{space 4}-6.245461{col 77}{space 3} 2.247415
+{txt}{space 12}sum10_2of5 {c |}{col 24}{res}{space 2}-.3750418{col 36}{space 2} 3.945487{col 47}{space 1}   -0.10{col 56}{space 3}0.924{col 64}{space 4}-8.123254{col 77}{space 3}  7.37317
+{txt}{space 12}sum10_3of5 {c |}{col 24}{res}{space 2}-.9991284{col 36}{space 2}  9.38002{col 47}{space 1}   -0.11{col 56}{space 3}0.915{col 64}{space 4}-19.41976{col 77}{space 3} 17.42151
+{txt}{space 12}sum10_4of5 {c |}{col 24}{res}{space 2} 33.25872{col 36}{space 2} 11.92718{col 47}{space 1}    2.79{col 56}{space 3}0.005{col 64}{space 4} 9.835929{col 77}{space 3} 56.68151
+{txt}{space 12}sum10_5of5 {c |}{col 24}{res}{space 2}-40.02757{col 36}{space 2} 21.66141{col 47}{space 1}   -1.85{col 56}{space 3}0.065{col 64}{space 4}-82.56659{col 77}{space 3} 2.511456
+{txt}{space 13}csh_index {c |}{col 24}{res}{space 2} 46.32961{col 36}{space 2} 1.867184{col 47}{space 1}   24.81{col 56}{space 3}0.000{col 64}{space 4} 42.66281{col 77}{space 3} 49.99642
+{txt}{space 22} {c |}
+sum10_1of5#c.csh_index {c |}
+{space 20}1  {c |}{col 24}{res}{space 2} 4.579726{col 36}{space 2}  2.36191{col 47}{space 1}    1.94{col 56}{space 3}0.053{col 64}{space 4}-.0586317{col 77}{space 3} 9.218084
+{txt}{space 22} {c |}
+sum10_2of5#c.csh_index {c |}
+{space 20}1  {c |}{col 24}{res}{space 2} 1.717574{col 36}{space 2} 4.924149{col 47}{space 1}    0.35{col 56}{space 3}0.727{col 64}{space 4} -7.95255{col 77}{space 3}  11.3877
+{txt}{space 22} {c |}
+sum10_3of5#c.csh_index {c |}
+{space 20}1  {c |}{col 24}{res}{space 2} 35.45528{col 36}{space 2} 7.761024{col 47}{space 1}    4.57{col 56}{space 3}0.000{col 64}{space 4} 20.21406{col 77}{space 3} 50.69651
+{txt}{space 22} {c |}
+sum10_4of5#c.csh_index {c |}
+{space 20}1  {c |}{col 24}{res}{space 2}-8.164413{col 36}{space 2} 9.769158{col 47}{space 1}   -0.84{col 56}{space 3}0.404{col 64}{space 4}-27.34924{col 77}{space 3} 11.02042
+{txt}{space 22} {c |}
+sum10_5of5#c.csh_index {c |}
+{space 20}1  {c |}{col 24}{res}{space 2} 38.85733{col 36}{space 2} 30.53982{col 47}{space 1}    1.27{col 56}{space 3}0.204{col 64}{space 4}-21.11726{col 77}{space 3} 98.83192
+{txt}{space 22} {c |}
+{space 19}nem {c |}
+{space 18}fiú  {c |}{col 24}{res}{space 2}-12.13974{col 36}{space 2} 1.882496{col 47}{space 1}   -6.45{col 56}{space 3}0.000{col 64}{space 4}-15.83662{col 77}{space 3}-8.442867
+{txt}{space 17}_cons {c |}{col 24}{res}{space 2} 1661.504{col 36}{space 2} 1.120943{col 47}{space 1} 1482.24{col 56}{space 3}0.000{col 64}{space 4} 1659.302{col 77}{space 3} 1663.705
+{txt}{hline 23}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+               sigma_u {c |} {res} 101.34265
+               {txt}sigma_e {c |} {res} 133.60056
+                   {txt}rho {c |} {res} .36523956{txt}   (fraction of variance due to u_i)
+{hline 23}{c BT}{hline 64}
+{stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_fe_10szint.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_fe_10szint.tex}
+{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_fe_10szint.txt""':seeout}
+(44123 observations deleted)
+(4101 observations deleted)
+
+Fixed-effects (within) regression               Number of obs      = {res}    35517
+{txt}Group variable: {res}omid10                          {txt}Number of groups   = {res}      618
+
+{txt}R-sq:  within  = {res}0.0596                         {txt}Obs per group: min = {res}        8
+{txt}       between = {res}0.8227                                        {txt}avg = {res}     57.5
+{txt}       overall = {res}0.2933                                        {txt}max = {res}      262
+
+                                                {txt}F({res}12{txt},{res}617{txt})          = {res}    71.15
+{txt}corr(u_i, Xb)  = {res}0.5675                         {txt}Prob > F           =    {res}0.0000
+
+{txt}{ralign 88:(Std. Err. adjusted for {res:618} clusters in omid10)}
+{hline 23}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 24}{c |}{col 36}    Robust
+{col 1}             o_zpsc_10{col 24}{c |}      Coef.{col 36}   Std. Err.{col 48}      t{col 56}   P>|t|{col 64}     [95% Con{col 77}f. Interval]
+{hline 23}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 12}sum10_1of5 {c |}{col 24}{res}{space 2}-8.169117{col 36}{space 2} 2.148324{col 47}{space 1}   -3.80{col 56}{space 3}0.000{col 64}{space 4}-12.38803{col 77}{space 3}-3.950203
+{txt}{space 12}sum10_2of5 {c |}{col 24}{res}{space 2}-6.686092{col 36}{space 2} 3.560541{col 47}{space 1}   -1.88{col 56}{space 3}0.061{col 64}{space 4}-13.67834{col 77}{space 3} .3061561
+{txt}{space 12}sum10_3of5 {c |}{col 24}{res}{space 2} -32.1809{col 36}{space 2} 9.418549{col 47}{space 1}   -3.42{col 56}{space 3}0.001{col 64}{space 4} -50.6772{col 77}{space 3} -13.6846
+{txt}{space 12}sum10_4of5 {c |}{col 24}{res}{space 2} 21.17151{col 36}{space 2} 28.99849{col 47}{space 1}    0.73{col 56}{space 3}0.466{col 64}{space 4}-35.77619{col 77}{space 3} 78.11921
+{txt}{space 12}sum10_5of5 {c |}{col 24}{res}{space 2}-42.94776{col 36}{space 2} 21.52551{col 47}{space 1}   -2.00{col 56}{space 3}0.046{col 64}{space 4}-85.21992{col 77}{space 3}-.6756115
+{txt}{space 13}csh_index {c |}{col 24}{res}{space 2}  46.4395{col 36}{space 2} 1.841481{col 47}{space 1}   25.22{col 56}{space 3}0.000{col 64}{space 4} 42.82317{col 77}{space 3} 50.05583
+{txt}{space 22} {c |}
+sum10_1of5#c.csh_index {c |}
+{space 20}1  {c |}{col 24}{res}{space 2} 5.117614{col 36}{space 2} 2.331017{col 47}{space 1}    2.20{col 56}{space 3}0.029{col 64}{space 4} .5399258{col 77}{space 3} 9.695303
+{txt}{space 22} {c |}
+sum10_2of5#c.csh_index {c |}
+{space 20}1  {c |}{col 24}{res}{space 2} .1040007{col 36}{space 2} 4.431761{col 47}{space 1}    0.02{col 56}{space 3}0.981{col 64}{space 4}-8.599163{col 77}{space 3} 8.807164
+{txt}{space 22} {c |}
+sum10_3of5#c.csh_index {c |}
+{space 20}1  {c |}{col 24}{res}{space 2} 2.295627{col 36}{space 2} 9.996447{col 47}{space 1}    0.23{col 56}{space 3}0.818{col 64}{space 4}-17.33556{col 77}{space 3} 21.92681
+{txt}{space 22} {c |}
+sum10_4of5#c.csh_index {c |}
+{space 20}1  {c |}{col 24}{res}{space 2}-119.3253{col 36}{space 2} 27.99934{col 47}{space 1}   -4.26{col 56}{space 3}0.000{col 64}{space 4}-174.3108{col 77}{space 3}-64.33972
+{txt}{space 22} {c |}
+sum10_5of5#c.csh_index {c |}
+{space 20}1  {c |}{col 24}{res}{space 2} 38.79959{col 36}{space 2} 30.57427{col 47}{space 1}    1.27{col 56}{space 3}0.205{col 64}{space 4}-21.24267{col 77}{space 3} 98.84184
+{txt}{space 22} {c |}
+{space 19}nem {c |}
+{space 18}fiú  {c |}{col 24}{res}{space 2}-12.16328{col 36}{space 2} 1.883843{col 47}{space 1}   -6.46{col 56}{space 3}0.000{col 64}{space 4} -15.8628{col 77}{space 3}-8.463762
+{txt}{space 17}_cons {c |}{col 24}{res}{space 2} 1664.192{col 36}{space 2}   1.1138{col 47}{space 1} 1494.16{col 56}{space 3}0.000{col 64}{space 4} 1662.005{col 77}{space 3}  1666.38
+{txt}{hline 23}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+               sigma_u {c |} {res} 101.22582
+               {txt}sigma_e {c |} {res} 133.58741
+                   {txt}rho {c |} {res} .36475052{txt}   (fraction of variance due to u_i)
+{hline 23}{c BT}{hline 64}
+{stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_fe_10szint.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_fe_10szint.tex}
+{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_fe_10szint.txt""':seeout}
+(44123 observations deleted)
+(4101 observations deleted)
+
+Fixed-effects (within) regression               Number of obs      = {res}    35517
+{txt}Group variable: {res}omid10                          {txt}Number of groups   = {res}      618
+
+{txt}R-sq:  within  = {res}0.0590                         {txt}Obs per group: min = {res}        8
+{txt}       between = {res}0.8259                                        {txt}avg = {res}     57.5
+{txt}       overall = {res}0.2929                                        {txt}max = {res}      262
+
+                                                {txt}F({res}12{txt},{res}617{txt})          = {res}    68.02
+{txt}corr(u_i, Xb)  = {res}0.5688                         {txt}Prob > F           =    {res}0.0000
+
+{txt}{ralign 88:(Std. Err. adjusted for {res:618} clusters in omid10)}
+{hline 23}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 24}{c |}{col 36}    Robust
+{col 1}             o_zpsc_10{col 24}{c |}      Coef.{col 36}   Std. Err.{col 48}      t{col 56}   P>|t|{col 64}     [95% Con{col 77}f. Interval]
+{hline 23}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 12}sum10_1of5 {c |}{col 24}{res}{space 2}  .058286{col 36}{space 2} 2.346802{col 47}{space 1}    0.02{col 56}{space 3}0.980{col 64}{space 4}-4.550401{col 77}{space 3} 4.666973
+{txt}{space 12}sum10_2of5 {c |}{col 24}{res}{space 2}-.9417744{col 36}{space 2} 4.360102{col 47}{space 1}   -0.22{col 56}{space 3}0.829{col 64}{space 4}-9.504214{col 77}{space 3} 7.620665
+{txt}{space 12}sum10_3of5 {c |}{col 24}{res}{space 2} 2.322824{col 36}{space 2}  8.00458{col 47}{space 1}    0.29{col 56}{space 3}0.772{col 64}{space 4} -13.3967{col 77}{space 3} 18.04235
+{txt}{space 12}sum10_4of5 {c |}{col 24}{res}{space 2} 34.93736{col 36}{space 2} 16.46643{col 47}{space 1}    2.12{col 56}{space 3}0.034{col 64}{space 4} 2.600328{col 77}{space 3}  67.2744
+{txt}{space 12}sum10_5of5 {c |}{col 24}{res}{space 2}-39.34294{col 36}{space 2} 21.64165{col 47}{space 1}   -1.82{col 56}{space 3}0.070{col 64}{space 4}-81.84316{col 77}{space 3} 3.157275
+{txt}{space 13}csh_index {c |}{col 24}{res}{space 2} 47.00983{col 36}{space 2} 1.845005{col 47}{space 1}   25.48{col 56}{space 3}0.000{col 64}{space 4} 43.38658{col 77}{space 3} 50.63308
+{txt}{space 22} {c |}
+sum10_1of5#c.csh_index {c |}
+{space 20}1  {c |}{col 24}{res}{space 2} 2.662406{col 36}{space 2} 2.440469{col 47}{space 1}    1.09{col 56}{space 3}0.276{col 64}{space 4}-2.130227{col 77}{space 3} 7.455039
+{txt}{space 22} {c |}
+sum10_2of5#c.csh_index {c |}
+{space 20}1  {c |}{col 24}{res}{space 2}  .401538{col 36}{space 2} 5.414699{col 47}{space 1}    0.07{col 56}{space 3}0.941{col 64}{space 4}-10.23194{col 77}{space 3} 11.03501
+{txt}{space 22} {c |}
+sum10_3of5#c.csh_index {c |}
+{space 20}1  {c |}{col 24}{res}{space 2} 21.08178{col 36}{space 2}  6.73606{col 47}{space 1}    3.13{col 56}{space 3}0.002{col 64}{space 4} 7.853396{col 77}{space 3} 34.31016
+{txt}{space 22} {c |}
+sum10_4of5#c.csh_index {c |}
+{space 20}1  {c |}{col 24}{res}{space 2} 1.009685{col 36}{space 2} 16.54258{col 47}{space 1}    0.06{col 56}{space 3}0.951{col 64}{space 4}-31.47691{col 77}{space 3} 33.49628
+{txt}{space 22} {c |}
+sum10_5of5#c.csh_index {c |}
+{space 20}1  {c |}{col 24}{res}{space 2} 38.12489{col 36}{space 2} 30.52653{col 47}{space 1}    1.25{col 56}{space 3}0.212{col 64}{space 4}-21.82359{col 77}{space 3} 98.07338
+{txt}{space 22} {c |}
+{space 19}nem {c |}
+{space 18}fiú  {c |}{col 24}{res}{space 2}-12.16461{col 36}{space 2} 1.882918{col 47}{space 1}   -6.46{col 56}{space 3}0.000{col 64}{space 4}-15.86232{col 77}{space 3} -8.46691
+{txt}{space 17}_cons {c |}{col 24}{res}{space 2} 1661.129{col 36}{space 2} 1.085632{col 47}{space 1} 1530.10{col 56}{space 3}0.000{col 64}{space 4} 1658.997{col 77}{space 3} 1663.261
+{txt}{hline 23}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+               sigma_u {c |} {res} 101.41325
+               {txt}sigma_e {c |} {res} 133.63372
+                   {txt}rho {c |} {res} .36544742{txt}   (fraction of variance due to u_i)
+{hline 23}{c BT}{hline 64}
+{stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_fe_10szint.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_fe_10szint.tex}
+{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_fe_10szint.txt""':seeout}
+(44123 observations deleted)
+(4101 observations deleted)
+
+Fixed-effects (within) regression               Number of obs      = {res}    35517
+{txt}Group variable: {res}omid10                          {txt}Number of groups   = {res}      618
+
+{txt}R-sq:  within  = {res}0.0595                         {txt}Obs per group: min = {res}        8
+{txt}       between = {res}0.8236                                        {txt}avg = {res}     57.5
+{txt}       overall = {res}0.2931                                        {txt}max = {res}      262
+
+                                                {txt}F({res}12{txt},{res}617{txt})          = {res}    89.60
+{txt}corr(u_i, Xb)  = {res}0.5677                         {txt}Prob > F           =    {res}0.0000
+
+{txt}{ralign 88:(Std. Err. adjusted for {res:618} clusters in omid10)}
+{hline 23}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 24}{c |}{col 36}    Robust
+{col 1}             o_zpsc_10{col 24}{c |}      Coef.{col 36}   Std. Err.{col 48}      t{col 56}   P>|t|{col 64}     [95% Con{col 77}f. Interval]
+{hline 23}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 12}sum10_1of5 {c |}{col 24}{res}{space 2}-8.964505{col 36}{space 2} 2.240572{col 47}{space 1}   -4.00{col 56}{space 3}0.000{col 64}{space 4}-13.36458{col 77}{space 3}-4.564433
+{txt}{space 12}sum10_2of5 {c |}{col 24}{res}{space 2}-7.384157{col 36}{space 2} 3.840443{col 47}{space 1}   -1.92{col 56}{space 3}0.055{col 64}{space 4}-14.92608{col 77}{space 3}  .157767
+{txt}{space 12}sum10_3of5 {c |}{col 24}{res}{space 2}   -26.96{col 36}{space 2} 9.383326{col 47}{space 1}   -2.87{col 56}{space 3}0.004{col 64}{space 4}-45.38712{col 77}{space 3}-8.532869
+{txt}{space 12}sum10_4of5 {c |}{col 24}{res}{space 2}  -45.022{col 36}{space 2} 21.67575{col 47}{space 1}   -2.08{col 56}{space 3}0.038{col 64}{space 4}-87.58919{col 77}{space 3}  -2.4548
+{txt}{space 12}sum10_5of5 {c |}{col 24}{res}{space 2}-43.12394{col 36}{space 2} 21.50972{col 47}{space 1}   -2.00{col 56}{space 3}0.045{col 64}{space 4}-85.36508{col 77}{space 3}-.8827996
+{txt}{space 13}csh_index {c |}{col 24}{res}{space 2} 46.48414{col 36}{space 2} 1.810567{col 47}{space 1}   25.67{col 56}{space 3}0.000{col 64}{space 4} 42.92852{col 77}{space 3} 50.03976
+{txt}{space 22} {c |}
+sum10_1of5#c.csh_index {c |}
+{space 20}1  {c |}{col 24}{res}{space 2} 4.725647{col 36}{space 2} 2.353334{col 47}{space 1}    2.01{col 56}{space 3}0.045{col 64}{space 4} .1041303{col 77}{space 3} 9.347163
+{txt}{space 22} {c |}
+sum10_2of5#c.csh_index {c |}
+{space 20}1  {c |}{col 24}{res}{space 2} 2.362418{col 36}{space 2} 4.856353{col 47}{space 1}    0.49{col 56}{space 3}0.627{col 64}{space 4}-7.174566{col 77}{space 3}  11.8994
+{txt}{space 22} {c |}
+sum10_3of5#c.csh_index {c |}
+{space 20}1  {c |}{col 24}{res}{space 2}-9.104452{col 36}{space 2} 10.96283{col 47}{space 1}   -0.83{col 56}{space 3}0.407{col 64}{space 4}-30.63343{col 77}{space 3} 12.42452
+{txt}{space 22} {c |}
+sum10_4of5#c.csh_index {c |}
+{space 20}1  {c |}{col 24}{res}{space 2} 50.40262{col 36}{space 2} 16.51454{col 47}{space 1}    3.05{col 56}{space 3}0.002{col 64}{space 4}  17.9711{col 77}{space 3} 82.83414
+{txt}{space 22} {c |}
+sum10_5of5#c.csh_index {c |}
+{space 20}1  {c |}{col 24}{res}{space 2}   38.706{col 36}{space 2} 30.62282{col 47}{space 1}    1.26{col 56}{space 3}0.207{col 64}{space 4}-21.43159{col 77}{space 3} 98.84359
+{txt}{space 22} {c |}
+{space 19}nem {c |}
+{space 18}fiú  {c |}{col 24}{res}{space 2}-12.13401{col 36}{space 2} 1.884803{col 47}{space 1}   -6.44{col 56}{space 3}0.000{col 64}{space 4}-15.83542{col 77}{space 3}-8.432605
+{txt}{space 17}_cons {c |}{col 24}{res}{space 2} 1664.091{col 36}{space 2} 1.086693{col 47}{space 1} 1531.33{col 56}{space 3}0.000{col 64}{space 4} 1661.957{col 77}{space 3} 1666.225
+{txt}{hline 23}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+               sigma_u {c |} {res} 101.25839
+               {txt}sigma_e {c |} {res} 133.59793
+                   {txt}rho {c |} {res} .36486312{txt}   (fraction of variance due to u_i)
+{hline 23}{c BT}{hline 64}
+{stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_fe_10szint.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_fe_10szint.tex}
+{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_fe_10szint.txt""':seeout}
+(44123 observations deleted)
+(4101 observations deleted)
+note: csh_index_8 omitted because of collinearity
+
+Fixed-effects (within) regression               Number of obs      = {res}    36214
+{txt}Group variable: {res}omid10                          {txt}Number of groups   = {res}      618
+
+{txt}R-sq:  within  = {res}0.0626                         {txt}Obs per group: min = {res}       17
+{txt}       between = {res}0.8282                                        {txt}avg = {res}     58.6
+{txt}       overall = {res}0.2665                                        {txt}max = {res}      272
+
+                                                {txt}F({res}12{txt},{res}617{txt})          = {res}   111.30
+{txt}corr(u_i, Xb)  = {res}0.5418                         {txt}Prob > F           =    {res}0.0000
+
+{txt}{ralign 90:(Std. Err. adjusted for {res:618} clusters in omid10)}
+{hline 25}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 26}{c |}{col 38}    Robust
+{col 1}                o_zpsc_8{col 26}{c |}      Coef.{col 38}   Std. Err.{col 50}      t{col 58}   P>|t|{col 66}     [95% Con{col 79}f. Interval]
+{hline 25}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 13}csh_index_8 {c |}{col 26}{res}{space 2} 42.82237{col 38}{space 2} 1.526955{col 49}{space 1}   28.04{col 58}{space 3}0.000{col 66}{space 4} 39.82372{col 79}{space 3} 45.82103
+{txt}{space 14}sum10_1of5 {c |}{col 26}{res}{space 2} 18.29794{col 38}{space 2} 2.640325{col 49}{space 1}    6.93{col 58}{space 3}0.000{col 66}{space 4} 13.11283{col 79}{space 3} 23.48306
+{txt}{space 14}sum10_2of5 {c |}{col 26}{res}{space 2} 49.19967{col 38}{space 2}  4.71168{col 49}{space 1}   10.44{col 58}{space 3}0.000{col 66}{space 4} 39.94679{col 79}{space 3} 58.45254
+{txt}{space 14}sum10_3of5 {c |}{col 26}{res}{space 2}  36.0707{col 38}{space 2} 8.520399{col 49}{space 1}    4.23{col 58}{space 3}0.000{col 66}{space 4}  19.3382{col 79}{space 3}  52.8032
+{txt}{space 14}sum10_4of5 {c |}{col 26}{res}{space 2} 83.15025{col 38}{space 2} 21.19269{col 49}{space 1}    3.92{col 58}{space 3}0.000{col 66}{space 4} 41.53171{col 79}{space 3} 124.7688
+{txt}{space 14}sum10_5of5 {c |}{col 26}{res}{space 2}  56.9502{col 38}{space 2} 28.36959{col 49}{space 1}    2.01{col 58}{space 3}0.045{col 66}{space 4}  1.23753{col 79}{space 3} 112.6629
+{txt}{space 13}csh_index_8 {c |}{col 26}{res}{space 2}        0{col 38}{txt}  (omitted)
+{space 24} {c |}
+sum10_1of5#c.csh_index_8 {c |}
+{space 22}1  {c |}{col 26}{res}{space 2}-2.108925{col 38}{space 2} 2.737066{col 49}{space 1}   -0.77{col 58}{space 3}0.441{col 66}{space 4}-7.484021{col 79}{space 3}  3.26617
+{txt}{space 24} {c |}
+sum10_2of5#c.csh_index_8 {c |}
+{space 22}1  {c |}{col 26}{res}{space 2}-16.26645{col 38}{space 2} 4.492801{col 49}{space 1}   -3.62{col 58}{space 3}0.000{col 66}{space 4}-25.08949{col 79}{space 3}-7.443416
+{txt}{space 24} {c |}
+sum10_3of5#c.csh_index_8 {c |}
+{space 22}1  {c |}{col 26}{res}{space 2} 13.65795{col 38}{space 2} 8.205648{col 49}{space 1}    1.66{col 58}{space 3}0.097{col 66}{space 4}-2.456438{col 79}{space 3} 29.77233
+{txt}{space 24} {c |}
+sum10_4of5#c.csh_index_8 {c |}
+{space 22}1  {c |}{col 26}{res}{space 2}-1.513715{col 38}{space 2} 15.80406{col 49}{space 1}   -0.10{col 58}{space 3}0.924{col 66}{space 4}-32.54999{col 79}{space 3} 29.52256
+{txt}{space 24} {c |}
+sum10_5of5#c.csh_index_8 {c |}
+{space 22}1  {c |}{col 26}{res}{space 2}-6.017933{col 38}{space 2} 50.35703{col 49}{space 1}   -0.12{col 58}{space 3}0.905{col 66}{space 4}-104.9099{col 79}{space 3} 92.87402
+{txt}{space 24} {c |}
+{space 21}nem {c |}
+{space 20}fiú  {c |}{col 26}{res}{space 2}-36.96432{col 38}{space 2} 1.761687{col 49}{space 1}  -20.98{col 58}{space 3}0.000{col 66}{space 4}-40.42395{col 79}{space 3}-33.50469
+{txt}{space 19}_cons {c |}{col 26}{res}{space 2} 1624.612{col 38}{space 2} 1.067008{col 49}{space 1} 1522.59{col 58}{space 3}0.000{col 66}{space 4} 1622.516{col 79}{space 3} 1626.707
+{txt}{hline 25}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+                 sigma_u {c |} {res} 89.870013
+                 {txt}sigma_e {c |} {res} 136.73224
+                     {txt}rho {c |} {res} .30167793{txt}   (fraction of variance due to u_i)
+{hline 25}{c BT}{hline 64}
+{stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_fe_8szint.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_fe_8szint.tex}
+{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_fe_8szint.txt""':seeout}
+(44123 observations deleted)
+(4101 observations deleted)
+note: csh_index_8 omitted because of collinearity
+
+Fixed-effects (within) regression               Number of obs      = {res}    36214
+{txt}Group variable: {res}omid10                          {txt}Number of groups   = {res}      618
+
+{txt}R-sq:  within  = {res}0.0578                         {txt}Obs per group: min = {res}       17
+{txt}       between = {res}0.8250                                        {txt}avg = {res}     58.6
+{txt}       overall = {res}0.2598                                        {txt}max = {res}      272
+
+                                                {txt}F({res}12{txt},{res}617{txt})          = {res}   105.72
+{txt}corr(u_i, Xb)  = {res}0.5420                         {txt}Prob > F           =    {res}0.0000
+
+{txt}{ralign 90:(Std. Err. adjusted for {res:618} clusters in omid10)}
+{hline 25}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 26}{c |}{col 38}    Robust
+{col 1}                o_zpsc_8{col 26}{c |}      Coef.{col 38}   Std. Err.{col 50}      t{col 58}   P>|t|{col 66}     [95% Con{col 79}f. Interval]
+{hline 25}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 13}csh_index_8 {c |}{col 26}{res}{space 2} 42.61193{col 38}{space 2} 1.462883{col 49}{space 1}   29.13{col 58}{space 3}0.000{col 66}{space 4} 39.73909{col 79}{space 3} 45.48476
+{txt}{space 14}sum10_1of5 {c |}{col 26}{res}{space 2} 9.625665{col 38}{space 2}  2.62106{col 49}{space 1}    3.67{col 58}{space 3}0.000{col 66}{space 4} 4.478384{col 79}{space 3} 14.77295
+{txt}{space 14}sum10_2of5 {c |}{col 26}{res}{space 2} 31.57754{col 38}{space 2} 4.354476{col 49}{space 1}    7.25{col 58}{space 3}0.000{col 66}{space 4} 23.02615{col 79}{space 3} 40.12893
+{txt}{space 14}sum10_3of5 {c |}{col 26}{res}{space 2}-14.75605{col 38}{space 2} 13.90156{col 49}{space 1}   -1.06{col 58}{space 3}0.289{col 66}{space 4}-42.05617{col 79}{space 3} 12.54407
+{txt}{space 14}sum10_4of5 {c |}{col 26}{res}{space 2} 12.97329{col 38}{space 2}  19.5538{col 49}{space 1}    0.66{col 58}{space 3}0.507{col 66}{space 4}-25.42678{col 79}{space 3} 51.37336
+{txt}{space 14}sum10_5of5 {c |}{col 26}{res}{space 2} 53.31408{col 38}{space 2} 28.63717{col 49}{space 1}    1.86{col 58}{space 3}0.063{col 66}{space 4}-2.924063{col 79}{space 3} 109.5522
+{txt}{space 13}csh_index_8 {c |}{col 26}{res}{space 2}        0{col 38}{txt}  (omitted)
+{space 24} {c |}
+sum10_1of5#c.csh_index_8 {c |}
+{space 22}1  {c |}{col 26}{res}{space 2}-2.548267{col 38}{space 2} 2.650381{col 49}{space 1}   -0.96{col 58}{space 3}0.337{col 66}{space 4}-7.753129{col 79}{space 3} 2.656595
+{txt}{space 24} {c |}
+sum10_2of5#c.csh_index_8 {c |}
+{space 22}1  {c |}{col 26}{res}{space 2} -7.34445{col 38}{space 2} 4.842273{col 49}{space 1}   -1.52{col 58}{space 3}0.130{col 66}{space 4}-16.85378{col 79}{space 3} 2.164885
+{txt}{space 24} {c |}
+sum10_3of5#c.csh_index_8 {c |}
+{space 22}1  {c |}{col 26}{res}{space 2}-31.52941{col 38}{space 2} 14.45903{col 49}{space 1}   -2.18{col 58}{space 3}0.030{col 66}{space 4}-59.92429{col 79}{space 3}-3.134524
+{txt}{space 24} {c |}
+sum10_4of5#c.csh_index_8 {c |}
+{space 22}1  {c |}{col 26}{res}{space 2}-6.245408{col 38}{space 2} 19.86938{col 49}{space 1}   -0.31{col 58}{space 3}0.753{col 66}{space 4}-45.26522{col 79}{space 3}  32.7744
+{txt}{space 24} {c |}
+sum10_5of5#c.csh_index_8 {c |}
+{space 22}1  {c |}{col 26}{res}{space 2}-5.436297{col 38}{space 2} 50.84222{col 49}{space 1}   -0.11{col 58}{space 3}0.915{col 66}{space 4}-105.2811{col 79}{space 3} 94.40848
+{txt}{space 24} {c |}
+{space 21}nem {c |}
+{space 20}fiú  {c |}{col 26}{res}{space 2}-36.94329{col 38}{space 2} 1.763313{col 49}{space 1}  -20.95{col 58}{space 3}0.000{col 66}{space 4}-40.40612{col 79}{space 3}-33.48047
+{txt}{space 19}_cons {c |}{col 26}{res}{space 2} 1627.661{col 38}{space 2} 1.043225{col 49}{space 1} 1560.22{col 58}{space 3}0.000{col 66}{space 4} 1625.612{col 79}{space 3}  1629.71
+{txt}{hline 25}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+                 sigma_u {c |} {res} 90.712471
+                 {txt}sigma_e {c |} {res} 137.07863
+                     {txt}rho {c |} {res} .30455086{txt}   (fraction of variance due to u_i)
+{hline 25}{c BT}{hline 64}
+{stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_fe_8szint.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_fe_8szint.tex}
+{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_fe_8szint.txt""':seeout}
+(44123 observations deleted)
+(4101 observations deleted)
+note: csh_index_8 omitted because of collinearity
+
+Fixed-effects (within) regression               Number of obs      = {res}    36214
+{txt}Group variable: {res}omid10                          {txt}Number of groups   = {res}      618
+
+{txt}R-sq:  within  = {res}0.0632                         {txt}Obs per group: min = {res}       17
+{txt}       between = {res}0.8287                                        {txt}avg = {res}     58.6
+{txt}       overall = {res}0.2710                                        {txt}max = {res}      272
+
+                                                {txt}F({res}12{txt},{res}617{txt})          = {res}   113.93
+{txt}corr(u_i, Xb)  = {res}0.5479                         {txt}Prob > F           =    {res}0.0000
+
+{txt}{ralign 90:(Std. Err. adjusted for {res:618} clusters in omid10)}
+{hline 25}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 26}{c |}{col 38}    Robust
+{col 1}                o_zpsc_8{col 26}{c |}      Coef.{col 38}   Std. Err.{col 50}      t{col 58}   P>|t|{col 66}     [95% Con{col 79}f. Interval]
+{hline 25}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 13}csh_index_8 {c |}{col 26}{res}{space 2} 42.80108{col 38}{space 2} 1.541492{col 49}{space 1}   27.77{col 58}{space 3}0.000{col 66}{space 4} 39.77388{col 79}{space 3} 45.82829
+{txt}{space 14}sum10_1of5 {c |}{col 26}{res}{space 2} 18.60554{col 38}{space 2} 2.425528{col 49}{space 1}    7.67{col 58}{space 3}0.000{col 66}{space 4} 13.84225{col 79}{space 3} 23.36883
+{txt}{space 14}sum10_2of5 {c |}{col 26}{res}{space 2} 49.49963{col 38}{space 2} 4.181407{col 49}{space 1}   11.84{col 58}{space 3}0.000{col 66}{space 4} 41.28811{col 79}{space 3} 57.71114
+{txt}{space 14}sum10_3of5 {c |}{col 26}{res}{space 2} 46.61952{col 38}{space 2}  10.8575{col 49}{space 1}    4.29{col 58}{space 3}0.000{col 66}{space 4} 25.29739{col 79}{space 3} 67.94165
+{txt}{space 14}sum10_4of5 {c |}{col 26}{res}{space 2} 25.42684{col 38}{space 2} 20.26953{col 49}{space 1}    1.25{col 58}{space 3}0.210{col 66}{space 4}-14.37879{col 79}{space 3} 65.23246
+{txt}{space 14}sum10_5of5 {c |}{col 26}{res}{space 2} 56.88744{col 38}{space 2} 28.35631{col 49}{space 1}    2.01{col 58}{space 3}0.045{col 66}{space 4} 1.200857{col 79}{space 3}  112.574
+{txt}{space 13}csh_index_8 {c |}{col 26}{res}{space 2}        0{col 38}{txt}  (omitted)
+{space 24} {c |}
+sum10_1of5#c.csh_index_8 {c |}
+{space 22}1  {c |}{col 26}{res}{space 2}-2.821367{col 38}{space 2} 2.586213{col 49}{space 1}   -1.09{col 58}{space 3}0.276{col 66}{space 4}-7.900214{col 79}{space 3}  2.25748
+{txt}{space 24} {c |}
+sum10_2of5#c.csh_index_8 {c |}
+{space 22}1  {c |}{col 26}{res}{space 2}-14.54684{col 38}{space 2} 4.284814{col 49}{space 1}   -3.39{col 58}{space 3}0.001{col 66}{space 4}-22.96143{col 79}{space 3}-6.132252
+{txt}{space 24} {c |}
+sum10_3of5#c.csh_index_8 {c |}
+{space 22}1  {c |}{col 26}{res}{space 2} 5.173546{col 38}{space 2} 9.099735{col 49}{space 1}    0.57{col 58}{space 3}0.570{col 66}{space 4}-12.69666{col 79}{space 3} 23.04375
+{txt}{space 24} {c |}
+sum10_4of5#c.csh_index_8 {c |}
+{space 22}1  {c |}{col 26}{res}{space 2} 21.56376{col 38}{space 2} 15.93404{col 49}{space 1}    1.35{col 58}{space 3}0.176{col 66}{space 4}-9.727752{col 79}{space 3} 52.85528
+{txt}{space 24} {c |}
+sum10_5of5#c.csh_index_8 {c |}
+{space 22}1  {c |}{col 26}{res}{space 2}-4.491897{col 38}{space 2} 50.63083{col 49}{space 1}   -0.09{col 58}{space 3}0.929{col 66}{space 4}-103.9216{col 79}{space 3} 94.93776
+{txt}{space 24} {c |}
+{space 21}nem {c |}
+{space 20}fiú  {c |}{col 26}{res}{space 2}-36.98935{col 38}{space 2} 1.762289{col 49}{space 1}  -20.99{col 58}{space 3}0.000{col 66}{space 4}-40.45017{col 79}{space 3}-33.52854
+{txt}{space 19}_cons {c |}{col 26}{res}{space 2}  1623.48{col 38}{space 2} 1.110924{col 49}{space 1} 1461.38{col 58}{space 3}0.000{col 66}{space 4} 1621.298{col 79}{space 3} 1625.661
+{txt}{hline 25}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+                 sigma_u {c |} {res}  89.26017
+                 {txt}sigma_e {c |} {res} 136.68366
+                     {txt}rho {c |} {res} .29896575{txt}   (fraction of variance due to u_i)
+{hline 25}{c BT}{hline 64}
+{stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_fe_8szint.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_fe_8szint.tex}
+{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_fe_8szint.txt""':seeout}
+(44123 observations deleted)
+(4101 observations deleted)
+note: csh_index_8 omitted because of collinearity
+
+Fixed-effects (within) regression               Number of obs      = {res}    36214
+{txt}Group variable: {res}omid10                          {txt}Number of groups   = {res}      618
+
+{txt}R-sq:  within  = {res}0.0575                         {txt}Obs per group: min = {res}       17
+{txt}       between = {res}0.8274                                        {txt}avg = {res}     58.6
+{txt}       overall = {res}0.2601                                        {txt}max = {res}      272
+
+                                                {txt}F({res}12{txt},{res}617{txt})          = {res}   106.31
+{txt}corr(u_i, Xb)  = {res}0.5436                         {txt}Prob > F           =    {res}0.0000
+
+{txt}{ralign 90:(Std. Err. adjusted for {res:618} clusters in omid10)}
+{hline 25}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 26}{c |}{col 38}    Robust
+{col 1}                o_zpsc_8{col 26}{c |}      Coef.{col 38}   Std. Err.{col 50}      t{col 58}   P>|t|{col 66}     [95% Con{col 79}f. Interval]
+{hline 25}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 13}csh_index_8 {c |}{col 26}{res}{space 2} 42.97995{col 38}{space 2}  1.50532{col 49}{space 1}   28.55{col 58}{space 3}0.000{col 66}{space 4} 40.02378{col 79}{space 3} 45.93612
+{txt}{space 14}sum10_1of5 {c |}{col 26}{res}{space 2} 7.892519{col 38}{space 2}  2.43763{col 49}{space 1}    3.24{col 58}{space 3}0.001{col 66}{space 4} 3.105461{col 79}{space 3} 12.67958
+{txt}{space 14}sum10_2of5 {c |}{col 26}{res}{space 2} 27.99852{col 38}{space 2}  4.18506{col 49}{space 1}    6.69{col 58}{space 3}0.000{col 66}{space 4} 19.77983{col 79}{space 3} 36.21721
+{txt}{space 14}sum10_3of5 {c |}{col 26}{res}{space 2}-5.968255{col 38}{space 2} 11.60515{col 49}{space 1}   -0.51{col 58}{space 3}0.607{col 66}{space 4}-28.75863{col 79}{space 3} 16.82212
+{txt}{space 14}sum10_4of5 {c |}{col 26}{res}{space 2} 62.12231{col 38}{space 2} 25.75482{col 49}{space 1}    2.41{col 58}{space 3}0.016{col 66}{space 4} 11.54457{col 79}{space 3}    112.7
+{txt}{space 14}sum10_5of5 {c |}{col 26}{res}{space 2} 52.88881{col 38}{space 2} 28.58542{col 49}{space 1}    1.85{col 58}{space 3}0.065{col 66}{space 4}-3.247697{col 79}{space 3} 109.0253
+{txt}{space 13}csh_index_8 {c |}{col 26}{res}{space 2}        0{col 38}{txt}  (omitted)
+{space 24} {c |}
+sum10_1of5#c.csh_index_8 {c |}
+{space 22}1  {c |}{col 26}{res}{space 2}-2.195329{col 38}{space 2} 2.410392{col 49}{space 1}   -0.91{col 58}{space 3}0.363{col 66}{space 4}-6.928896{col 79}{space 3} 2.538239
+{txt}{space 24} {c |}
+sum10_2of5#c.csh_index_8 {c |}
+{space 22}1  {c |}{col 26}{res}{space 2}-9.812485{col 38}{space 2} 4.558268{col 49}{space 1}   -2.15{col 58}{space 3}0.032{col 66}{space 4}-18.76409{col 79}{space 3}-.8608845
+{txt}{space 24} {c |}
+sum10_3of5#c.csh_index_8 {c |}
+{space 22}1  {c |}{col 26}{res}{space 2}-20.12666{col 38}{space 2} 12.01322{col 49}{space 1}   -1.68{col 58}{space 3}0.094{col 66}{space 4}-43.71842{col 79}{space 3} 3.465092
+{txt}{space 24} {c |}
+sum10_4of5#c.csh_index_8 {c |}
+{space 22}1  {c |}{col 26}{res}{space 2}-83.30111{col 38}{space 2} 27.27412{col 49}{space 1}   -3.05{col 58}{space 3}0.002{col 66}{space 4}-136.8625{col 79}{space 3}-29.73976
+{txt}{space 24} {c |}
+sum10_5of5#c.csh_index_8 {c |}
+{space 22}1  {c |}{col 26}{res}{space 2}-6.469161{col 38}{space 2} 50.83022{col 49}{space 1}   -0.13{col 58}{space 3}0.899{col 66}{space 4}-106.2904{col 79}{space 3} 93.35205
+{txt}{space 24} {c |}
+{space 21}nem {c |}
+{space 20}fiú  {c |}{col 26}{res}{space 2}-36.95119{col 38}{space 2} 1.762211{col 49}{space 1}  -20.97{col 58}{space 3}0.000{col 66}{space 4}-40.41185{col 79}{space 3}-33.49053
+{txt}{space 19}_cons {c |}{col 26}{res}{space 2} 1627.599{col 38}{space 2} 1.092699{col 49}{space 1} 1489.52{col 58}{space 3}0.000{col 66}{space 4} 1625.453{col 79}{space 3} 1629.745
+{txt}{hline 25}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+                 sigma_u {c |} {res} 90.729133
+                 {txt}sigma_e {c |} {res} 137.09944
+                     {txt}rho {c |} {res} .30456438{txt}   (fraction of variance due to u_i)
+{hline 25}{c BT}{hline 64}
+{stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_fe_8szint.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_fe_8szint.tex}
+{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_fe_8szint.txt""':seeout}
+(44123 observations deleted)
+(4101 observations deleted)
+note: csh_index_8 omitted because of collinearity
+
+Fixed-effects (within) regression               Number of obs      = {res}    36214
+{txt}Group variable: {res}omid10                          {txt}Number of groups   = {res}      618
+
+{txt}R-sq:  within  = {res}0.0630                         {txt}Obs per group: min = {res}       17
+{txt}       between = {res}0.8291                                        {txt}avg = {res}     58.6
+{txt}       overall = {res}0.2703                                        {txt}max = {res}      272
+
+                                                {txt}F({res}12{txt},{res}617{txt})          = {res}   116.29
+{txt}corr(u_i, Xb)  = {res}0.5470                         {txt}Prob > F           =    {res}0.0000
+
+{txt}{ralign 90:(Std. Err. adjusted for {res:618} clusters in omid10)}
+{hline 25}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 26}{c |}{col 38}    Robust
+{col 1}                o_zpsc_8{col 26}{c |}      Coef.{col 38}   Std. Err.{col 50}      t{col 58}   P>|t|{col 66}     [95% Con{col 79}f. Interval]
+{hline 25}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 13}csh_index_8 {c |}{col 26}{res}{space 2} 42.95429{col 38}{space 2}  1.51254{col 49}{space 1}   28.40{col 58}{space 3}0.000{col 66}{space 4} 39.98394{col 79}{space 3} 45.92464
+{txt}{space 14}sum10_1of5 {c |}{col 26}{res}{space 2} 18.86373{col 38}{space 2} 2.643109{col 49}{space 1}    7.14{col 58}{space 3}0.000{col 66}{space 4} 13.67315{col 79}{space 3} 24.05431
+{txt}{space 14}sum10_2of5 {c |}{col 26}{res}{space 2} 49.35875{col 38}{space 2} 4.600495{col 49}{space 1}   10.73{col 58}{space 3}0.000{col 66}{space 4} 40.32422{col 79}{space 3} 58.39328
+{txt}{space 14}sum10_3of5 {c |}{col 26}{res}{space 2}  51.5277{col 38}{space 2} 9.207691{col 49}{space 1}    5.60{col 58}{space 3}0.000{col 66}{space 4} 33.44549{col 79}{space 3} 69.60992
+{txt}{space 14}sum10_4of5 {c |}{col 26}{res}{space 2}-.5186733{col 38}{space 2} 21.89458{col 49}{space 1}   -0.02{col 58}{space 3}0.981{col 66}{space 4} -43.5156{col 79}{space 3} 42.47825
+{txt}{space 14}sum10_5of5 {c |}{col 26}{res}{space 2} 58.03027{col 38}{space 2}  28.0478{col 49}{space 1}    2.07{col 58}{space 3}0.039{col 66}{space 4} 2.949536{col 79}{space 3}  113.111
+{txt}{space 13}csh_index_8 {c |}{col 26}{res}{space 2}        0{col 38}{txt}  (omitted)
+{space 24} {c |}
+sum10_1of5#c.csh_index_8 {c |}
+{space 22}1  {c |}{col 26}{res}{space 2}-3.356849{col 38}{space 2} 2.639628{col 49}{space 1}   -1.27{col 58}{space 3}0.204{col 66}{space 4}-8.540593{col 79}{space 3} 1.826895
+{txt}{space 24} {c |}
+sum10_2of5#c.csh_index_8 {c |}
+{space 22}1  {c |}{col 26}{res}{space 2}-18.31114{col 38}{space 2} 4.707361{col 49}{space 1}   -3.89{col 58}{space 3}0.000{col 66}{space 4}-27.55553{col 79}{space 3}-9.066746
+{txt}{space 24} {c |}
+sum10_3of5#c.csh_index_8 {c |}
+{space 22}1  {c |}{col 26}{res}{space 2} -1.17664{col 38}{space 2} 7.915816{col 49}{space 1}   -0.15{col 58}{space 3}0.882{col 66}{space 4}-16.72185{col 79}{space 3} 14.36857
+{txt}{space 24} {c |}
+sum10_4of5#c.csh_index_8 {c |}
+{space 22}1  {c |}{col 26}{res}{space 2} 50.90585{col 38}{space 2} 13.61607{col 49}{space 1}    3.74{col 58}{space 3}0.000{col 66}{space 4} 24.16639{col 79}{space 3}  77.6453
+{txt}{space 24} {c |}
+sum10_5of5#c.csh_index_8 {c |}
+{space 22}1  {c |}{col 26}{res}{space 2}-5.503267{col 38}{space 2}  50.2076{col 49}{space 1}   -0.11{col 58}{space 3}0.913{col 66}{space 4}-104.1018{col 79}{space 3} 93.09523
+{txt}{space 24} {c |}
+{space 21}nem {c |}
+{space 20}fiú  {c |}{col 26}{res}{space 2}-36.84189{col 38}{space 2} 1.763495{col 49}{space 1}  -20.89{col 58}{space 3}0.000{col 66}{space 4}-40.30507{col 79}{space 3}-33.37871
+{txt}{space 19}_cons {c |}{col 26}{res}{space 2} 1624.319{col 38}{space 2}  1.08371{col 49}{space 1} 1498.85{col 58}{space 3}0.000{col 66}{space 4} 1622.191{col 79}{space 3} 1626.448
+{txt}{hline 25}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+                 sigma_u {c |} {res} 89.240066
+                 {txt}sigma_e {c |} {res} 136.69961
+                     {txt}rho {c |} {res} .29882244{txt}   (fraction of variance due to u_i)
+{hline 25}{c BT}{hline 64}
+{stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_fe_8szint.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_fe_8szint.tex}
+{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_fe_8szint.txt""':seeout}
+(44123 observations deleted)
+(4101 observations deleted)
+note: csh_index_8 omitted because of collinearity
+
+Fixed-effects (within) regression               Number of obs      = {res}    36214
+{txt}Group variable: {res}omid10                          {txt}Number of groups   = {res}      618
+
+{txt}R-sq:  within  = {res}0.0576                         {txt}Obs per group: min = {res}       17
+{txt}       between = {res}0.8222                                        {txt}avg = {res}     58.6
+{txt}       overall = {res}0.2594                                        {txt}max = {res}      272
+
+                                                {txt}F({res}12{txt},{res}617{txt})          = {res}   104.11
+{txt}corr(u_i, Xb)  = {res}0.5416                         {txt}Prob > F           =    {res}0.0000
+
+{txt}{ralign 90:(Std. Err. adjusted for {res:618} clusters in omid10)}
+{hline 25}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 26}{c |}{col 38}    Robust
+{col 1}                o_zpsc_8{col 26}{c |}      Coef.{col 38}   Std. Err.{col 50}      t{col 58}   P>|t|{col 66}     [95% Con{col 79}f. Interval]
+{hline 25}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 13}csh_index_8 {c |}{col 26}{res}{space 2} 41.70735{col 38}{space 2} 1.471132{col 49}{space 1}   28.35{col 58}{space 3}0.000{col 66}{space 4} 38.81832{col 79}{space 3} 44.59638
+{txt}{space 14}sum10_1of5 {c |}{col 26}{res}{space 2} 5.575426{col 38}{space 2} 2.372145{col 49}{space 1}    2.35{col 58}{space 3}0.019{col 66}{space 4} .9169696{col 79}{space 3} 10.23388
+{txt}{space 14}sum10_2of5 {c |}{col 26}{res}{space 2} 32.36755{col 38}{space 2} 4.469171{col 49}{space 1}    7.24{col 58}{space 3}0.000{col 66}{space 4} 23.59092{col 79}{space 3} 41.14418
+{txt}{space 14}sum10_3of5 {c |}{col 26}{res}{space 2}-6.484404{col 38}{space 2} 11.59096{col 49}{space 1}   -0.56{col 58}{space 3}0.576{col 66}{space 4}-29.24692{col 79}{space 3} 16.27812
+{txt}{space 14}sum10_4of5 {c |}{col 26}{res}{space 2} 37.24667{col 38}{space 2} 10.49873{col 49}{space 1}    3.55{col 58}{space 3}0.000{col 66}{space 4} 16.62909{col 79}{space 3} 57.86425
+{txt}{space 14}sum10_5of5 {c |}{col 26}{res}{space 2} 52.64363{col 38}{space 2} 28.63258{col 49}{space 1}    1.84{col 58}{space 3}0.066{col 66}{space 4}-3.585486{col 79}{space 3} 108.8727
+{txt}{space 13}csh_index_8 {c |}{col 26}{res}{space 2}        0{col 38}{txt}  (omitted)
+{space 24} {c |}
+sum10_1of5#c.csh_index_8 {c |}
+{space 22}1  {c |}{col 26}{res}{space 2} .7484696{col 38}{space 2} 2.359132{col 49}{space 1}    0.32{col 58}{space 3}0.751{col 66}{space 4}-3.884433{col 79}{space 3} 5.381372
+{txt}{space 24} {c |}
+sum10_2of5#c.csh_index_8 {c |}
+{space 22}1  {c |}{col 26}{res}{space 2}-4.596482{col 38}{space 2} 5.029365{col 49}{space 1}   -0.91{col 58}{space 3}0.361{col 66}{space 4}-14.47323{col 79}{space 3} 5.280266
+{txt}{space 24} {c |}
+sum10_3of5#c.csh_index_8 {c |}
+{space 22}1  {c |}{col 26}{res}{space 2}-18.71144{col 38}{space 2} 11.87009{col 49}{space 1}   -1.58{col 58}{space 3}0.115{col 66}{space 4}-42.02211{col 79}{space 3} 4.599231
+{txt}{space 24} {c |}
+sum10_4of5#c.csh_index_8 {c |}
+{space 22}1  {c |}{col 26}{res}{space 2}-36.53683{col 38}{space 2} 39.29713{col 49}{space 1}   -0.93{col 58}{space 3}0.353{col 66}{space 4}-113.7092{col 79}{space 3}  40.6355
+{txt}{space 24} {c |}
+sum10_5of5#c.csh_index_8 {c |}
+{space 22}1  {c |}{col 26}{res}{space 2}-4.634946{col 38}{space 2} 50.85473{col 49}{space 1}   -0.09{col 58}{space 3}0.927{col 66}{space 4}-104.5043{col 79}{space 3}  95.2344
+{txt}{space 24} {c |}
+{space 21}nem {c |}
+{space 20}fiú  {c |}{col 26}{res}{space 2}-37.00145{col 38}{space 2} 1.764197{col 49}{space 1}  -20.97{col 58}{space 3}0.000{col 66}{space 4}-40.46601{col 79}{space 3}-33.53689
+{txt}{space 19}_cons {c |}{col 26}{res}{space 2} 1628.617{col 38}{space 2} 1.046067{col 49}{space 1} 1556.89{col 58}{space 3}0.000{col 66}{space 4} 1626.562{col 79}{space 3} 1630.671
+{txt}{hline 25}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+                 sigma_u {c |} {res} 90.751276
+                 {txt}sigma_e {c |} {res} 137.09399
+                     {txt}rho {c |} {res} .30468459{txt}   (fraction of variance due to u_i)
+{hline 25}{c BT}{hline 64}
+{stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_fe_8szint.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_fe_8szint.tex}
+{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_fe_8szint.txt""':seeout}
+(44123 observations deleted)
+(4101 observations deleted)
+{res}
+{txt}Random-effects GLS regression                   Number of obs      = {res}    35517
+{txt}Group variable: {res}omid10                          {txt}Number of groups   = {res}      618
+
+{txt}R-sq:  within  = {res}0.0591                         {txt}Obs per group: min = {res}        8
+{txt}       between = {res}0.8263                                        {txt}avg = {res}     57.5
+{txt}       overall = {res}0.2930                                        {txt}max = {res}      262
+
+                                                {txt}Wald chi2({res}12{txt})      = {res}  1429.82
+{txt}corr(u_i, X)   = {res}0{txt} (assumed)                    Prob > chi2        =    {res}0.0000
+
+{txt}{ralign 88:(Std. Err. adjusted for {res:618} clusters in omid10)}
+{hline 23}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 24}{c |}{col 36}    Robust
+{col 1}             o_zpsc_10{col 24}{c |}      Coef.{col 36}   Std. Err.{col 48}      z{col 56}   P>|z|{col 64}     [95% Con{col 77}f. Interval]
+{hline 23}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 12}sum10_1of5 {c |}{col 24}{res}{space 2}-.1139367{col 36}{space 2} 2.331217{col 47}{space 1}   -0.05{col 56}{space 3}0.961{col 64}{space 4}-4.683038{col 77}{space 3} 4.455165
+{txt}{space 12}sum10_2of5 {c |}{col 24}{res}{space 2} .7671103{col 36}{space 2} 4.461625{col 47}{space 1}    0.17{col 56}{space 3}0.863{col 64}{space 4}-7.977513{col 77}{space 3} 9.511734
+{txt}{space 12}sum10_3of5 {c |}{col 24}{res}{space 2} .4130712{col 36}{space 2} 7.432273{col 47}{space 1}    0.06{col 56}{space 3}0.956{col 64}{space 4}-14.15392{col 77}{space 3} 14.98006
+{txt}{space 12}sum10_4of5 {c |}{col 24}{res}{space 2} 54.21203{col 36}{space 2} 28.52033{col 47}{space 1}    1.90{col 56}{space 3}0.057{col 64}{space 4}-1.686785{col 77}{space 3} 110.1108
+{txt}{space 12}sum10_5of5 {c |}{col 24}{res}{space 2}-51.02886{col 36}{space 2} 23.72513{col 47}{space 1}   -2.15{col 56}{space 3}0.031{col 64}{space 4}-97.52925{col 77}{space 3}-4.528462
+{txt}{space 13}csh_index {c |}{col 24}{res}{space 2} 57.67877{col 36}{space 2} 1.695548{col 47}{space 1}   34.02{col 56}{space 3}0.000{col 64}{space 4} 54.35556{col 77}{space 3} 61.00199
+{txt}{space 22} {c |}
+sum10_1of5#c.csh_index {c |}
+{space 20}1  {c |}{col 24}{res}{space 2} 4.620768{col 36}{space 2} 2.528531{col 47}{space 1}    1.83{col 56}{space 3}0.068{col 64}{space 4}-.3350619{col 77}{space 3} 9.576598
+{txt}{space 22} {c |}
+sum10_2of5#c.csh_index {c |}
+{space 20}1  {c |}{col 24}{res}{space 2} 2.541589{col 36}{space 2} 4.821171{col 47}{space 1}    0.53{col 56}{space 3}0.598{col 64}{space 4}-6.907732{col 77}{space 3} 11.99091
+{txt}{space 22} {c |}
+sum10_3of5#c.csh_index {c |}
+{space 20}1  {c |}{col 24}{res}{space 2} 31.86315{col 36}{space 2} 8.281367{col 47}{space 1}    3.85{col 56}{space 3}0.000{col 64}{space 4} 15.63197{col 77}{space 3} 48.09434
+{txt}{space 22} {c |}
+sum10_4of5#c.csh_index {c |}
+{space 20}1  {c |}{col 24}{res}{space 2}-20.24932{col 36}{space 2} 29.93222{col 47}{space 1}   -0.68{col 56}{space 3}0.499{col 64}{space 4}-78.91539{col 77}{space 3} 38.41675
+{txt}{space 22} {c |}
+sum10_5of5#c.csh_index {c |}
+{space 20}1  {c |}{col 24}{res}{space 2} 33.19673{col 36}{space 2} 28.19151{col 47}{space 1}    1.18{col 56}{space 3}0.239{col 64}{space 4}-22.05762{col 77}{space 3} 88.45107
+{txt}{space 22} {c |}
+{space 19}nem {c |}
+{space 18}fiú  {c |}{col 24}{res}{space 2}-15.68851{col 36}{space 2} 1.877567{col 47}{space 1}   -8.36{col 56}{space 3}0.000{col 64}{space 4}-19.36847{col 77}{space 3}-12.00855
+{txt}{space 17}_cons {c |}{col 24}{res}{space 2} 1652.901{col 36}{space 2}  3.91381{col 47}{space 1}  422.33{col 56}{space 3}0.000{col 64}{space 4}  1645.23{col 77}{space 3} 1660.571
+{txt}{hline 23}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+               sigma_u {c |} {res} 48.286201
+               {txt}sigma_e {c |} {res} 133.61801
+                   {txt}rho {c |} {res} .11550752{txt}   (fraction of variance due to u_i)
+{hline 23}{c BT}{hline 64}
+{stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_re_10szint.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_re_10szint.tex}
+{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_re_10szint.txt""':seeout}
+(44123 observations deleted)
+(4101 observations deleted)
+{res}
+{txt}Random-effects GLS regression                   Number of obs      = {res}    35517
+{txt}Group variable: {res}omid10                          {txt}Number of groups   = {res}      618
+
+{txt}R-sq:  within  = {res}0.0592                         {txt}Obs per group: min = {res}        8
+{txt}       between = {res}0.8244                                        {txt}avg = {res}     57.5
+{txt}       overall = {res}0.2935                                        {txt}max = {res}      262
+
+                                                {txt}Wald chi2({res}12{txt})      = {res}  1420.47
+{txt}corr(u_i, X)   = {res}0{txt} (assumed)                    Prob > chi2        =    {res}0.0000
+
+{txt}{ralign 88:(Std. Err. adjusted for {res:618} clusters in omid10)}
+{hline 23}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 24}{c |}{col 36}    Robust
+{col 1}             o_zpsc_10{col 24}{c |}      Coef.{col 36}   Std. Err.{col 48}      z{col 56}   P>|z|{col 64}     [95% Con{col 77}f. Interval]
+{hline 23}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 12}sum10_1of5 {c |}{col 24}{res}{space 2}-9.551738{col 36}{space 2} 2.261838{col 47}{space 1}   -4.22{col 56}{space 3}0.000{col 64}{space 4}-13.98486{col 77}{space 3}-5.118617
+{txt}{space 12}sum10_2of5 {c |}{col 24}{res}{space 2} -8.17371{col 36}{space 2}   3.8297{col 47}{space 1}   -2.13{col 56}{space 3}0.033{col 64}{space 4}-15.67978{col 77}{space 3}-.6676366
+{txt}{space 12}sum10_3of5 {c |}{col 24}{res}{space 2}-30.57654{col 36}{space 2} 10.15143{col 47}{space 1}   -3.01{col 56}{space 3}0.003{col 64}{space 4}-50.47298{col 77}{space 3} -10.6801
+{txt}{space 12}sum10_4of5 {c |}{col 24}{res}{space 2}-33.33009{col 36}{space 2} 22.23857{col 47}{space 1}   -1.50{col 56}{space 3}0.134{col 64}{space 4} -76.9169{col 77}{space 3} 10.25671
+{txt}{space 12}sum10_5of5 {c |}{col 24}{res}{space 2}-54.69855{col 36}{space 2} 23.58929{col 47}{space 1}   -2.32{col 56}{space 3}0.020{col 64}{space 4}-100.9327{col 77}{space 3}-8.464398
+{txt}{space 13}csh_index {c |}{col 24}{res}{space 2} 58.30754{col 36}{space 2} 1.681264{col 47}{space 1}   34.68{col 56}{space 3}0.000{col 64}{space 4} 55.01232{col 77}{space 3} 61.60276
+{txt}{space 22} {c |}
+sum10_1of5#c.csh_index {c |}
+{space 20}1  {c |}{col 24}{res}{space 2}  2.97552{col 36}{space 2} 2.433173{col 47}{space 1}    1.22{col 56}{space 3}0.221{col 64}{space 4}-1.793412{col 77}{space 3} 7.744451
+{txt}{space 22} {c |}
+sum10_2of5#c.csh_index {c |}
+{space 20}1  {c |}{col 24}{res}{space 2} 1.800925{col 36}{space 2} 4.482638{col 47}{space 1}    0.40{col 56}{space 3}0.688{col 64}{space 4}-6.984884{col 77}{space 3} 10.58673
+{txt}{space 22} {c |}
+sum10_3of5#c.csh_index {c |}
+{space 20}1  {c |}{col 24}{res}{space 2}-22.54167{col 36}{space 2} 14.47229{col 47}{space 1}   -1.56{col 56}{space 3}0.119{col 64}{space 4}-50.90683{col 77}{space 3} 5.823486
+{txt}{space 22} {c |}
+sum10_4of5#c.csh_index {c |}
+{space 20}1  {c |}{col 24}{res}{space 2}  12.0499{col 36}{space 2} 20.29177{col 47}{space 1}    0.59{col 56}{space 3}0.553{col 64}{space 4}-27.72124{col 77}{space 3} 51.82104
+{txt}{space 22} {c |}
+sum10_5of5#c.csh_index {c |}
+{space 20}1  {c |}{col 24}{res}{space 2} 32.66943{col 36}{space 2} 28.28195{col 47}{space 1}    1.16{col 56}{space 3}0.248{col 64}{space 4}-22.76216{col 77}{space 3} 88.10103
+{txt}{space 22} {c |}
+{space 19}nem {c |}
+{space 18}fiú  {c |}{col 24}{res}{space 2} -15.5972{col 36}{space 2} 1.878272{col 47}{space 1}   -8.30{col 56}{space 3}0.000{col 64}{space 4}-19.27854{col 77}{space 3}-11.91585
+{txt}{space 17}_cons {c |}{col 24}{res}{space 2} 1655.724{col 36}{space 2} 3.939634{col 47}{space 1}  420.27{col 56}{space 3}0.000{col 64}{space 4} 1648.003{col 77}{space 3} 1663.446
+{txt}{hline 23}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+               sigma_u {c |} {res} 48.078012
+               {txt}sigma_e {c |} {res}  133.6119
+                   {txt}rho {c |} {res} .11463682{txt}   (fraction of variance due to u_i)
+{hline 23}{c BT}{hline 64}
+{stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_re_10szint.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_re_10szint.tex}
+{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_re_10szint.txt""':seeout}
+(44123 observations deleted)
+(4101 observations deleted)
+{res}
+{txt}Random-effects GLS regression                   Number of obs      = {res}    35517
+{txt}Group variable: {res}omid10                          {txt}Number of groups   = {res}      618
+
+{txt}R-sq:  within  = {res}0.0594                         {txt}Obs per group: min = {res}        8
+{txt}       between = {res}0.8241                                        {txt}avg = {res}     57.5
+{txt}       overall = {res}0.2940                                        {txt}max = {res}      262
+
+                                                {txt}Wald chi2({res}12{txt})      = {res}  1455.76
+{txt}corr(u_i, X)   = {res}0{txt} (assumed)                    Prob > chi2        =    {res}0.0000
+
+{txt}{ralign 88:(Std. Err. adjusted for {res:618} clusters in omid10)}
+{hline 23}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 24}{c |}{col 36}    Robust
+{col 1}             o_zpsc_10{col 24}{c |}      Coef.{col 36}   Std. Err.{col 48}      z{col 56}   P>|z|{col 64}     [95% Con{col 77}f. Interval]
+{hline 23}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 12}sum10_1of5 {c |}{col 24}{res}{space 2}-.9641066{col 36}{space 2} 2.269979{col 47}{space 1}   -0.42{col 56}{space 3}0.671{col 64}{space 4}-5.413184{col 77}{space 3} 3.484971
+{txt}{space 12}sum10_2of5 {c |}{col 24}{res}{space 2} 1.288215{col 36}{space 2} 3.994646{col 47}{space 1}    0.32{col 56}{space 3}0.747{col 64}{space 4}-6.541148{col 77}{space 3} 9.117577
+{txt}{space 12}sum10_3of5 {c |}{col 24}{res}{space 2} 2.802384{col 36}{space 2} 9.991321{col 47}{space 1}    0.28{col 56}{space 3}0.779{col 64}{space 4}-16.78025{col 77}{space 3} 22.38501
+{txt}{space 12}sum10_4of5 {c |}{col 24}{res}{space 2} 40.39982{col 36}{space 2} 12.74047{col 47}{space 1}    3.17{col 56}{space 3}0.002{col 64}{space 4} 15.42896{col 77}{space 3} 65.37068
+{txt}{space 12}sum10_5of5 {c |}{col 24}{res}{space 2}-51.18689{col 36}{space 2} 23.75273{col 47}{space 1}   -2.15{col 56}{space 3}0.031{col 64}{space 4}-97.74139{col 77}{space 3}-4.632391
+{txt}{space 13}csh_index {c |}{col 24}{res}{space 2}   57.212{col 36}{space 2} 1.744211{col 47}{space 1}   32.80{col 56}{space 3}0.000{col 64}{space 4} 53.79341{col 77}{space 3}  60.6306
+{txt}{space 22} {c |}
+sum10_1of5#c.csh_index {c |}
+{space 20}1  {c |}{col 24}{res}{space 2} 5.960012{col 36}{space 2} 2.383832{col 47}{space 1}    2.50{col 56}{space 3}0.012{col 64}{space 4} 1.287788{col 77}{space 3} 10.63224
+{txt}{space 22} {c |}
+sum10_2of5#c.csh_index {c |}
+{space 20}1  {c |}{col 24}{res}{space 2} 2.073585{col 36}{space 2} 4.865238{col 47}{space 1}    0.43{col 56}{space 3}0.670{col 64}{space 4}-7.462106{col 77}{space 3} 11.60928
+{txt}{space 22} {c |}
+sum10_3of5#c.csh_index {c |}
+{space 20}1  {c |}{col 24}{res}{space 2} 34.91149{col 36}{space 2} 8.201843{col 47}{space 1}    4.26{col 56}{space 3}0.000{col 64}{space 4} 18.83617{col 77}{space 3}  50.9868
+{txt}{space 22} {c |}
+sum10_4of5#c.csh_index {c |}
+{space 20}1  {c |}{col 24}{res}{space 2} -7.25495{col 36}{space 2} 9.623822{col 47}{space 1}   -0.75{col 56}{space 3}0.451{col 64}{space 4} -26.1173{col 77}{space 3} 11.60739
+{txt}{space 22} {c |}
+sum10_5of5#c.csh_index {c |}
+{space 20}1  {c |}{col 24}{res}{space 2} 33.71868{col 36}{space 2}  28.2251{col 47}{space 1}    1.19{col 56}{space 3}0.232{col 64}{space 4}-21.60149{col 77}{space 3} 89.03885
+{txt}{space 22} {c |}
+{space 19}nem {c |}
+{space 18}fiú  {c |}{col 24}{res}{space 2}-15.65688{col 36}{space 2} 1.878722{col 47}{space 1}   -8.33{col 56}{space 3}0.000{col 64}{space 4} -19.3391{col 77}{space 3}-11.97465
+{txt}{space 17}_cons {c |}{col 24}{res}{space 2} 1652.694{col 36}{space 2}  3.91715{col 47}{space 1}  421.91{col 56}{space 3}0.000{col 64}{space 4} 1645.017{col 77}{space 3} 1660.372
+{txt}{hline 23}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+               sigma_u {c |} {res} 48.225338
+               {txt}sigma_e {c |} {res} 133.60056
+                   {txt}rho {c |} {res} .11527668{txt}   (fraction of variance due to u_i)
+{hline 23}{c BT}{hline 64}
+{stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_re_10szint.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_re_10szint.tex}
+{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_re_10szint.txt""':seeout}
+(44123 observations deleted)
+(4101 observations deleted)
+{res}
+{txt}Random-effects GLS regression                   Number of obs      = {res}    35517
+{txt}Group variable: {res}omid10                          {txt}Number of groups   = {res}      618
+
+{txt}R-sq:  within  = {res}0.0596                         {txt}Obs per group: min = {res}        8
+{txt}       between = {res}0.8232                                        {txt}avg = {res}     57.5
+{txt}       overall = {res}0.2941                                        {txt}max = {res}      262
+
+                                                {txt}Wald chi2({res}12{txt})      = {res}  1453.08
+{txt}corr(u_i, X)   = {res}0{txt} (assumed)                    Prob > chi2        =    {res}0.0000
+
+{txt}{ralign 88:(Std. Err. adjusted for {res:618} clusters in omid10)}
+{hline 23}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 24}{c |}{col 36}    Robust
+{col 1}             o_zpsc_10{col 24}{c |}      Coef.{col 36}   Std. Err.{col 48}      z{col 56}   P>|z|{col 64}     [95% Con{col 77}f. Interval]
+{hline 23}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 12}sum10_1of5 {c |}{col 24}{res}{space 2}-10.03139{col 36}{space 2} 2.170519{col 47}{space 1}   -4.62{col 56}{space 3}0.000{col 64}{space 4}-14.28553{col 77}{space 3}-5.777255
+{txt}{space 12}sum10_2of5 {c |}{col 24}{res}{space 2}-9.601142{col 36}{space 2} 3.581082{col 47}{space 1}   -2.68{col 56}{space 3}0.007{col 64}{space 4}-16.61993{col 77}{space 3} -2.58235
+{txt}{space 12}sum10_3of5 {c |}{col 24}{res}{space 2}-36.69863{col 36}{space 2} 9.366633{col 47}{space 1}   -3.92{col 56}{space 3}0.000{col 64}{space 4} -55.0569{col 77}{space 3}-18.34037
+{txt}{space 12}sum10_4of5 {c |}{col 24}{res}{space 2} 23.08792{col 36}{space 2} 29.50145{col 47}{space 1}    0.78{col 56}{space 3}0.434{col 64}{space 4}-34.73387{col 77}{space 3}  80.9097
+{txt}{space 12}sum10_5of5 {c |}{col 24}{res}{space 2} -55.5306{col 36}{space 2} 23.58083{col 47}{space 1}   -2.35{col 56}{space 3}0.019{col 64}{space 4}-101.7482{col 77}{space 3}-9.313032
+{txt}{space 13}csh_index {c |}{col 24}{res}{space 2} 57.93362{col 36}{space 2} 1.732927{col 47}{space 1}   33.43{col 56}{space 3}0.000{col 64}{space 4} 54.53715{col 77}{space 3}  61.3301
+{txt}{space 22} {c |}
+sum10_1of5#c.csh_index {c |}
+{space 20}1  {c |}{col 24}{res}{space 2} 3.897331{col 36}{space 2} 2.327436{col 47}{space 1}    1.67{col 56}{space 3}0.094{col 64}{space 4}-.6643603{col 77}{space 3} 8.459021
+{txt}{space 22} {c |}
+sum10_2of5#c.csh_index {c |}
+{space 20}1  {c |}{col 24}{res}{space 2}-.4913706{col 36}{space 2} 4.425682{col 47}{space 1}   -0.11{col 56}{space 3}0.912{col 64}{space 4}-9.165547{col 77}{space 3} 8.182806
+{txt}{space 22} {c |}
+sum10_3of5#c.csh_index {c |}
+{space 20}1  {c |}{col 24}{res}{space 2}-2.529379{col 36}{space 2} 10.22776{col 47}{space 1}   -0.25{col 56}{space 3}0.805{col 64}{space 4}-22.57542{col 77}{space 3} 17.51666
+{txt}{space 22} {c |}
+sum10_4of5#c.csh_index {c |}
+{space 20}1  {c |}{col 24}{res}{space 2}-122.8429{col 36}{space 2} 28.75891{col 47}{space 1}   -4.27{col 56}{space 3}0.000{col 64}{space 4}-179.2094{col 77}{space 3}-66.47652
+{txt}{space 22} {c |}
+sum10_5of5#c.csh_index {c |}
+{space 20}1  {c |}{col 24}{res}{space 2} 33.08443{col 36}{space 2} 28.29422{col 47}{space 1}    1.17{col 56}{space 3}0.242{col 64}{space 4}-22.37122{col 77}{space 3} 88.54009
+{txt}{space 22} {c |}
+{space 19}nem {c |}
+{space 18}fiú  {c |}{col 24}{res}{space 2}-15.63253{col 36}{space 2} 1.879156{col 47}{space 1}   -8.32{col 56}{space 3}0.000{col 64}{space 4}-19.31561{col 77}{space 3}-11.94945
+{txt}{space 17}_cons {c |}{col 24}{res}{space 2} 1656.424{col 36}{space 2}  3.95055{col 47}{space 1}  419.29{col 56}{space 3}0.000{col 64}{space 4} 1648.682{col 77}{space 3} 1664.167
+{txt}{hline 23}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+               sigma_u {c |} {res} 48.269258
+               {txt}sigma_e {c |} {res} 133.58741
+                   {txt}rho {c |} {res} .11548261{txt}   (fraction of variance due to u_i)
+{hline 23}{c BT}{hline 64}
+{stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_re_10szint.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_re_10szint.tex}
+{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_re_10szint.txt""':seeout}
+(44123 observations deleted)
+(4101 observations deleted)
+{res}
+{txt}Random-effects GLS regression                   Number of obs      = {res}    35517
+{txt}Group variable: {res}omid10                          {txt}Number of groups   = {res}      618
+
+{txt}R-sq:  within  = {res}0.0589                         {txt}Obs per group: min = {res}        8
+{txt}       between = {res}0.8258                                        {txt}avg = {res}     57.5
+{txt}       overall = {res}0.2935                                        {txt}max = {res}      262
+
+                                                {txt}Wald chi2({res}12{txt})      = {res}  1438.08
+{txt}corr(u_i, X)   = {res}0{txt} (assumed)                    Prob > chi2        =    {res}0.0000
+
+{txt}{ralign 88:(Std. Err. adjusted for {res:618} clusters in omid10)}
+{hline 23}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 24}{c |}{col 36}    Robust
+{col 1}             o_zpsc_10{col 24}{c |}      Coef.{col 36}   Std. Err.{col 48}      z{col 56}   P>|z|{col 64}     [95% Con{col 77}f. Interval]
+{hline 23}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 12}sum10_1of5 {c |}{col 24}{res}{space 2} .9609731{col 36}{space 2} 2.391608{col 47}{space 1}    0.40{col 56}{space 3}0.688{col 64}{space 4}-3.726493{col 77}{space 3} 5.648439
+{txt}{space 12}sum10_2of5 {c |}{col 24}{res}{space 2}  1.50368{col 36}{space 2} 4.474904{col 47}{space 1}    0.34{col 56}{space 3}0.737{col 64}{space 4} -7.26697{col 77}{space 3} 10.27433
+{txt}{space 12}sum10_3of5 {c |}{col 24}{res}{space 2} 6.898586{col 36}{space 2} 8.475797{col 47}{space 1}    0.81{col 56}{space 3}0.416{col 64}{space 4}-9.713671{col 77}{space 3} 23.51084
+{txt}{space 12}sum10_4of5 {c |}{col 24}{res}{space 2} 35.20901{col 36}{space 2} 17.62956{col 47}{space 1}    2.00{col 56}{space 3}0.046{col 64}{space 4} .6557121{col 77}{space 3} 69.76231
+{txt}{space 12}sum10_5of5 {c |}{col 24}{res}{space 2}-50.46906{col 36}{space 2} 23.74613{col 47}{space 1}   -2.13{col 56}{space 3}0.034{col 64}{space 4}-97.01062{col 77}{space 3}-3.927494
+{txt}{space 13}csh_index {c |}{col 24}{res}{space 2} 58.01346{col 36}{space 2} 1.730795{col 47}{space 1}   33.52{col 56}{space 3}0.000{col 64}{space 4} 54.62117{col 77}{space 3} 61.40576
+{txt}{space 22} {c |}
+sum10_1of5#c.csh_index {c |}
+{space 20}1  {c |}{col 24}{res}{space 2} 3.601227{col 36}{space 2} 2.437503{col 47}{space 1}    1.48{col 56}{space 3}0.140{col 64}{space 4}-1.176191{col 77}{space 3} 8.378644
+{txt}{space 22} {c |}
+sum10_2of5#c.csh_index {c |}
+{space 20}1  {c |}{col 24}{res}{space 2} 1.422035{col 36}{space 2} 5.387795{col 47}{space 1}    0.26{col 56}{space 3}0.792{col 64}{space 4}-9.137849{col 77}{space 3} 11.98192
+{txt}{space 22} {c |}
+sum10_3of5#c.csh_index {c |}
+{space 20}1  {c |}{col 24}{res}{space 2} 21.67856{col 36}{space 2} 6.681058{col 47}{space 1}    3.24{col 56}{space 3}0.001{col 64}{space 4} 8.583925{col 77}{space 3} 34.77319
+{txt}{space 22} {c |}
+sum10_4of5#c.csh_index {c |}
+{space 20}1  {c |}{col 24}{res}{space 2} 3.176478{col 36}{space 2} 17.00116{col 47}{space 1}    0.19{col 56}{space 3}0.852{col 64}{space 4}-30.14519{col 77}{space 3} 36.49815
+{txt}{space 22} {c |}
+sum10_5of5#c.csh_index {c |}
+{space 20}1  {c |}{col 24}{res}{space 2} 32.88431{col 36}{space 2}  28.1965{col 47}{space 1}    1.17{col 56}{space 3}0.244{col 64}{space 4} -22.3798{col 77}{space 3} 88.14843
+{txt}{space 22} {c |}
+{space 19}nem {c |}
+{space 18}fiú  {c |}{col 24}{res}{space 2}-15.68933{col 36}{space 2} 1.879297{col 47}{space 1}   -8.35{col 56}{space 3}0.000{col 64}{space 4}-19.37269{col 77}{space 3}-12.00598
+{txt}{space 17}_cons {c |}{col 24}{res}{space 2} 1652.363{col 36}{space 2} 3.908461{col 47}{space 1}  422.77{col 56}{space 3}0.000{col 64}{space 4} 1644.703{col 77}{space 3} 1660.023
+{txt}{hline 23}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+               sigma_u {c |} {res} 48.201281
+               {txt}sigma_e {c |} {res} 133.63372
+                   {txt}rho {c |} {res} .11512438{txt}   (fraction of variance due to u_i)
+{hline 23}{c BT}{hline 64}
+{stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_re_10szint.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_re_10szint.tex}
+{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_re_10szint.txt""':seeout}
+(44123 observations deleted)
+(4101 observations deleted)
+{res}
+{txt}Random-effects GLS regression                   Number of obs      = {res}    35517
+{txt}Group variable: {res}omid10                          {txt}Number of groups   = {res}      618
+
+{txt}R-sq:  within  = {res}0.0594                         {txt}Obs per group: min = {res}        8
+{txt}       between = {res}0.8245                                        {txt}avg = {res}     57.5
+{txt}       overall = {res}0.2938                                        {txt}max = {res}      262
+
+                                                {txt}Wald chi2({res}12{txt})      = {res}  1660.75
+{txt}corr(u_i, X)   = {res}0{txt} (assumed)                    Prob > chi2        =    {res}0.0000
+
+{txt}{ralign 88:(Std. Err. adjusted for {res:618} clusters in omid10)}
+{hline 23}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 24}{c |}{col 36}    Robust
+{col 1}             o_zpsc_10{col 24}{c |}      Coef.{col 36}   Std. Err.{col 48}      z{col 56}   P>|z|{col 64}     [95% Con{col 77}f. Interval]
+{hline 23}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 12}sum10_1of5 {c |}{col 24}{res}{space 2}-10.39966{col 36}{space 2}  2.24509{col 47}{space 1}   -4.63{col 56}{space 3}0.000{col 64}{space 4}-14.79996{col 77}{space 3}-5.999369
+{txt}{space 12}sum10_2of5 {c |}{col 24}{res}{space 2}-10.52266{col 36}{space 2} 3.832333{col 47}{space 1}   -2.75{col 56}{space 3}0.006{col 64}{space 4} -18.0339{col 77}{space 3}-3.011427
+{txt}{space 12}sum10_3of5 {c |}{col 24}{res}{space 2}-30.73512{col 36}{space 2} 9.312907{col 47}{space 1}   -3.30{col 56}{space 3}0.001{col 64}{space 4}-48.98809{col 77}{space 3}-12.48216
+{txt}{space 12}sum10_4of5 {c |}{col 24}{res}{space 2}-40.79139{col 36}{space 2} 23.22955{col 47}{space 1}   -1.76{col 56}{space 3}0.079{col 64}{space 4}-86.32047{col 77}{space 3} 4.737699
+{txt}{space 12}sum10_5of5 {c |}{col 24}{res}{space 2}-55.61512{col 36}{space 2} 23.57203{col 47}{space 1}   -2.36{col 56}{space 3}0.018{col 64}{space 4}-101.8155{col 77}{space 3} -9.41479
+{txt}{space 13}csh_index {c |}{col 24}{res}{space 2} 57.92468{col 36}{space 2}  1.69433{col 47}{space 1}   34.19{col 56}{space 3}0.000{col 64}{space 4} 54.60386{col 77}{space 3} 61.24551
+{txt}{space 22} {c |}
+sum10_1of5#c.csh_index {c |}
+{space 20}1  {c |}{col 24}{res}{space 2} 3.902508{col 36}{space 2} 2.348411{col 47}{space 1}    1.66{col 56}{space 3}0.097{col 64}{space 4}-.7002922{col 77}{space 3} 8.505308
+{txt}{space 22} {c |}
+sum10_2of5#c.csh_index {c |}
+{space 20}1  {c |}{col 24}{res}{space 2} 1.890447{col 36}{space 2}  4.83238{col 47}{space 1}    0.39{col 56}{space 3}0.696{col 64}{space 4}-7.580844{col 77}{space 3} 11.36174
+{txt}{space 22} {c |}
+sum10_3of5#c.csh_index {c |}
+{space 20}1  {c |}{col 24}{res}{space 2}-13.00612{col 36}{space 2} 11.19269{col 47}{space 1}   -1.16{col 56}{space 3}0.245{col 64}{space 4} -34.9434{col 77}{space 3} 8.931157
+{txt}{space 22} {c |}
+sum10_4of5#c.csh_index {c |}
+{space 20}1  {c |}{col 24}{res}{space 2} 42.83108{col 36}{space 2} 18.27685{col 47}{space 1}    2.34{col 56}{space 3}0.019{col 64}{space 4} 7.009103{col 77}{space 3} 78.65305
+{txt}{space 22} {c |}
+sum10_5of5#c.csh_index {c |}
+{space 20}1  {c |}{col 24}{res}{space 2}  33.0663{col 36}{space 2} 28.32945{col 47}{space 1}    1.17{col 56}{space 3}0.243{col 64}{space 4} -22.4584{col 77}{space 3}   88.591
+{txt}{space 22} {c |}
+{space 19}nem {c |}
+{space 18}fiú  {c |}{col 24}{res}{space 2}-15.61379{col 36}{space 2} 1.879799{col 47}{space 1}   -8.31{col 56}{space 3}0.000{col 64}{space 4}-19.29813{col 77}{space 3}-11.92946
+{txt}{space 17}_cons {c |}{col 24}{res}{space 2} 1656.223{col 36}{space 2} 3.947666{col 47}{space 1}  419.54{col 56}{space 3}0.000{col 64}{space 4} 1648.486{col 77}{space 3} 1663.961
+{txt}{hline 23}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+               sigma_u {c |} {res} 48.114235
+               {txt}sigma_e {c |} {res} 133.59793
+                   {txt}rho {c |} {res} .11481106{txt}   (fraction of variance due to u_i)
+{hline 23}{c BT}{hline 64}
+{stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_re_10szint.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_re_10szint.tex}
+{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_re_10szint.txt""':seeout}
+(44123 observations deleted)
+(4101 observations deleted)
+note: csh_index_8 omitted because of collinearity
+{res}
+{txt}Random-effects GLS regression                   Number of obs      = {res}    36214
+{txt}Group variable: {res}omid10                          {txt}Number of groups   = {res}      618
+
+{txt}R-sq:  within  = {res}0.0619                         {txt}Obs per group: min = {res}       17
+{txt}       between = {res}0.8447                                        {txt}avg = {res}     58.6
+{txt}       overall = {res}0.2744                                        {txt}max = {res}      272
+
+                                                {txt}Wald chi2({res}12{txt})      = {res}  2312.66
+{txt}corr(u_i, X)   = {res}0{txt} (assumed)                    Prob > chi2        =    {res}0.0000
+
+{txt}{ralign 90:(Std. Err. adjusted for {res:618} clusters in omid10)}
+{hline 25}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 26}{c |}{col 38}    Robust
+{col 1}                o_zpsc_8{col 26}{c |}      Coef.{col 38}   Std. Err.{col 50}      z{col 58}   P>|z|{col 66}     [95% Con{col 79}f. Interval]
+{hline 25}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 13}csh_index_8 {c |}{col 26}{res}{space 2} 57.69895{col 38}{space 2} 1.503123{col 49}{space 1}   38.39{col 58}{space 3}0.000{col 66}{space 4} 54.75288{col 79}{space 3} 60.64502
+{txt}{space 14}sum10_1of5 {c |}{col 26}{res}{space 2} 18.03918{col 38}{space 2} 2.669008{col 49}{space 1}    6.76{col 58}{space 3}0.000{col 66}{space 4} 12.80802{col 79}{space 3} 23.27034
+{txt}{space 14}sum10_2of5 {c |}{col 26}{res}{space 2} 51.82296{col 38}{space 2} 4.642247{col 49}{space 1}   11.16{col 58}{space 3}0.000{col 66}{space 4} 42.72433{col 79}{space 3}  60.9216
+{txt}{space 14}sum10_3of5 {c |}{col 26}{res}{space 2} 38.28732{col 38}{space 2} 9.387543{col 49}{space 1}    4.08{col 58}{space 3}0.000{col 66}{space 4} 19.88807{col 79}{space 3} 56.68656
+{txt}{space 14}sum10_4of5 {c |}{col 26}{res}{space 2} 91.39568{col 38}{space 2} 20.64216{col 49}{space 1}    4.43{col 58}{space 3}0.000{col 66}{space 4} 50.93779{col 79}{space 3} 131.8536
+{txt}{space 14}sum10_5of5 {c |}{col 26}{res}{space 2} 52.84121{col 38}{space 2}  28.0315{col 49}{space 1}    1.89{col 58}{space 3}0.059{col 66}{space 4}-2.099517{col 79}{space 3} 107.7819
+{txt}{space 13}csh_index_8 {c |}{col 26}{res}{space 2}        0{col 38}{txt}  (omitted)
+{space 24} {c |}
+sum10_1of5#c.csh_index_8 {c |}
+{space 22}1  {c |}{col 26}{res}{space 2}-2.834305{col 38}{space 2} 2.798247{col 49}{space 1}   -1.01{col 58}{space 3}0.311{col 66}{space 4}-8.318768{col 79}{space 3} 2.650159
+{txt}{space 24} {c |}
+sum10_2of5#c.csh_index_8 {c |}
+{space 22}1  {c |}{col 26}{res}{space 2} -16.4101{col 38}{space 2} 4.381096{col 49}{space 1}   -3.75{col 58}{space 3}0.000{col 66}{space 4}-24.99689{col 79}{space 3}-7.823313
+{txt}{space 24} {c |}
+sum10_3of5#c.csh_index_8 {c |}
+{space 22}1  {c |}{col 26}{res}{space 2} 15.74064{col 38}{space 2} 8.617769{col 49}{space 1}    1.83{col 58}{space 3}0.068{col 66}{space 4}-1.149878{col 79}{space 3} 32.63115
+{txt}{space 24} {c |}
+sum10_4of5#c.csh_index_8 {c |}
+{space 22}1  {c |}{col 26}{res}{space 2}-10.20769{col 38}{space 2} 14.96318{col 49}{space 1}   -0.68{col 58}{space 3}0.495{col 66}{space 4}-39.53499{col 79}{space 3} 19.11961
+{txt}{space 24} {c |}
+sum10_5of5#c.csh_index_8 {c |}
+{space 22}1  {c |}{col 26}{res}{space 2}-7.265892{col 38}{space 2} 50.38452{col 49}{space 1}   -0.14{col 58}{space 3}0.885{col 66}{space 4}-106.0177{col 79}{space 3} 91.48595
+{txt}{space 24} {c |}
+{space 21}nem {c |}
+{space 20}fiú  {c |}{col 26}{res}{space 2}-41.80614{col 38}{space 2} 1.764018{col 49}{space 1}  -23.70{col 58}{space 3}0.000{col 66}{space 4}-45.26355{col 79}{space 3}-38.34872
+{txt}{space 19}_cons {c |}{col 26}{res}{space 2} 1617.782{col 38}{space 2} 3.452004{col 49}{space 1}  468.65{col 58}{space 3}0.000{col 66}{space 4} 1611.016{col 79}{space 3} 1624.548
+{txt}{hline 25}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+                 sigma_u {c |} {res} 37.570188
+                 {txt}sigma_e {c |} {res} 136.73224
+                     {txt}rho {c |} {res}  .0701996{txt}   (fraction of variance due to u_i)
+{hline 25}{c BT}{hline 64}
+{stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_re_8szint.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_re_8szint.tex}
+{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_re_8szint.txt""':seeout}
+(44123 observations deleted)
+(4101 observations deleted)
+note: csh_index_8 omitted because of collinearity
+{res}
+{txt}Random-effects GLS regression                   Number of obs      = {res}    36214
+{txt}Group variable: {res}omid10                          {txt}Number of groups   = {res}      618
+
+{txt}R-sq:  within  = {res}0.0572                         {txt}Obs per group: min = {res}       17
+{txt}       between = {res}0.8411                                        {txt}avg = {res}     58.6
+{txt}       overall = {res}0.2676                                        {txt}max = {res}      272
+
+                                                {txt}Wald chi2({res}12{txt})      = {res}  2279.88
+{txt}corr(u_i, X)   = {res}0{txt} (assumed)                    Prob > chi2        =    {res}0.0000
+
+{txt}{ralign 90:(Std. Err. adjusted for {res:618} clusters in omid10)}
+{hline 25}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 26}{c |}{col 38}    Robust
+{col 1}                o_zpsc_8{col 26}{c |}      Coef.{col 38}   Std. Err.{col 50}      z{col 58}   P>|z|{col 66}     [95% Con{col 79}f. Interval]
+{hline 25}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 13}csh_index_8 {c |}{col 26}{res}{space 2} 57.36225{col 38}{space 2} 1.426456{col 49}{space 1}   40.21{col 58}{space 3}0.000{col 66}{space 4} 54.56645{col 79}{space 3} 60.15805
+{txt}{space 14}sum10_1of5 {c |}{col 26}{res}{space 2} 7.602923{col 38}{space 2} 2.609157{col 49}{space 1}    2.91{col 58}{space 3}0.004{col 66}{space 4}  2.48907{col 79}{space 3} 12.71678
+{txt}{space 14}sum10_2of5 {c |}{col 26}{res}{space 2} 29.03276{col 38}{space 2} 4.448621{col 49}{space 1}    6.53{col 58}{space 3}0.000{col 66}{space 4} 20.31362{col 79}{space 3} 37.75189
+{txt}{space 14}sum10_3of5 {c |}{col 26}{res}{space 2}-21.39332{col 38}{space 2} 14.30426{col 49}{space 1}   -1.50{col 58}{space 3}0.135{col 66}{space 4}-49.42915{col 79}{space 3} 6.642515
+{txt}{space 14}sum10_4of5 {c |}{col 26}{res}{space 2} 15.91974{col 38}{space 2}  19.6311{col 49}{space 1}    0.81{col 58}{space 3}0.417{col 66}{space 4}-22.55651{col 79}{space 3} 54.39599
+{txt}{space 14}sum10_5of5 {c |}{col 26}{res}{space 2} 48.37971{col 38}{space 2} 28.30544{col 49}{space 1}    1.71{col 58}{space 3}0.087{col 66}{space 4} -7.09794{col 79}{space 3} 103.8574
+{txt}{space 13}csh_index_8 {c |}{col 26}{res}{space 2}        0{col 38}{txt}  (omitted)
+{space 24} {c |}
+sum10_1of5#c.csh_index_8 {c |}
+{space 22}1  {c |}{col 26}{res}{space 2}-3.471525{col 38}{space 2} 2.728369{col 49}{space 1}   -1.27{col 58}{space 3}0.203{col 66}{space 4} -8.81903{col 79}{space 3} 1.875979
+{txt}{space 24} {c |}
+sum10_2of5#c.csh_index_8 {c |}
+{space 22}1  {c |}{col 26}{res}{space 2} -8.32189{col 38}{space 2} 4.889522{col 49}{space 1}   -1.70{col 58}{space 3}0.089{col 66}{space 4}-17.90518{col 79}{space 3} 1.261397
+{txt}{space 24} {c |}
+sum10_3of5#c.csh_index_8 {c |}
+{space 22}1  {c |}{col 26}{res}{space 2}-33.81225{col 38}{space 2}  14.6366{col 49}{space 1}   -2.31{col 58}{space 3}0.021{col 66}{space 4}-62.49946{col 79}{space 3}-5.125032
+{txt}{space 24} {c |}
+sum10_4of5#c.csh_index_8 {c |}
+{space 22}1  {c |}{col 26}{res}{space 2}-17.14889{col 38}{space 2} 19.23344{col 49}{space 1}   -0.89{col 58}{space 3}0.373{col 66}{space 4}-54.84575{col 79}{space 3} 20.54797
+{txt}{space 24} {c |}
+sum10_5of5#c.csh_index_8 {c |}
+{space 22}1  {c |}{col 26}{res}{space 2}-6.894773{col 38}{space 2} 50.73808{col 49}{space 1}   -0.14{col 58}{space 3}0.892{col 66}{space 4}-106.3396{col 79}{space 3} 92.55003
+{txt}{space 24} {c |}
+{space 21}nem {c |}
+{space 20}fiú  {c |}{col 26}{res}{space 2}-41.68909{col 38}{space 2} 1.765697{col 49}{space 1}  -23.61{col 58}{space 3}0.000{col 66}{space 4}-45.14979{col 79}{space 3}-38.22838
+{txt}{space 19}_cons {c |}{col 26}{res}{space 2} 1621.414{col 38}{space 2} 3.491542{col 49}{space 1}  464.38{col 58}{space 3}0.000{col 66}{space 4}  1614.57{col 79}{space 3} 1628.257
+{txt}{hline 25}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+                 sigma_u {c |} {res} 38.256949
+                 {txt}sigma_e {c |} {res} 137.07863
+                     {txt}rho {c |} {res} .07226146{txt}   (fraction of variance due to u_i)
+{hline 25}{c BT}{hline 64}
+{stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_re_8szint.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_re_8szint.tex}
+{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_re_8szint.txt""':seeout}
+(44123 observations deleted)
+(4101 observations deleted)
+note: csh_index_8 omitted because of collinearity
+{res}
+{txt}Random-effects GLS regression                   Number of obs      = {res}    36214
+{txt}Group variable: {res}omid10                          {txt}Number of groups   = {res}      618
+
+{txt}R-sq:  within  = {res}0.0626                         {txt}Obs per group: min = {res}       17
+{txt}       between = {res}0.8430                                        {txt}avg = {res}     58.6
+{txt}       overall = {res}0.2780                                        {txt}max = {res}      272
+
+                                                {txt}Wald chi2({res}12{txt})      = {res}  2378.07
+{txt}corr(u_i, X)   = {res}0{txt} (assumed)                    Prob > chi2        =    {res}0.0000
+
+{txt}{ralign 90:(Std. Err. adjusted for {res:618} clusters in omid10)}
+{hline 25}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 26}{c |}{col 38}    Robust
+{col 1}                o_zpsc_8{col 26}{c |}      Coef.{col 38}   Std. Err.{col 50}      z{col 58}   P>|z|{col 66}     [95% Con{col 79}f. Interval]
+{hline 25}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 13}csh_index_8 {c |}{col 26}{res}{space 2}  57.0026{col 38}{space 2} 1.493623{col 49}{space 1}   38.16{col 58}{space 3}0.000{col 66}{space 4} 54.07515{col 79}{space 3} 59.93004
+{txt}{space 14}sum10_1of5 {c |}{col 26}{res}{space 2} 20.70291{col 38}{space 2} 2.535766{col 49}{space 1}    8.16{col 58}{space 3}0.000{col 66}{space 4}  15.7329{col 79}{space 3} 25.67292
+{txt}{space 14}sum10_2of5 {c |}{col 26}{res}{space 2} 52.48582{col 38}{space 2} 4.117709{col 49}{space 1}   12.75{col 58}{space 3}0.000{col 66}{space 4} 44.41526{col 79}{space 3} 60.55638
+{txt}{space 14}sum10_3of5 {c |}{col 26}{res}{space 2} 51.81704{col 38}{space 2} 11.01749{col 49}{space 1}    4.70{col 58}{space 3}0.000{col 66}{space 4} 30.22316{col 79}{space 3} 73.41091
+{txt}{space 14}sum10_4of5 {c |}{col 26}{res}{space 2} 33.74052{col 38}{space 2} 22.28136{col 49}{space 1}    1.51{col 58}{space 3}0.130{col 66}{space 4}-9.930132{col 79}{space 3} 77.41118
+{txt}{space 14}sum10_5of5 {c |}{col 26}{res}{space 2} 53.66482{col 38}{space 2}  28.0857{col 49}{space 1}    1.91{col 58}{space 3}0.056{col 66}{space 4}-1.382135{col 79}{space 3} 108.7118
+{txt}{space 13}csh_index_8 {c |}{col 26}{res}{space 2}        0{col 38}{txt}  (omitted)
+{space 24} {c |}
+sum10_1of5#c.csh_index_8 {c |}
+{space 22}1  {c |}{col 26}{res}{space 2}-1.368982{col 38}{space 2} 2.653695{col 49}{space 1}   -0.52{col 58}{space 3}0.606{col 66}{space 4}-6.570129{col 79}{space 3} 3.832165
+{txt}{space 24} {c |}
+sum10_2of5#c.csh_index_8 {c |}
+{space 22}1  {c |}{col 26}{res}{space 2}-14.68351{col 38}{space 2} 4.115309{col 49}{space 1}   -3.57{col 58}{space 3}0.000{col 66}{space 4}-22.74937{col 79}{space 3}-6.617652
+{txt}{space 24} {c |}
+sum10_3of5#c.csh_index_8 {c |}
+{space 22}1  {c |}{col 26}{res}{space 2} 4.360847{col 38}{space 2} 9.076293{col 49}{space 1}    0.48{col 58}{space 3}0.631{col 66}{space 4}-13.42836{col 79}{space 3} 22.15006
+{txt}{space 24} {c |}
+sum10_4of5#c.csh_index_8 {c |}
+{space 22}1  {c |}{col 26}{res}{space 2}  25.3592{col 38}{space 2} 16.96537{col 49}{space 1}    1.49{col 58}{space 3}0.135{col 66}{space 4}-7.892311{col 79}{space 3} 58.61072
+{txt}{space 24} {c |}
+sum10_5of5#c.csh_index_8 {c |}
+{space 22}1  {c |}{col 26}{res}{space 2}-5.390854{col 38}{space 2} 50.63704{col 49}{space 1}   -0.11{col 58}{space 3}0.915{col 66}{space 4}-104.6376{col 79}{space 3} 93.85592
+{txt}{space 24} {c |}
+{space 21}nem {c |}
+{space 20}fiú  {c |}{col 26}{res}{space 2}-41.82437{col 38}{space 2} 1.766398{col 49}{space 1}  -23.68{col 58}{space 3}0.000{col 66}{space 4}-45.28645{col 79}{space 3}-38.36229
+{txt}{space 19}_cons {c |}{col 26}{res}{space 2} 1616.119{col 38}{space 2} 3.446006{col 49}{space 1}  468.98{col 58}{space 3}0.000{col 66}{space 4} 1609.365{col 79}{space 3} 1622.873
+{txt}{hline 25}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+                 sigma_u {c |} {res} 37.652588
+                 {txt}sigma_e {c |} {res} 136.68366
+                     {txt}rho {c |} {res} .07053271{txt}   (fraction of variance due to u_i)
+{hline 25}{c BT}{hline 64}
+{stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_re_8szint.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_re_8szint.tex}
+{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_re_8szint.txt""':seeout}
+(44123 observations deleted)
+(4101 observations deleted)
+note: csh_index_8 omitted because of collinearity
+{res}
+{txt}Random-effects GLS regression                   Number of obs      = {res}    36214
+{txt}Group variable: {res}omid10                          {txt}Number of groups   = {res}      618
+
+{txt}R-sq:  within  = {res}0.0569                         {txt}Obs per group: min = {res}       17
+{txt}       between = {res}0.8425                                        {txt}avg = {res}     58.6
+{txt}       overall = {res}0.2679                                        {txt}max = {res}      272
+
+                                                {txt}Wald chi2({res}12{txt})      = {res}  2270.70
+{txt}corr(u_i, X)   = {res}0{txt} (assumed)                    Prob > chi2        =    {res}0.0000
+
+{txt}{ralign 90:(Std. Err. adjusted for {res:618} clusters in omid10)}
+{hline 25}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 26}{c |}{col 38}    Robust
+{col 1}                o_zpsc_8{col 26}{c |}      Coef.{col 38}   Std. Err.{col 50}      z{col 58}   P>|z|{col 66}     [95% Con{col 79}f. Interval]
+{hline 25}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 13}csh_index_8 {c |}{col 26}{res}{space 2}  57.9563{col 38}{space 2} 1.471223{col 49}{space 1}   39.39{col 58}{space 3}0.000{col 66}{space 4} 55.07276{col 79}{space 3} 60.83984
+{txt}{space 14}sum10_1of5 {c |}{col 26}{res}{space 2} 5.821019{col 38}{space 2} 2.451567{col 49}{space 1}    2.37{col 58}{space 3}0.018{col 66}{space 4} 1.016036{col 79}{space 3}   10.626
+{txt}{space 14}sum10_2of5 {c |}{col 26}{res}{space 2} 24.63849{col 38}{space 2}  4.23172{col 49}{space 1}    5.82{col 58}{space 3}0.000{col 66}{space 4} 16.34448{col 79}{space 3} 32.93251
+{txt}{space 14}sum10_3of5 {c |}{col 26}{res}{space 2}-10.91133{col 38}{space 2} 12.21573{col 49}{space 1}   -0.89{col 58}{space 3}0.372{col 66}{space 4}-34.85372{col 79}{space 3} 13.03106
+{txt}{space 14}sum10_4of5 {c |}{col 26}{res}{space 2} 67.08675{col 38}{space 2} 24.67936{col 49}{space 1}    2.72{col 58}{space 3}0.007{col 66}{space 4}  18.7161{col 79}{space 3} 115.4574
+{txt}{space 14}sum10_5of5 {c |}{col 26}{res}{space 2} 47.85726{col 38}{space 2} 28.27558{col 49}{space 1}    1.69{col 58}{space 3}0.091{col 66}{space 4}-7.561858{col 79}{space 3} 103.2764
+{txt}{space 13}csh_index_8 {c |}{col 26}{res}{space 2}        0{col 38}{txt}  (omitted)
+{space 24} {c |}
+sum10_1of5#c.csh_index_8 {c |}
+{space 22}1  {c |}{col 26}{res}{space 2}-3.682899{col 38}{space 2} 2.469569{col 49}{space 1}   -1.49{col 58}{space 3}0.136{col 66}{space 4}-8.523165{col 79}{space 3} 1.157367
+{txt}{space 24} {c |}
+sum10_2of5#c.csh_index_8 {c |}
+{space 22}1  {c |}{col 26}{res}{space 2}-11.76426{col 38}{space 2}  4.62089{col 49}{space 1}   -2.55{col 58}{space 3}0.011{col 66}{space 4}-20.82104{col 79}{space 3}-2.707482
+{txt}{space 24} {c |}
+sum10_3of5#c.csh_index_8 {c |}
+{space 22}1  {c |}{col 26}{res}{space 2}-25.99295{col 38}{space 2} 11.99006{col 49}{space 1}   -2.17{col 58}{space 3}0.030{col 66}{space 4}-49.49304{col 79}{space 3}-2.492863
+{txt}{space 24} {c |}
+sum10_4of5#c.csh_index_8 {c |}
+{space 22}1  {c |}{col 26}{res}{space 2}-90.98963{col 38}{space 2} 25.95992{col 49}{space 1}   -3.51{col 58}{space 3}0.000{col 66}{space 4}-141.8701{col 79}{space 3}-40.10912
+{txt}{space 24} {c |}
+sum10_5of5#c.csh_index_8 {c |}
+{space 22}1  {c |}{col 26}{res}{space 2} -7.95268{col 38}{space 2} 50.76268{col 49}{space 1}   -0.16{col 58}{space 3}0.876{col 66}{space 4}-107.4457{col 79}{space 3} 91.54034
+{txt}{space 24} {c |}
+{space 21}nem {c |}
+{space 20}fiú  {c |}{col 26}{res}{space 2}-41.69163{col 38}{space 2} 1.764987{col 49}{space 1}  -23.62{col 58}{space 3}0.000{col 66}{space 4}-45.15094{col 79}{space 3}-38.23232
+{txt}{space 19}_cons {c |}{col 26}{res}{space 2} 1621.497{col 38}{space 2} 3.503867{col 49}{space 1}  462.77{col 58}{space 3}0.000{col 66}{space 4}  1614.63{col 79}{space 3} 1628.365
+{txt}{hline 25}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+                 sigma_u {c |} {res} 38.293942
+                 {txt}sigma_e {c |} {res} 137.09944
+                     {txt}rho {c |} {res} .07237078{txt}   (fraction of variance due to u_i)
+{hline 25}{c BT}{hline 64}
+{stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_re_8szint.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_re_8szint.tex}
+{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_re_8szint.txt""':seeout}
+(44123 observations deleted)
+(4101 observations deleted)
+note: csh_index_8 omitted because of collinearity
+{res}
+{txt}Random-effects GLS regression                   Number of obs      = {res}    36214
+{txt}Group variable: {res}omid10                          {txt}Number of groups   = {res}      618
+
+{txt}R-sq:  within  = {res}0.0624                         {txt}Obs per group: min = {res}       17
+{txt}       between = {res}0.8423                                        {txt}avg = {res}     58.6
+{txt}       overall = {res}0.2771                                        {txt}max = {res}      272
+
+                                                {txt}Wald chi2({res}12{txt})      = {res}  2389.34
+{txt}corr(u_i, X)   = {res}0{txt} (assumed)                    Prob > chi2        =    {res}0.0000
+
+{txt}{ralign 90:(Std. Err. adjusted for {res:618} clusters in omid10)}
+{hline 25}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 26}{c |}{col 38}    Robust
+{col 1}                o_zpsc_8{col 26}{c |}      Coef.{col 38}   Std. Err.{col 50}      z{col 58}   P>|z|{col 66}     [95% Con{col 79}f. Interval]
+{hline 25}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 13}csh_index_8 {c |}{col 26}{res}{space 2} 57.25521{col 38}{space 2} 1.481121{col 49}{space 1}   38.66{col 58}{space 3}0.000{col 66}{space 4} 54.35227{col 79}{space 3} 60.15815
+{txt}{space 14}sum10_1of5 {c |}{col 26}{res}{space 2} 20.64083{col 38}{space 2} 2.683414{col 49}{space 1}    7.69{col 58}{space 3}0.000{col 66}{space 4} 15.38144{col 79}{space 3} 25.90023
+{txt}{space 14}sum10_2of5 {c |}{col 26}{res}{space 2} 53.22393{col 38}{space 2} 4.539758{col 49}{space 1}   11.72{col 58}{space 3}0.000{col 66}{space 4} 44.32617{col 79}{space 3} 62.12169
+{txt}{space 14}sum10_3of5 {c |}{col 26}{res}{space 2} 57.90159{col 38}{space 2} 9.446772{col 49}{space 1}    6.13{col 58}{space 3}0.000{col 66}{space 4} 39.38626{col 79}{space 3} 76.41692
+{txt}{space 14}sum10_4of5 {c |}{col 26}{res}{space 2}-1.584639{col 38}{space 2} 23.49225{col 49}{space 1}   -0.07{col 58}{space 3}0.946{col 66}{space 4} -47.6286{col 79}{space 3} 44.45932
+{txt}{space 14}sum10_5of5 {c |}{col 26}{res}{space 2} 54.47398{col 38}{space 2} 27.84698{col 49}{space 1}    1.96{col 58}{space 3}0.050{col 66}{space 4}-.1050903{col 79}{space 3} 109.0531
+{txt}{space 13}csh_index_8 {c |}{col 26}{res}{space 2}        0{col 38}{txt}  (omitted)
+{space 24} {c |}
+sum10_1of5#c.csh_index_8 {c |}
+{space 22}1  {c |}{col 26}{res}{space 2} -2.64375{col 38}{space 2} 2.699501{col 49}{space 1}   -0.98{col 58}{space 3}0.327{col 66}{space 4}-7.934676{col 79}{space 3} 2.647175
+{txt}{space 24} {c |}
+sum10_2of5#c.csh_index_8 {c |}
+{space 22}1  {c |}{col 26}{res}{space 2}-17.40118{col 38}{space 2} 4.549384{col 49}{space 1}   -3.82{col 58}{space 3}0.000{col 66}{space 4}-26.31781{col 79}{space 3}-8.484555
+{txt}{space 24} {c |}
+sum10_3of5#c.csh_index_8 {c |}
+{space 22}1  {c |}{col 26}{res}{space 2}-.9733188{col 38}{space 2} 7.838399{col 49}{space 1}   -0.12{col 58}{space 3}0.901{col 66}{space 4} -16.3363{col 79}{space 3} 14.38966
+{txt}{space 24} {c |}
+sum10_4of5#c.csh_index_8 {c |}
+{space 22}1  {c |}{col 26}{res}{space 2} 56.69079{col 38}{space 2} 14.64347{col 49}{space 1}    3.87{col 58}{space 3}0.000{col 66}{space 4} 27.99012{col 79}{space 3} 85.39147
+{txt}{space 24} {c |}
+sum10_5of5#c.csh_index_8 {c |}
+{space 22}1  {c |}{col 26}{res}{space 2}-6.472366{col 38}{space 2} 50.27872{col 49}{space 1}   -0.13{col 58}{space 3}0.898{col 66}{space 4}-105.0169{col 79}{space 3} 92.07212
+{txt}{space 24} {c |}
+{space 21}nem {c |}
+{space 20}fiú  {c |}{col 26}{res}{space 2}-41.66637{col 38}{space 2} 1.766712{col 49}{space 1}  -23.58{col 58}{space 3}0.000{col 66}{space 4}-45.12906{col 79}{space 3}-38.20368
+{txt}{space 19}_cons {c |}{col 26}{res}{space 2} 1617.036{col 38}{space 2} 3.441911{col 49}{space 1}  469.81{col 58}{space 3}0.000{col 66}{space 4}  1610.29{col 79}{space 3} 1623.782
+{txt}{hline 25}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+                 sigma_u {c |} {res}  37.71038
+                 {txt}sigma_e {c |} {res} 136.69961
+                     {txt}rho {c |} {res} .07071873{txt}   (fraction of variance due to u_i)
+{hline 25}{c BT}{hline 64}
+{stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_re_8szint.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_re_8szint.tex}
+{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_re_8szint.txt""':seeout}
+(44123 observations deleted)
+(4101 observations deleted)
+note: csh_index_8 omitted because of collinearity
+{res}
+{txt}Random-effects GLS regression                   Number of obs      = {res}    36214
+{txt}Group variable: {res}omid10                          {txt}Number of groups   = {res}      618
+
+{txt}R-sq:  within  = {res}0.0570                         {txt}Obs per group: min = {res}       17
+{txt}       between = {res}0.8387                                        {txt}avg = {res}     58.6
+{txt}       overall = {res}0.2671                                        {txt}max = {res}      272
+
+                                                {txt}Wald chi2({res}12{txt})      = {res}  2231.19
+{txt}corr(u_i, X)   = {res}0{txt} (assumed)                    Prob > chi2        =    {res}0.0000
+
+{txt}{ralign 90:(Std. Err. adjusted for {res:618} clusters in omid10)}
+{hline 25}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 26}{c |}{col 38}    Robust
+{col 1}                o_zpsc_8{col 26}{c |}      Coef.{col 38}   Std. Err.{col 50}      z{col 58}   P>|z|{col 66}     [95% Con{col 79}f. Interval]
+{hline 25}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 13}csh_index_8 {c |}{col 26}{res}{space 2} 56.13272{col 38}{space 2} 1.426975{col 49}{space 1}   39.34{col 58}{space 3}0.000{col 66}{space 4}  53.3359{col 79}{space 3} 58.92954
+{txt}{space 14}sum10_1of5 {c |}{col 26}{res}{space 2} 3.442617{col 38}{space 2} 2.365752{col 49}{space 1}    1.46{col 58}{space 3}0.146{col 66}{space 4}-1.194172{col 79}{space 3} 8.079406
+{txt}{space 14}sum10_2of5 {c |}{col 26}{res}{space 2} 29.04669{col 38}{space 2} 4.579849{col 49}{space 1}    6.34{col 58}{space 3}0.000{col 66}{space 4} 20.07035{col 79}{space 3} 38.02303
+{txt}{space 14}sum10_3of5 {c |}{col 26}{res}{space 2}-10.53096{col 38}{space 2}  11.9013{col 49}{space 1}   -0.88{col 58}{space 3}0.376{col 66}{space 4}-33.85707{col 79}{space 3} 12.79515
+{txt}{space 14}sum10_4of5 {c |}{col 26}{res}{space 2} 41.62476{col 38}{space 2} 10.88958{col 49}{space 1}    3.82{col 58}{space 3}0.000{col 66}{space 4} 20.28158{col 79}{space 3} 62.96795
+{txt}{space 14}sum10_5of5 {c |}{col 26}{res}{space 2} 47.55365{col 38}{space 2}  28.3133{col 49}{space 1}    1.68{col 58}{space 3}0.093{col 66}{space 4}-7.939402{col 79}{space 3} 103.0467
+{txt}{space 13}csh_index_8 {c |}{col 26}{res}{space 2}        0{col 38}{txt}  (omitted)
+{space 24} {c |}
+sum10_1of5#c.csh_index_8 {c |}
+{space 22}1  {c |}{col 26}{res}{space 2} .0676394{col 38}{space 2} 2.414269{col 49}{space 1}    0.03{col 58}{space 3}0.978{col 66}{space 4}-4.664241{col 79}{space 3}  4.79952
+{txt}{space 24} {c |}
+sum10_2of5#c.csh_index_8 {c |}
+{space 22}1  {c |}{col 26}{res}{space 2}-6.020758{col 38}{space 2} 5.086537{col 49}{space 1}   -1.18{col 58}{space 3}0.237{col 66}{space 4}-15.99019{col 79}{space 3} 3.948672
+{txt}{space 24} {c |}
+sum10_3of5#c.csh_index_8 {c |}
+{space 22}1  {c |}{col 26}{res}{space 2}-23.44195{col 38}{space 2} 11.74482{col 49}{space 1}   -2.00{col 58}{space 3}0.046{col 66}{space 4}-46.46136{col 79}{space 3}-.4225312
+{txt}{space 24} {c |}
+sum10_4of5#c.csh_index_8 {c |}
+{space 22}1  {c |}{col 26}{res}{space 2}-46.84507{col 38}{space 2} 38.29316{col 49}{space 1}   -1.22{col 58}{space 3}0.221{col 66}{space 4}-121.8983{col 79}{space 3} 28.20815
+{txt}{space 24} {c |}
+sum10_5of5#c.csh_index_8 {c |}
+{space 22}1  {c |}{col 26}{res}{space 2}-5.998577{col 38}{space 2} 50.76349{col 49}{space 1}   -0.12{col 58}{space 3}0.906{col 66}{space 4}-105.4932{col 79}{space 3} 93.49604
+{txt}{space 24} {c |}
+{space 21}nem {c |}
+{space 20}fiú  {c |}{col 26}{res}{space 2}-41.65439{col 38}{space 2}  1.76626{col 49}{space 1}  -23.58{col 58}{space 3}0.000{col 66}{space 4}-45.11619{col 79}{space 3}-38.19258
+{txt}{space 19}_cons {c |}{col 26}{res}{space 2}  1622.43{col 38}{space 2} 3.503542{col 49}{space 1}  463.08{col 58}{space 3}0.000{col 66}{space 4} 1615.563{col 79}{space 3} 1629.297
+{txt}{hline 25}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+                 sigma_u {c |} {res} 38.785765
+                 {txt}sigma_e {c |} {res} 137.09399
+                     {txt}rho {c |} {res} .07410849{txt}   (fraction of variance due to u_i)
+{hline 25}{c BT}{hline 64}
+{stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_re_8szint.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_re_8szint.tex}
+{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2011-2013_re_8szint.txt""':seeout}
+(note: file E:/szakdoga_data_out/OHtól/final_elemzesi_2011-2013_szintekre.dta not found)
+file E:/szakdoga_data_out/OHtól/final_elemzesi_2011-2013_szintekre.dta saved
+      name:  {res}<unnamed>
+       {txt}log:  {res}C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal\02_analysis_2011-2013_szintekre.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res} 8 Apr 2016, 17:25:54
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}
