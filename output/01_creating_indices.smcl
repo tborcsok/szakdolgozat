@@ -1,80 +1,80 @@
 {smcl}
-{txt}{sf}{ul off}{.-}
+{com}{sf}{ul off}{txt}{.-}
       name:  {res}<unnamed>
        {txt}log:  {res}C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal\01_creating_indices.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res} 8 Apr 2016, 13:39:37
-{txt}r; t=0.00 13:39:37
+ {txt}opened on:  {res} 9 Apr 2016, 14:23:31
+{txt}r; t=0.10 14:23:31
 
 {com}. 
 . //alapbeállítások
 . clear
-{txt}r; t=0.06 13:39:37
+{txt}r; t=0.01 14:23:31
 
 {com}. clear matrix
-{txt}r; t=0.01 13:39:37
+{txt}r; t=0.00 14:23:31
 
 {com}. clear mata
-{txt}r; t=0.00 13:39:37
+{txt}r; t=0.00 14:23:31
 
 {com}. set more off
-{txt}r; t=0.00 13:39:37
+{txt}r; t=0.00 14:23:31
 
 {com}. set varabbrev off
-{txt}r; t=0.00 13:39:37
+{txt}r; t=0.00 14:23:31
 
 {com}. set matsize 11000
-{txt}r; t=0.00 13:39:37
+{txt}r; t=0.00 14:23:31
 
 {com}. set maxvar 32767
 
-{txt}r; t=0.00 13:39:37
+{txt}r; t=0.00 14:23:31
 
 {com}. *set segmentsize 128m
 . 
 . 
 . //makrók definiálása
 . global outtype "as(eps)"  //change bw png and eps
-{txt}r; t=0.00 13:39:37
+{txt}r; t=0.00 14:23:31
 
 {com}. 
 . global szdOHout "E:/szakdoga_data_out/OHtól/"
-{txt}r; t=0.00 13:39:37
+{txt}r; t=0.00 14:23:31
 
 {com}. global szdOHinERTEKELESI "E:/szakdoga_data_out/OHtól/ertekelesi_"
-{txt}r; t=0.00 13:39:37
+{txt}r; t=0.00 14:23:31
 
 {com}. global stataOUT `""C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/"'
-{txt}r; t=0.00 13:39:37
+{txt}r; t=0.00 14:23:31
 
 {com}. 
 . local waves "2008-2010 2009-2011 2010-2012 2011-2013 2012-2014" // kivéve  
-{txt}r; t=0.00 13:39:37
+{txt}r; t=0.00 14:23:31
 
 {com}. local waves2 "2009-2011 2010-2012 2011-2013 2012-2014" // kivéve  
-{txt}r; t=0.00 13:39:37
+{txt}r; t=0.00 14:23:31
 
 {com}. 
 . 
 . local regressants "csh_index i.nem i.ta02801"  //ta02801 - apa iskolai végzettsége; i.isknagy; megye dummynak nem volt értelme; rv_hhh; i.ta02801; 
-{txt}r; t=0.00 13:39:37
+{txt}r; t=0.00 14:23:31
 
 {com}. local rereg ", re"
-{txt}r; t=0.00 13:39:37
+{txt}r; t=0.00 14:23:31
 
 {com}. local fereg ", fe"
-{txt}r; t=0.00 13:39:37
+{txt}r; t=0.00 14:23:31
 
 {com}. 
 . local 1keep keep(o_zpsc_lag csh_index)
-{txt}r; t=0.00 13:39:37
+{txt}r; t=0.00 14:23:31
 
 {com}. local 2keep keep(csh_index)
-{txt}r; t=0.00 13:39:37
+{txt}r; t=0.00 14:23:31
 
 {com}. 
 . global dropnum 30
-{txt}r; t=0.00 13:39:37
+{txt}r; t=0.00 14:23:31
 
 {com}. 
 . foreach w of local waves {c -(}
@@ -118,7 +118,7 @@
 {txt} 17{com}. bysort ${c -(}iskid{c )-}: egen E1 = mean(E1_source)
 {txt} 18{com}. *replace E1 = . if ev == ev_start
 . label variable E1 "E1"
-{txt} 19{com}. outreg2 e_1 using ${c -(}stataOUT{c )-}tables/elso_`w'.tex", replace ctitle(E1) `1keep' addtext(RE, NEM, FE, NEM) tex(fragment pretty)
+{txt} 19{com}. outreg2 e_1 using ${c -(}stataOUT{c )-}tables/elso_`w'.tex", replace ctitle(E1) `1keep' addtext(Fuggo valtozo, szint, RE, NEM, FE, NEM) tex(fragment pretty)
 {txt} 20{com}. 
 . 
 . // B) Fejlödés - gain - modell
@@ -129,7 +129,7 @@
 {txt} 23{com}. bysort ${c -(}iskid{c )-}: egen E2 = mean(E2_source)
 {txt} 24{com}. *replace E2 = . if ev == ev_start
 . label variable E2 "E2"
-{txt} 25{com}. outreg2 e_2 using ${c -(}stataOUT{c )-}tables/elso_`w'.tex", append ctitle(E2) `2keep' addtext(RE, NEM, FE, NEM) tex(fragment pretty)
+{txt} 25{com}. outreg2 e_2 using ${c -(}stataOUT{c )-}tables/elso_`w'.tex", append ctitle(E2) `2keep' addtext(Fuggo valtozo, valtozas, RE, NEM, FE, NEM) tex(fragment pretty)
 {txt} 26{com}. drop E2_source
 {txt} 27{com}. 
 . 
@@ -148,7 +148,7 @@
 {txt} 30{com}. estimates store i_1
 {txt} 31{com}. predict I1, u
 {txt} 32{com}. label variable I1 "I1"
-{txt} 33{com}. outreg2 i_1_temp using ${c -(}stataOUT{c )-}tables/elso_`w'.tex", append ctitle(I1) `1keep' addtext(RE, IGEN, FE, NEM) tex(fragment pretty)
+{txt} 33{com}. outreg2 i_1_temp using ${c -(}stataOUT{c )-}tables/elso_`w'.tex", append ctitle(I1) `1keep' addtext(Fuggo valtozo, szint, RE, IGEN, FE, NEM) tex(fragment pretty)
 {txt} 34{com}. 
 . 
 . xtset ${c -(}iskid{c )-}
@@ -158,7 +158,7 @@
 {txt} 36{com}. estimates store i_2
 {txt} 37{com}. predict I2, u
 {txt} 38{com}. label variable I2 "I2"
-{txt} 39{com}. outreg2 i_2_temp using ${c -(}stataOUT{c )-}tables/elso_`w'.tex", append ctitle(I2) `2keep' addtext(RE, IGEN, FE, NEM) tex(fragment pretty)
+{txt} 39{com}. outreg2 i_2_temp using ${c -(}stataOUT{c )-}tables/elso_`w'.tex", append ctitle(I2) `2keep' addtext(Fuggo valtozo, valtozas, RE, IGEN, FE, NEM) tex(fragment pretty)
 {txt} 40{com}. 
 . 
 . //////// Fixed Effects modellek //////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -170,7 +170,7 @@
 {txt} 42{com}. estimates store f_1
 {txt} 43{com}. predict F1, u
 {txt} 44{com}. label variable F1 "F1"
-{txt} 45{com}. outreg2 f_1 using ${c -(}stataOUT{c )-}tables/elso_`w'.tex", append ctitle(F1) `1keep' addtext(RE, NEM, FE, IGEN) tex(fragment pretty)
+{txt} 45{com}. outreg2 f_1 using ${c -(}stataOUT{c )-}tables/elso_`w'.tex", append ctitle(F1) `1keep' addtext(Fuggo valtozo, szint, RE, NEM, FE, IGEN) tex(fragment pretty)
 {txt} 46{com}. 
 . 
 . 
@@ -181,7 +181,7 @@
 {txt} 48{com}. estimates store f_2
 {txt} 49{com}. predict F2, u
 {txt} 50{com}. label variable F2 "F2"
-{txt} 51{com}. outreg2 f_2 using ${c -(}stataOUT{c )-}tables/elso_`w'.tex", append ctitle(F2) `2keep' addtext(RE, NEM, FE, IGEN) tex(fragment pretty)
+{txt} 51{com}. outreg2 f_2 using ${c -(}stataOUT{c )-}tables/elso_`w'.tex", append ctitle(F2) `2keep' addtext(Fuggo valtozo, valtozas, RE, NEM, FE, IGEN) tex(fragment pretty)
 {txt} 52{com}. 
 . 
 . //outreg2
@@ -191,7 +191,7 @@
 . *save ${c -(}szdOHout{c )-}ertekelesi_`w'.dta, replace
 . *estimates save ${c -(}szdOHout{c )-}01_est_save_`w'.ster, replace
 . 
-. drop if I1 == .
+. drop if I1 == . //ezen csúszott el a számítás sokáig ...
 {txt} 53{com}. duplicates drop ${c -(}iskid{c )-}, force
 {txt} 54{com}. 
 . quietly graph matrix E1 E2 I1 I2 F1 F2, title(`w')
@@ -271,7 +271,7 @@ Közepes község  {c |}{col 17}{res}{space 2} .1426485{col 29}{space 2} 3.987429{c
 {res}{txt}(28451 missing values generated)
 (120 missing values generated)
 {stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2008-2010.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2008-2010.tex}
-{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2008-2010.txt""':seeout}
+{browse `"C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2008-2010.txt""':seeout}
 
       Source {c |}       SS       df       MS              Number of obs ={res}   58081
 {txt}{hline 13}{char +}{hline 30}           F( 35, 58045) ={res}   10.73
@@ -334,7 +334,7 @@ Közepes község  {c |}{col 17}{res}{space 2} .7282442{col 29}{space 2} 4.384817{c
 {res}{txt}(28451 missing values generated)
 (120 missing values generated)
 {stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2008-2010.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2008-2010.tex}
-{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2008-2010.txt""':seeout}
+{browse `"C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2008-2010.txt""':seeout}
 {col 8}panel variable:  {res}omid (unbalanced)
 
 {txt}Random-effects GLS regression                   Number of obs      = {res}    58081
@@ -374,7 +374,7 @@ Közepes község  {c |}{col 17}{res}{space 2} .7282442{col 29}{space 2} 4.384817{c
 {hline 13}{c BT}{hline 64}
 (28451 missing values generated)
 {stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2008-2010.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2008-2010.tex}
-{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2008-2010.txt""':seeout}
+{browse `"C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2008-2010.txt""':seeout}
 {col 8}panel variable:  {res}omid (unbalanced)
 
 {txt}Random-effects GLS regression                   Number of obs      = {res}    58081
@@ -413,7 +413,7 @@ Közepes község  {c |}{col 17}{res}{space 2} .7282442{col 29}{space 2} 4.384817{c
 {hline 13}{c BT}{hline 64}
 (28451 missing values generated)
 {stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2008-2010.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2008-2010.tex}
-{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2008-2010.txt""':seeout}
+{browse `"C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2008-2010.txt""':seeout}
 {col 8}panel variable:  {res}omid (unbalanced)
 
 {txt}Fixed-effects (within) regression               Number of obs      = {res}    58081
@@ -453,7 +453,7 @@ Közepes község  {c |}{col 17}{res}{space 2} .7282442{col 29}{space 2} 4.384817{c
 {hline 13}{c BT}{hline 64}
 (28451 missing values generated)
 {stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2008-2010.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2008-2010.tex}
-{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2008-2010.txt""':seeout}
+{browse `"C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2008-2010.txt""':seeout}
 {col 8}panel variable:  {res}omid (unbalanced)
 
 {txt}Fixed-effects (within) regression               Number of obs      = {res}    58081
@@ -492,7 +492,7 @@ Közepes község  {c |}{col 17}{res}{space 2} .7282442{col 29}{space 2} 4.384817{c
 {hline 13}{c BT}{hline 64}
 (28451 missing values generated)
 {stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2008-2010.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2008-2010.tex}
-{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2008-2010.txt""':seeout}
+{browse `"C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2008-2010.txt""':seeout}
 (28451 observations deleted)
 
 {p 0 4}{txt}Duplicates in terms of {res} omid{p_end}
@@ -572,7 +572,7 @@ Közepes község  {c |}{col 17}{res}{space 2} 9.026479{col 29}{space 2} 4.262958{c
 {res}{txt}(24629 missing values generated)
 (64 missing values generated)
 {stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2009-2011.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2009-2011.tex}
-{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2009-2011.txt""':seeout}
+{browse `"C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2009-2011.txt""':seeout}
 
       Source {c |}       SS       df       MS              Number of obs ={res}   54205
 {txt}{hline 13}{char +}{hline 30}           F( 37, 54167) ={res}    7.43
@@ -637,7 +637,7 @@ Közepes község  {c |}{col 17}{res}{space 2} 18.09227{col 29}{space 2} 4.758774{c
 {res}{txt}(24629 missing values generated)
 (64 missing values generated)
 {stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2009-2011.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2009-2011.tex}
-{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2009-2011.txt""':seeout}
+{browse `"C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2009-2011.txt""':seeout}
 {col 8}panel variable:  {res}omid (unbalanced)
 
 {txt}Random-effects GLS regression                   Number of obs      = {res}    54205
@@ -677,7 +677,7 @@ Közepes község  {c |}{col 17}{res}{space 2} 18.09227{col 29}{space 2} 4.758774{c
 {hline 13}{c BT}{hline 64}
 (24629 missing values generated)
 {stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2009-2011.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2009-2011.tex}
-{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2009-2011.txt""':seeout}
+{browse `"C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2009-2011.txt""':seeout}
 {col 8}panel variable:  {res}omid (unbalanced)
 
 {txt}Random-effects GLS regression                   Number of obs      = {res}    54205
@@ -716,7 +716,7 @@ Közepes község  {c |}{col 17}{res}{space 2} 18.09227{col 29}{space 2} 4.758774{c
 {hline 13}{c BT}{hline 64}
 (24629 missing values generated)
 {stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2009-2011.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2009-2011.tex}
-{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2009-2011.txt""':seeout}
+{browse `"C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2009-2011.txt""':seeout}
 {col 8}panel variable:  {res}omid (unbalanced)
 
 {txt}Fixed-effects (within) regression               Number of obs      = {res}    54205
@@ -756,7 +756,7 @@ Közepes község  {c |}{col 17}{res}{space 2} 18.09227{col 29}{space 2} 4.758774{c
 {hline 13}{c BT}{hline 64}
 (24629 missing values generated)
 {stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2009-2011.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2009-2011.tex}
-{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2009-2011.txt""':seeout}
+{browse `"C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2009-2011.txt""':seeout}
 {col 8}panel variable:  {res}omid (unbalanced)
 
 {txt}Fixed-effects (within) regression               Number of obs      = {res}    54205
@@ -795,7 +795,7 @@ Közepes község  {c |}{col 17}{res}{space 2} 18.09227{col 29}{space 2} 4.758774{c
 {hline 13}{c BT}{hline 64}
 (24629 missing values generated)
 {stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2009-2011.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2009-2011.tex}
-{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2009-2011.txt""':seeout}
+{browse `"C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2009-2011.txt""':seeout}
 (24629 observations deleted)
 
 {p 0 4}{txt}Duplicates in terms of {res} omid{p_end}
@@ -874,7 +874,7 @@ Közepes község  {c |}{col 17}{res}{space 2} .8428236{col 29}{space 2} 4.508846{c
 {txt}{hline 16}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
 {res}{txt}(23103 missing values generated)
 {stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2010-2012.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2010-2012.tex}
-{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2010-2012.txt""':seeout}
+{browse `"C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2010-2012.txt""':seeout}
 
       Source {c |}       SS       df       MS              Number of obs ={res}   51115
 {txt}{hline 13}{char +}{hline 30}           F( 37, 51077) ={res}   19.01
@@ -938,7 +938,7 @@ Közepes község  {c |}{col 17}{res}{space 2} 2.130246{col 29}{space 2} 4.846436{c
 {txt}{hline 16}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
 {res}{txt}(23103 missing values generated)
 {stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2010-2012.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2010-2012.tex}
-{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2010-2012.txt""':seeout}
+{browse `"C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2010-2012.txt""':seeout}
 {col 8}panel variable:  {res}omid (unbalanced)
 
 {txt}Random-effects GLS regression                   Number of obs      = {res}    51115
@@ -978,7 +978,7 @@ Közepes község  {c |}{col 17}{res}{space 2} 2.130246{col 29}{space 2} 4.846436{c
 {hline 13}{c BT}{hline 64}
 (23103 missing values generated)
 {stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2010-2012.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2010-2012.tex}
-{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2010-2012.txt""':seeout}
+{browse `"C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2010-2012.txt""':seeout}
 {col 8}panel variable:  {res}omid (unbalanced)
 
 {txt}Random-effects GLS regression                   Number of obs      = {res}    51115
@@ -1017,7 +1017,7 @@ Közepes község  {c |}{col 17}{res}{space 2} 2.130246{col 29}{space 2} 4.846436{c
 {hline 13}{c BT}{hline 64}
 (23103 missing values generated)
 {stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2010-2012.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2010-2012.tex}
-{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2010-2012.txt""':seeout}
+{browse `"C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2010-2012.txt""':seeout}
 {col 8}panel variable:  {res}omid (unbalanced)
 
 {txt}Fixed-effects (within) regression               Number of obs      = {res}    51115
@@ -1057,7 +1057,7 @@ Közepes község  {c |}{col 17}{res}{space 2} 2.130246{col 29}{space 2} 4.846436{c
 {hline 13}{c BT}{hline 64}
 (23103 missing values generated)
 {stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2010-2012.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2010-2012.tex}
-{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2010-2012.txt""':seeout}
+{browse `"C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2010-2012.txt""':seeout}
 {col 8}panel variable:  {res}omid (unbalanced)
 
 {txt}Fixed-effects (within) regression               Number of obs      = {res}    51115
@@ -1096,7 +1096,7 @@ Közepes község  {c |}{col 17}{res}{space 2} 2.130246{col 29}{space 2} 4.846436{c
 {hline 13}{c BT}{hline 64}
 (23103 missing values generated)
 {stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2010-2012.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2010-2012.tex}
-{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2010-2012.txt""':seeout}
+{browse `"C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2010-2012.txt""':seeout}
 (23103 observations deleted)
 
 {p 0 4}{txt}Duplicates in terms of {res} omid{p_end}
@@ -1166,7 +1166,7 @@ Közepes község  {c |}{col 17}{res}{space 2} 5.593912{col 29}{space 2} 4.598692{c
 {res}{txt}(21500 missing values generated)
 (34 missing values generated)
 {stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2011-2013.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2011-2013.tex}
-{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2011-2013.txt""':seeout}
+{browse `"C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2011-2013.txt""':seeout}
 
       Source {c |}       SS       df       MS              Number of obs ={res}   49607
 {txt}{hline 13}{char +}{hline 30}           F( 27, 49579) ={res}   28.10
@@ -1221,7 +1221,7 @@ Közepes község  {c |}{col 17}{res}{space 2} 9.258377{col 29}{space 2} 4.905095{c
 {res}{txt}(21500 missing values generated)
 (34 missing values generated)
 {stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2011-2013.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2011-2013.tex}
-{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2011-2013.txt""':seeout}
+{browse `"C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2011-2013.txt""':seeout}
 {col 8}panel variable:  {res}omid (unbalanced)
 
 {txt}Random-effects GLS regression                   Number of obs      = {res}    49607
@@ -1261,7 +1261,7 @@ Közepes község  {c |}{col 17}{res}{space 2} 9.258377{col 29}{space 2} 4.905095{c
 {hline 13}{c BT}{hline 64}
 (21500 missing values generated)
 {stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2011-2013.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2011-2013.tex}
-{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2011-2013.txt""':seeout}
+{browse `"C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2011-2013.txt""':seeout}
 {col 8}panel variable:  {res}omid (unbalanced)
 
 {txt}Random-effects GLS regression                   Number of obs      = {res}    49607
@@ -1300,7 +1300,7 @@ Közepes község  {c |}{col 17}{res}{space 2} 9.258377{col 29}{space 2} 4.905095{c
 {hline 13}{c BT}{hline 64}
 (21500 missing values generated)
 {stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2011-2013.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2011-2013.tex}
-{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2011-2013.txt""':seeout}
+{browse `"C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2011-2013.txt""':seeout}
 {col 8}panel variable:  {res}omid (unbalanced)
 
 {txt}Fixed-effects (within) regression               Number of obs      = {res}    49607
@@ -1340,7 +1340,7 @@ Közepes község  {c |}{col 17}{res}{space 2} 9.258377{col 29}{space 2} 4.905095{c
 {hline 13}{c BT}{hline 64}
 (21500 missing values generated)
 {stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2011-2013.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2011-2013.tex}
-{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2011-2013.txt""':seeout}
+{browse `"C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2011-2013.txt""':seeout}
 {col 8}panel variable:  {res}omid (unbalanced)
 
 {txt}Fixed-effects (within) regression               Number of obs      = {res}    49607
@@ -1379,7 +1379,7 @@ Közepes község  {c |}{col 17}{res}{space 2} 9.258377{col 29}{space 2} 4.905095{c
 {hline 13}{c BT}{hline 64}
 (21500 missing values generated)
 {stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2011-2013.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2011-2013.tex}
-{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2011-2013.txt""':seeout}
+{browse `"C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2011-2013.txt""':seeout}
 (21500 observations deleted)
 
 {p 0 4}{txt}Duplicates in terms of {res} omid{p_end}
@@ -1448,7 +1448,7 @@ Közepes község  {c |}{col 17}{res}{space 2}-22.27305{col 29}{space 2} 4.744761{c
 {txt}{hline 16}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
 {res}{txt}(20035 missing values generated)
 {stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2012-2014.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2012-2014.tex}
-{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2012-2014.txt""':seeout}
+{browse `"C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2012-2014.txt""':seeout}
 
       Source {c |}       SS       df       MS              Number of obs ={res}   48433
 {txt}{hline 13}{char +}{hline 30}           F( 27, 48405) ={res}    6.92
@@ -1502,7 +1502,7 @@ Közepes község  {c |}{col 17}{res}{space 2}-22.84429{col 29}{space 2} 5.038732{c
 {txt}{hline 16}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
 {res}{txt}(20035 missing values generated)
 {stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2012-2014.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2012-2014.tex}
-{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2012-2014.txt""':seeout}
+{browse `"C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2012-2014.txt""':seeout}
 {col 8}panel variable:  {res}omid (unbalanced)
 
 {txt}Random-effects GLS regression                   Number of obs      = {res}    48433
@@ -1542,7 +1542,7 @@ Közepes község  {c |}{col 17}{res}{space 2}-22.84429{col 29}{space 2} 5.038732{c
 {hline 13}{c BT}{hline 64}
 (20035 missing values generated)
 {stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2012-2014.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2012-2014.tex}
-{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2012-2014.txt""':seeout}
+{browse `"C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2012-2014.txt""':seeout}
 {col 8}panel variable:  {res}omid (unbalanced)
 
 {txt}Random-effects GLS regression                   Number of obs      = {res}    48433
@@ -1581,7 +1581,7 @@ Közepes község  {c |}{col 17}{res}{space 2}-22.84429{col 29}{space 2} 5.038732{c
 {hline 13}{c BT}{hline 64}
 (20035 missing values generated)
 {stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2012-2014.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2012-2014.tex}
-{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2012-2014.txt""':seeout}
+{browse `"C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2012-2014.txt""':seeout}
 {col 8}panel variable:  {res}omid (unbalanced)
 
 {txt}Fixed-effects (within) regression               Number of obs      = {res}    48433
@@ -1621,7 +1621,7 @@ Közepes község  {c |}{col 17}{res}{space 2}-22.84429{col 29}{space 2} 5.038732{c
 {hline 13}{c BT}{hline 64}
 (20035 missing values generated)
 {stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2012-2014.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2012-2014.tex}
-{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2012-2014.txt""':seeout}
+{browse `"C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2012-2014.txt""':seeout}
 {col 8}panel variable:  {res}omid (unbalanced)
 
 {txt}Fixed-effects (within) regression               Number of obs      = {res}    48433
@@ -1660,7 +1660,7 @@ Közepes község  {c |}{col 17}{res}{space 2}-22.84429{col 29}{space 2} 5.038732{c
 {hline 13}{c BT}{hline 64}
 (20035 missing values generated)
 {stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2012-2014.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2012-2014.tex}
-{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2012-2014.txt""':seeout}
+{browse `"C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/elso_2012-2014.txt""':seeout}
 (20035 observations deleted)
 
 {p 0 4}{txt}Duplicates in terms of {res} omid{p_end}
@@ -1668,143 +1668,15 @@ Közepes község  {c |}{col 17}{res}{space 2}-22.84429{col 29}{space 2} 5.038732{c
 {txt}(47259 observations deleted)
 (file C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/images/indices_matrixgraph_2012-2014.png written in PNG format)
 file E:/szakdoga_data_out/OHtól/indices_2012-2014.dta saved
-r; t=133.30 13:41:51
+r; t=143.96 14:25:55
 
 {com}. *
 . 
-. 
-. 
-. /*
-> // pooled 
-> 
-> 
-> 
-> 
-> use ${c -(}szdOHinERTEKELESI{c )-}2008-2010, clear
-> append using ${c -(}szdOHinERTEKELESI{c )-}2009-2011, force
-> append using ${c -(}szdOHinERTEKELESI{c )-}2010-2012, force
-> append using ${c -(}szdOHinERTEKELESI{c )-}2011-2013, force
-> append using ${c -(}szdOHinERTEKELESI{c )-}2012-2014, force
-> 
-> //panel struktúra
-> *xtset omid
-> 
-> *sort telephely omid
-> *egen newid = group(omid telephely), label
-> 
-> //azonosító változók
-> 
-> 
-> 
-> //8. osztályos eredmények meghagyása
-> drop if evfolyam != 8
-> 
-> //legkisebb iskolák kidobása
-> *sort omid
-> *by omid: gen freq_omid = _N
-> *sort freq_omid
-> *by freq_omid: drop if freq_omid <=15
-> *drop freq_omid
-> 
-> 
-> /////////// Modellek /////////////////////////////////////////////
-> 
-> //////// az egyéni hibák iskolai átlaga //////////////////////////////////////////////////////////////////////////////////////////////////////
-> 
-> // A) Kiigazított- covariate adjustment - modell
-> *E1
-> quietly reg o_zpsc o_zpsc_lag `regressants' i.telnagy i.fentip i.isknagy
-> estimates store e_1
-> predict E1_source, res
-> bysort ${c -(}iskid{c )-}: egen E1 = mean(E1_source)
-> *replace E1 = . if ev == ev_start
-> label variable E1 "E1"
-> outreg2 e_1 using ${c -(}stataOUT{c )-}tables/elso_pooled.tex", replace ctitle(E1) `1keep' addtext(RE, NEM, FE, NEM) tex(fragment pretty)
-> 
-> 
-> // B) Fejlödés - gain - modell
-> *E2
-> quietly regress o_zpsc_diff `regressants' i.telnagy i.fentip i.isknagy
-> estimates store e_2
-> predict E2_source, res
-> bysort ${c -(}iskid{c )-}: egen E2 = mean(E2_source)
-> *replace E2 = . if ev == ev_start
-> label variable E2 "E2"
-> outreg2 e_2 using ${c -(}stataOUT{c )-}tables/elso_pooled.tex", append ctitle(E2) `2keep' addtext(RE, NEM, FE, NEM) tex(fragment pretty)
-> drop E2_source
-> 
-> 
-> drop E1_source 
-> 
-> 
-> //////// Random Effects modellek ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-> *itt az egyéni teljesítmény random effect
-> *az iskola pedig dummy -> ez alapján saját tengelymetszete van az egyes iskoláknak
->         *ez a Möko for STATA könyv alapján
-> 
-> xtset ${c -(}iskid{c )-}
-> // A) Kiigazított- covariate adjustment - modell
-> *I1
-> quietly xtreg o_zpsc o_zpsc_lag `regressants' , re cluster(omid)
-> estimates store i_1
-> predict I1, u
-> label variable I1 "I1"
-> outreg2 i_1_temp using ${c -(}stataOUT{c )-}tables/elso_pooled.tex", append ctitle(I1) `1keep' addtext(RE, IGEN, FE, NEM) tex(fragment pretty)
-> 
-> 
-> xtset ${c -(}iskid{c )-}
-> // B) Fejlödés - gain - modell
-> *I2
-> quietly xtreg o_zpsc_diff `regressants' , re cluster(omid)
-> estimates store i_2
-> predict I2, u
-> label variable I2 "I2"
-> outreg2 i_2_temp using ${c -(}stataOUT{c )-}tables/elso_pooled.tex", append ctitle(I2) `2keep' addtext(RE, IGEN, FE, NEM) tex(fragment pretty)
-> 
-> 
-> //////// Fixed Effects modellek //////////////////////////////////////////////////////////////////////////////////////////////////////////////
-> 
-> xtset ${c -(}iskid{c )-}
-> // A) Kiigazított- covariate adjustment - modell
-> *F1
-> quietly xtreg o_zpsc o_zpsc_lag `regressants' , fe cluster(omid)
-> estimates store f_1
-> predict F1, u
-> label variable F1 "F1"
-> outreg2 f_1 using ${c -(}stataOUT{c )-}tables/elso_pooled.tex", append ctitle(F1) `1keep' addtext(RE, NEM, FE, IGEN) tex(fragment pretty)
-> 
-> 
-> 
-> xtset ${c -(}iskid{c )-}
-> // B) Fejlödés - gain - modell
-> *F2
-> quietly xtreg o_zpsc_diff `regressants' , fe cluster(omid)
-> estimates store f_2
-> predict F2, u
-> label variable F2 "F2"
-> outreg2 f_2 using ${c -(}stataOUT{c )-}tables/elso_pooled.tex", append ctitle(F2) `2keep' addtext(RE, NEM, FE, IGEN) tex(fragment pretty)
-> 
-> 
-> //outreg2
-> *csinálni egy kompakt, összefogaló változatot a föszövegbe
-> *csinálni egy részleteset az appendixbe.
-> 
-> *save ${c -(}szdOHout{c )-}ertekelesi_`w'.dta, replace
-> *estimates save ${c -(}szdOHout{c )-}01_est_save_`w'.ster, replace
-> 
-> 
-> duplicates drop ${c -(}iskid{c )-}, force
-> quietly graph matrix E1 E2 I1 I2 F1, title(pooled)
-> graph export ${c -(}stataOUT{c )-}images/indices_matrixgraph_pooled.png", as(png) replace
-> keep omid telephely ${c -(}iskid{c )-} ev E1 E2 I1 I2 F1 F2
-> save ${c -(}szdOHout{c )-}indices_pooled, replace
-> */
-. 
-.  log close
+. log close
       {txt}name:  {res}<unnamed>
        {txt}log:  {res}C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal\01_creating_indices.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res} 8 Apr 2016, 13:41:51
+ {txt}closed on:  {res} 9 Apr 2016, 14:25:55
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}

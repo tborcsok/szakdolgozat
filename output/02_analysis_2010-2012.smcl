@@ -3,7 +3,7 @@
       name:  {res}<unnamed>
        {txt}log:  {res}C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal\02_analysis_2010-2012.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res} 9 Apr 2016, 02:36:34
+ {txt}opened on:  {res} 9 Apr 2016, 14:26:05
 {txt}(OKM 2010 Tanulói 8. és 2012 Tanulói 10. évfolyam)
 {p}
 (note: you are using old
@@ -101,7 +101,7 @@ sum10_5of5#c.csh_index {c |}
                    {txt}rho {c |} {res} .15427426{txt}   (fraction of variance due to u_i)
 {hline 23}{c BT}{hline 64}
 {stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_fe_szint.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_fe_szint.tex}
-{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_fe_szint.txt""':seeout}
+{browse `"C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_fe_szint.txt""':seeout}
 (46079 observations deleted)
 (3993 observations deleted)
 
@@ -152,7 +152,7 @@ sum10_5of5#c.csh_index {c |}
                    {txt}rho {c |} {res} .15237404{txt}   (fraction of variance due to u_i)
 {hline 23}{c BT}{hline 64}
 {stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_fe_szint.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_fe_szint.tex}
-{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_fe_szint.txt""':seeout}
+{browse `"C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_fe_szint.txt""':seeout}
 (46079 observations deleted)
 (3993 observations deleted)
 
@@ -203,7 +203,7 @@ sum10_5of5#c.csh_index {c |}
                    {txt}rho {c |} {res} .15470265{txt}   (fraction of variance due to u_i)
 {hline 23}{c BT}{hline 64}
 {stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_fe_szint.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_fe_szint.tex}
-{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_fe_szint.txt""':seeout}
+{browse `"C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_fe_szint.txt""':seeout}
 (46079 observations deleted)
 (3993 observations deleted)
 
@@ -254,7 +254,7 @@ sum10_5of5#c.csh_index {c |}
                    {txt}rho {c |} {res} .15221509{txt}   (fraction of variance due to u_i)
 {hline 23}{c BT}{hline 64}
 {stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_fe_szint.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_fe_szint.tex}
-{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_fe_szint.txt""':seeout}
+{browse `"C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_fe_szint.txt""':seeout}
 (46079 observations deleted)
 (3993 observations deleted)
 
@@ -305,7 +305,7 @@ sum10_5of5#c.csh_index {c |}
                    {txt}rho {c |} {res} .15468675{txt}   (fraction of variance due to u_i)
 {hline 23}{c BT}{hline 64}
 {stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_fe_szint.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_fe_szint.tex}
-{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_fe_szint.txt""':seeout}
+{browse `"C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_fe_szint.txt""':seeout}
 (46079 observations deleted)
 (3993 observations deleted)
 
@@ -356,7 +356,7 @@ sum10_5of5#c.csh_index {c |}
                    {txt}rho {c |} {res} .15239556{txt}   (fraction of variance due to u_i)
 {hline 23}{c BT}{hline 64}
 {stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_fe_szint.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_fe_szint.tex}
-{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_fe_szint.txt""':seeout}
+{browse `"C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_fe_szint.txt""':seeout}
 (46079 observations deleted)
 (3993 observations deleted)
 
@@ -406,7 +406,7 @@ sum10_5of5#c.csh_index {c |}
                    {txt}rho {c |} {res} .05484857{txt}   (fraction of variance due to u_i)
 {hline 23}{c BT}{hline 64}
 {stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_fe_valtozas.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_fe_valtozas.tex}
-{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_fe_valtozas.txt""':seeout}
+{browse `"C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_fe_valtozas.txt""':seeout}
 (46079 observations deleted)
 (3993 observations deleted)
 
@@ -456,7 +456,7 @@ sum10_5of5#c.csh_index {c |}
                    {txt}rho {c |} {res} .05360586{txt}   (fraction of variance due to u_i)
 {hline 23}{c BT}{hline 64}
 {stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_fe_valtozas.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_fe_valtozas.tex}
-{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_fe_valtozas.txt""':seeout}
+{browse `"C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_fe_valtozas.txt""':seeout}
 (46079 observations deleted)
 (3993 observations deleted)
 
@@ -506,7 +506,7 @@ sum10_5of5#c.csh_index {c |}
                    {txt}rho {c |} {res} .05427578{txt}   (fraction of variance due to u_i)
 {hline 23}{c BT}{hline 64}
 {stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_fe_valtozas.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_fe_valtozas.tex}
-{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_fe_valtozas.txt""':seeout}
+{browse `"C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_fe_valtozas.txt""':seeout}
 (46079 observations deleted)
 (3993 observations deleted)
 
@@ -556,7 +556,7 @@ sum10_5of5#c.csh_index {c |}
                    {txt}rho {c |} {res} .05383138{txt}   (fraction of variance due to u_i)
 {hline 23}{c BT}{hline 64}
 {stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_fe_valtozas.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_fe_valtozas.tex}
-{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_fe_valtozas.txt""':seeout}
+{browse `"C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_fe_valtozas.txt""':seeout}
 (46079 observations deleted)
 (3993 observations deleted)
 
@@ -606,7 +606,7 @@ sum10_5of5#c.csh_index {c |}
                    {txt}rho {c |} {res} .05437921{txt}   (fraction of variance due to u_i)
 {hline 23}{c BT}{hline 64}
 {stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_fe_valtozas.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_fe_valtozas.tex}
-{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_fe_valtozas.txt""':seeout}
+{browse `"C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_fe_valtozas.txt""':seeout}
 (46079 observations deleted)
 (3993 observations deleted)
 
@@ -656,7 +656,7 @@ sum10_5of5#c.csh_index {c |}
                    {txt}rho {c |} {res} .05374458{txt}   (fraction of variance due to u_i)
 {hline 23}{c BT}{hline 64}
 {stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_fe_valtozas.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_fe_valtozas.tex}
-{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_fe_valtozas.txt""':seeout}
+{browse `"C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_fe_valtozas.txt""':seeout}
 (46079 observations deleted)
 (3993 observations deleted)
 {res}
@@ -707,7 +707,7 @@ sum10_5of5#c.csh_index {c |}
                    {txt}rho {c |} {res} .04378663{txt}   (fraction of variance due to u_i)
 {hline 23}{c BT}{hline 64}
 {stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_re_szint.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_re_szint.tex}
-{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_re_szint.txt""':seeout}
+{browse `"C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_re_szint.txt""':seeout}
 (46079 observations deleted)
 (3993 observations deleted)
 {res}
@@ -758,7 +758,7 @@ sum10_5of5#c.csh_index {c |}
                    {txt}rho {c |} {res} .04242612{txt}   (fraction of variance due to u_i)
 {hline 23}{c BT}{hline 64}
 {stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_re_szint.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_re_szint.tex}
-{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_re_szint.txt""':seeout}
+{browse `"C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_re_szint.txt""':seeout}
 (46079 observations deleted)
 (3993 observations deleted)
 {res}
@@ -809,7 +809,7 @@ sum10_5of5#c.csh_index {c |}
                    {txt}rho {c |} {res} .04281553{txt}   (fraction of variance due to u_i)
 {hline 23}{c BT}{hline 64}
 {stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_re_szint.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_re_szint.tex}
-{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_re_szint.txt""':seeout}
+{browse `"C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_re_szint.txt""':seeout}
 (46079 observations deleted)
 (3993 observations deleted)
 {res}
@@ -860,7 +860,7 @@ sum10_5of5#c.csh_index {c |}
                    {txt}rho {c |} {res} .04300765{txt}   (fraction of variance due to u_i)
 {hline 23}{c BT}{hline 64}
 {stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_re_szint.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_re_szint.tex}
-{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_re_szint.txt""':seeout}
+{browse `"C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_re_szint.txt""':seeout}
 (46079 observations deleted)
 (3993 observations deleted)
 {res}
@@ -911,7 +911,7 @@ sum10_5of5#c.csh_index {c |}
                    {txt}rho {c |} {res} .04277558{txt}   (fraction of variance due to u_i)
 {hline 23}{c BT}{hline 64}
 {stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_re_szint.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_re_szint.tex}
-{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_re_szint.txt""':seeout}
+{browse `"C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_re_szint.txt""':seeout}
 (46079 observations deleted)
 (3993 observations deleted)
 {res}
@@ -962,7 +962,7 @@ sum10_5of5#c.csh_index {c |}
                    {txt}rho {c |} {res} .04231642{txt}   (fraction of variance due to u_i)
 {hline 23}{c BT}{hline 64}
 {stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_re_szint.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_re_szint.tex}
-{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_re_szint.txt""':seeout}
+{browse `"C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_re_szint.txt""':seeout}
 (46079 observations deleted)
 (3993 observations deleted)
 {res}
@@ -1012,7 +1012,7 @@ sum10_5of5#c.csh_index {c |}
                    {txt}rho {c |} {res} .03179269{txt}   (fraction of variance due to u_i)
 {hline 23}{c BT}{hline 64}
 {stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_re_valtozas.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_re_valtozas.tex}
-{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_re_valtozas.txt""':seeout}
+{browse `"C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_re_valtozas.txt""':seeout}
 (46079 observations deleted)
 (3993 observations deleted)
 {res}
@@ -1062,7 +1062,7 @@ sum10_5of5#c.csh_index {c |}
                    {txt}rho {c |} {res} .03060276{txt}   (fraction of variance due to u_i)
 {hline 23}{c BT}{hline 64}
 {stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_re_valtozas.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_re_valtozas.tex}
-{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_re_valtozas.txt""':seeout}
+{browse `"C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_re_valtozas.txt""':seeout}
 (46079 observations deleted)
 (3993 observations deleted)
 {res}
@@ -1112,7 +1112,7 @@ sum10_5of5#c.csh_index {c |}
                    {txt}rho {c |} {res}   .030959{txt}   (fraction of variance due to u_i)
 {hline 23}{c BT}{hline 64}
 {stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_re_valtozas.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_re_valtozas.tex}
-{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_re_valtozas.txt""':seeout}
+{browse `"C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_re_valtozas.txt""':seeout}
 (46079 observations deleted)
 (3993 observations deleted)
 {res}
@@ -1162,7 +1162,7 @@ sum10_5of5#c.csh_index {c |}
                    {txt}rho {c |} {res} .03107986{txt}   (fraction of variance due to u_i)
 {hline 23}{c BT}{hline 64}
 {stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_re_valtozas.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_re_valtozas.tex}
-{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_re_valtozas.txt""':seeout}
+{browse `"C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_re_valtozas.txt""':seeout}
 (46079 observations deleted)
 (3993 observations deleted)
 {res}
@@ -1212,7 +1212,7 @@ sum10_5of5#c.csh_index {c |}
                    {txt}rho {c |} {res} .03094534{txt}   (fraction of variance due to u_i)
 {hline 23}{c BT}{hline 64}
 {stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_re_valtozas.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_re_valtozas.tex}
-{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_re_valtozas.txt""':seeout}
+{browse `"C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_re_valtozas.txt""':seeout}
 (46079 observations deleted)
 (3993 observations deleted)
 {res}
@@ -1262,12 +1262,12 @@ sum10_5of5#c.csh_index {c |}
                    {txt}rho {c |} {res} .03048472{txt}   (fraction of variance due to u_i)
 {hline 23}{c BT}{hline 64}
 {stata `"shellout using `"C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_re_valtozas.tex"'"':C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_re_valtozas.tex}
-{browse `"E:\szakdoga_data_out\OHtól"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_re_valtozas.txt""':seeout}
+{browse `"C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal"' :dir}{com} : {txt}{stata `"seeout using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/tables/eredmenyek_2010-2012_re_valtozas.txt""':seeout}
 file E:/szakdoga_data_out/OHtól/final_elemzesi_2010-2012.dta saved
       name:  {res}<unnamed>
        {txt}log:  {res}C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal\02_analysis_2010-2012.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res} 9 Apr 2016, 02:39:20
+ {txt}closed on:  {res} 9 Apr 2016, 14:28:25
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}
