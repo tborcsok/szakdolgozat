@@ -1,9 +1,9 @@
 {smcl}
-{txt}{sf}{ul off}{.-}
+{com}{sf}{ul off}{txt}{.-}
       name:  {res}<unnamed>
        {txt}log:  {res}C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal\02_analysis_2010-2012.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res} 8 Apr 2016, 16:46:17
+ {txt}opened on:  {res} 9 Apr 2016, 02:36:34
 {txt}(OKM 2010 Tanulói 8. és 2012 Tanulói 10. évfolyam)
 {p}
 (note: you are using old
@@ -1267,7 +1267,7 @@ file E:/szakdoga_data_out/OHtól/final_elemzesi_2010-2012.dta saved
       name:  {res}<unnamed>
        {txt}log:  {res}C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal\02_analysis_2010-2012.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res} 8 Apr 2016, 16:48:40
+ {txt}closed on:  {res} 9 Apr 2016, 02:39:20
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}
