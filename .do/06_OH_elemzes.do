@@ -1,9 +1,11 @@
 *szakdolgozat
 *FINAL COUNTDOWN
-*elemz√©si id√∂szak
-*note: igaz√°b√≥l a preserve restore nem kell, ugyanazt becs√ºln√©, ez csak a hiba kik√ºsz√∂b√∂l√©se ker√ºlt be
+*elemzÈsi idˆszak
+*note: igaz·bÛl a preserve restore nem kell, ugyanazt becs¸lnÈ
 
-//alapbe√°ll√≠t√°sok
+
+
+//alapbe·llÌt·sok
 clear
 clear matrix
 clear mata
@@ -14,11 +16,11 @@ set maxvar 32767
 *set segmentsize 128m
 
 
-//makr√≥k defini√°l√°sa
+//makrÛk defini·l·sa
 global outtype "as(eps)"  //change bw png and eps
 
-global szdOHout "E:/szakdoga_data_out/OHt√≥l/"
-global szdOHinSMALL "E:/szakdoga_data_out/OHt√≥l/alap/small_"
+global szdOHout "E:/szakdoga_data_out/OHtÛl/"
+global szdOHinSMALL "E:/szakdoga_data_out/OHtÛl/alap/small_"
 global stataOUT `""C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/BT_Szakdolgozat/from_stata/"'
 
 local years "2008 2009 2010 2011 2012 2013 2014"
@@ -30,12 +32,15 @@ local valtozok2 "E2 I1 I2 F1 F2"
 local refe "fe re" //re
 
 *local sort "o_zpsc_8 csh_index 1.sum10 2.sum10 3.sum10 4.sum10 5.sum10 1.sum10#c.csh_index 2.sum10#c.csh_index 3.sum10#c.csh_index 4.sum10#c.csh_index 5.sum10#c.csh_index"
-local sort "o_zpsc_8 csh_index sum10_1of5 sum10_2of5 sum10_3of5 sum10_4of5 sum10_5of5 sum10_1of5#c.csh_index sum10_2of5#c.csh_index sum10_3of5#c.csh_index sum10_4of5#c.csh_index sum10_5of5#c.csh_index"
+local sortt "o_zpsc_8 csh_index sum10_1of5 1.sum10_1of5#c.csh_index sum10_2of5 1.sum10_2of5#c.csh_index sum10_3of5 1.sum10_3of5#c.csh_index sum10_4of5 1.sum10_4of5#c.csh_index sum10_5of5 1.sum10_5of5#c.csh_index"
 local dropp "0b.sum10_1of5#co.csh_index 0b.sum10_2of5#co.csh_index 0b.sum10_3of5#co.csh_index 0b.sum10_4of5#co.csh_index 0b.sum10_5of5#co.csh_index o.sum10_5of5 0o.sum10_5of5#co.csh_index o.sum10_4of5 0o.sum10_4of5#co.csh_index"
 
 global dropnum 30
 
 foreach w of local waves {
+
+log using "C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal\02_analysis_`w'.smcl", replace
+
 use ${szdOHout}elemzesi_`w', clear
 *use ${szdOHout}elemzesi_pooled, clear
 
@@ -49,7 +54,7 @@ merge ${iskid} using ${szdOHout}04_E_dummys
 
 xtset azon ev
 
-//k√©t id√∂szakos modellekhez
+//kÈt idˆszakos modellekhez
 gen o_zpsc_8 = L2.o_zpsc if evfolyam == 10
 gen o_zpsc_10 = o_zpsc if evfolyam == 10
 
@@ -89,10 +94,10 @@ keep if evfolyam == 10
 *egen placeholder = std(csh_index)
 *replace csh_index = placeholder
 *drop placeholder
-label variable csh_index "A tanul√≥ standardiz√°lt csal√°dih√°tt√©r-indexe"
+label variable csh_index "A tanulÛ standardiz·lt csal·dih·ttÈr-indexe"
 
 
-//legkisebb iskol√°k kidob√°sa
+//legkisebb iskol·k kidob·sa
 *sort omid10
 *by omid10: gen freq_omid10 = _N
 *sort freq_omid10
@@ -125,7 +130,7 @@ drop freq_omid10
 	gen sum10_4of5 = (sum10_E1_lag == 4) if sum10_E1_lag != .
 	gen sum10_5of5 = (sum10_E1_lag == 5) if sum10_E1_lag != .
 	xtreg o_zpsc_10 o_zpsc_8 sum10_1of5 sum10_2of5 sum10_3of5 sum10_4of5 sum10_5of5 csh_index sum10_1of5#c.csh_index sum10_2of5#c.csh_index sum10_3of5#c.csh_index sum10_4of5#c.csh_index sum10_5of5#c.csh_index i.nem, `ref' cluster(omid10)
-	outreg2 using ${stataOUT}tables/eredmenyek_`w'_`ref'_szint.tex", replace ctitle(E1) sortvar(`sort') drop(`dropp') addtext(Depvar, valtozas, Panel, `ref', Wave, `w') tex(fragment pretty)
+	outreg2 using ${stataOUT}tables/eredmenyek_`w'_`ref'_szint.tex", replace ctitle(E1) sortvar(`sortt') drop(`dropp') addtext(Depvar, szint, Panel, `ref', Wave, `w') tex(fragment pretty)
 	*drop sum10_1of5 sum10_2of5 sum10_3of5 sum10_4of5 sum10_5of5
 	restore
 	
@@ -143,13 +148,13 @@ drop freq_omid10
 		gen sum10_4of5 = (sum10_`v'_lag == 4) if sum10_`v'_lag != .
 		gen sum10_5of5 = (sum10_`v'_lag == 5) if sum10_`v'_lag != .
 		xtreg o_zpsc_10 o_zpsc_8 sum10_1of5 sum10_2of5 sum10_3of5 sum10_4of5 sum10_5of5 csh_index sum10_1of5#c.csh_index sum10_2of5#c.csh_index sum10_3of5#c.csh_index sum10_4of5#c.csh_index sum10_5of5#c.csh_index i.nem, `ref' cluster(omid10)
-		outreg2 using ${stataOUT}tables/eredmenyek_`w'_`ref'_szint.tex", append ctitle(`v') sortvar(`sort') drop(`dropp') addtext(Depvar, szint, Panel, `ref', Wave, `w') tex(fragment pretty)
+		outreg2 using ${stataOUT}tables/eredmenyek_`w'_`ref'_szint.tex", append ctitle(`v') sortvar(`sortt') drop(`dropp') addtext(Depvar, szint, Panel, `ref', Wave, `w') tex(fragment pretty)
 		*drop sum10_1of5 sum10_2of5 sum10_3of5 sum10_4of5 sum10_5of5
 		restore
 	}
 	
 
-	//v√°ltoz√°s
+	//v·ltoz·s
 	preserve
 	drop if sum10_E1_lag == .
 	sort omid10
@@ -163,7 +168,7 @@ drop freq_omid10
 	gen sum10_4of5 = (sum10_E1_lag == 4) if sum10_E1_lag != .
 	gen sum10_5of5 = (sum10_E1_lag == 5) if sum10_E1_lag != .
 	xtreg o_zpsc_D_8_10 sum10_1of5 sum10_2of5 sum10_3of5 sum10_4of5 sum10_5of5 csh_index sum10_1of5#c.csh_index sum10_2of5#c.csh_index sum10_3of5#c.csh_index sum10_4of5#c.csh_index sum10_5of5#c.csh_index i.nem, `ref' cluster(omid10)
-	outreg2 using ${stataOUT}tables/eredmenyek_`w'_`ref'_valtozas.tex", replace ctitle(E1) sortvar(`sort') drop(`dropp') addtext(Depvar, valtozas, Panel, `ref', Wave, `w') tex(fragment pretty)
+	outreg2 using ${stataOUT}tables/eredmenyek_`w'_`ref'_valtozas.tex", replace ctitle(E1) sortvar(`sortt') drop(`dropp') addtext(Depvar, valtozas, Panel, `ref', Wave, `w') tex(fragment pretty)
 	*drop sum10_1of5 sum10_2of5 sum10_3of5 sum10_4of5 sum10_5of5
 	restore
 	
@@ -181,7 +186,7 @@ drop freq_omid10
 		gen sum10_4of5 = (sum10_`v'_lag == 4) if sum10_`v'_lag != .
 		gen sum10_5of5 = (sum10_`v'_lag == 5) if sum10_`v'_lag != .
 		xtreg o_zpsc_D_8_10 sum10_1of5 sum10_2of5 sum10_3of5 sum10_4of5 sum10_5of5 csh_index sum10_1of5#c.csh_index sum10_2of5#c.csh_index sum10_3of5#c.csh_index sum10_4of5#c.csh_index sum10_5of5#c.csh_index i.nem, `ref' cluster(omid10)
-		outreg2 using ${stataOUT}tables/eredmenyek_`w'_`ref'_valtozas.tex", append ctitle(`v') sortvar(`sort') drop(`dropp') addtext(Depvar, valtozas, Panel, `ref', Wave, `w') tex(fragment pretty)
+		outreg2 using ${stataOUT}tables/eredmenyek_`w'_`ref'_valtozas.tex", append ctitle(`v') sortvar(`sortt') drop(`dropp') addtext(Depvar, valtozas, Panel, `ref', Wave, `w') tex(fragment pretty)
 		*drop sum10_1of5 sum10_2of5 sum10_3of5 sum10_4of5 sum10_5of5
 		restore
 	}
@@ -192,6 +197,9 @@ drop freq_omid10
 
 *
 save ${szdOHout}final_elemzesi_`w', replace
+
+log close
+
 }
 *
 
@@ -202,6 +210,9 @@ save ${szdOHout}final_elemzesi_`w', replace
 local waves2 "pooled"
 
 foreach w of local waves2 {
+
+log using "C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal\02_analysis_`w'.smcl", replace
+
 use ${szdOHout}elemzesi_`w', clear
 *use ${szdOHout}elemzesi_pooled, clear
 
@@ -216,7 +227,7 @@ merge ${iskid} using ${szdOHout}04_E_I_F_dummys
 xtset azon ev
 
 
-//k√©t id√∂szakos modellekhez
+//kÈt idˆszakos modellekhez
 gen o_zpsc_8 = L2.o_zpsc if evfolyam == 10
 gen o_zpsc_10 = o_zpsc if evfolyam == 10
 
@@ -257,9 +268,9 @@ keep if evfolyam == 10
 *egen placeholder = std(csh_index)
 *replace csh_index = placeholder
 *drop placeholder
-label variable csh_index "A tanul√≥ standardiz√°lt csal√°dih√°tt√©r-indexe"
+label variable csh_index "A tanulÛ standardiz·lt csal·dih·ttÈr-indexe"
 
-//legkisebb iskol√°k kidob√°sa
+//legkisebb iskol·k kidob·sa
 *sort omid10
 *by omid10: gen freq_omid10 = _N
 *sort freq_omid10
@@ -288,7 +299,7 @@ drop freq_omid10
 	gen sum10_4of5 = (sum10_E1_lag == 4) if sum10_E1_lag != .
 	gen sum10_5of5 = (sum10_E1_lag == 5) if sum10_E1_lag != .
 	xtreg o_zpsc_10 o_zpsc_8 sum10_1of5 sum10_2of5 sum10_3of5 sum10_4of5 sum10_5of5 csh_index sum10_1of5#c.csh_index sum10_2of5#c.csh_index sum10_3of5#c.csh_index sum10_4of5#c.csh_index sum10_5of5#c.csh_index  i.nem i.wave, `ref' cluster(omid10)
-	outreg2 using ${stataOUT}tables/eredmenyek_`w'_`ref'_szint.tex", replace ctitle(E1) sortvar(`sort') drop(`dropp') addtext(Depvar, szint, Panel, `ref', Wave, `w') tex(fragment pretty)
+	outreg2 using ${stataOUT}tables/eredmenyek_`w'_`ref'_szint.tex", replace ctitle(E1) sortvar(`sortt') drop(`dropp') addtext(Depvar, szint, Panel, `ref', Wave, `w') tex(fragment pretty)
 	*drop sum10_1of5 sum10_2of5 sum10_3of5 sum10_4of5 sum10_5of5
 	restore
 	
@@ -306,12 +317,12 @@ drop freq_omid10
 		gen sum10_4of5 = (sum10_`v'_lag == 4) if sum10_`v'_lag != .
 		gen sum10_5of5 = (sum10_`v'_lag == 5) if sum10_`v'_lag != .
 		xtreg o_zpsc_10 o_zpsc_8 sum10_1of5 sum10_2of5 sum10_3of5 sum10_4of5 sum10_5of5 csh_index sum10_1of5#c.csh_index sum10_2of5#c.csh_index sum10_3of5#c.csh_index sum10_4of5#c.csh_index sum10_5of5#c.csh_index  i.nem i.wave, `ref' cluster(omid10)
-		outreg2 using ${stataOUT}tables/eredmenyek_`w'_`ref'_szint.tex", append ctitle(`v') sortvar(`sort') drop(`dropp') addtext(Depvar, szint, Panel, `ref', Wave, `w') tex(fragment pretty)
+		outreg2 using ${stataOUT}tables/eredmenyek_`w'_`ref'_szint.tex", append ctitle(`v') sortvar(`sortt') drop(`dropp') addtext(Depvar, szint, Panel, `ref', Wave, `w') tex(fragment pretty)
 		*drop sum10_1of5 sum10_2of5 sum10_3of5 sum10_4of5 sum10_5of5
 		restore
 	}
 	
-	//v√°ltoz√°s
+	//v·ltoz·s
 	preserve
 	drop if sum10_E1_lag == .
 	sort omid10
@@ -325,7 +336,7 @@ drop freq_omid10
 	gen sum10_4of5 = (sum10_E1_lag == 4) if sum10_E1_lag != .
 	gen sum10_5of5 = (sum10_E1_lag == 5) if sum10_E1_lag != .
 	xtreg o_zpsc_D_8_10 sum10_1of5 sum10_2of5 sum10_3of5 sum10_4of5 sum10_5of5 csh_index sum10_1of5#c.csh_index sum10_2of5#c.csh_index sum10_3of5#c.csh_index sum10_4of5#c.csh_index sum10_5of5#c.csh_index  i.nem i.wave, `ref' cluster(omid10)
-	outreg2 using ${stataOUT}tables/eredmenyek_`w'_`ref'_valtozas.tex", replace ctitle(E1) sortvar(`sort') drop(`dropp') addtext(Depvar, valtozas, Panel, `ref', Wave, `w') tex(fragment pretty)
+	outreg2 using ${stataOUT}tables/eredmenyek_`w'_`ref'_valtozas.tex", replace ctitle(E1) sortvar(`sortt') drop(`dropp') addtext(Depvar, valtozas, Panel, `ref', Wave, `w') tex(fragment pretty)
 	*drop sum10_1of5 sum10_2of5 sum10_3of5 sum10_4of5 sum10_5of5
 	restore
 	
@@ -343,7 +354,7 @@ drop freq_omid10
 		gen sum10_4of5 = (sum10_`v'_lag == 4) if sum10_`v'_lag != .
 		gen sum10_5of5 = (sum10_`v'_lag == 5) if sum10_`v'_lag != .
 		xtreg o_zpsc_D_8_10 sum10_1of5 sum10_2of5 sum10_3of5 sum10_4of5 sum10_5of5 csh_index sum10_1of5#c.csh_index sum10_2of5#c.csh_index sum10_3of5#c.csh_index sum10_4of5#c.csh_index sum10_5of5#c.csh_index  i.nem i.wave, `ref' cluster(omid10)
-		outreg2 using ${stataOUT}tables/eredmenyek_`w'_`ref'_valtozas.tex", append ctitle(`v') sortvar(`sort') drop(`dropp') addtext(Depvar, valtozas, Panel, `ref', Wave, `w') tex(fragment pretty)
+		outreg2 using ${stataOUT}tables/eredmenyek_`w'_`ref'_valtozas.tex", append ctitle(`v') sortvar(`sortt') drop(`dropp') addtext(Depvar, valtozas, Panel, `ref', Wave, `w') tex(fragment pretty)
 		*drop sum10_1of5 sum10_2of5 sum10_3of5 sum10_4of5 sum10_5of5
 		restore
 	}
@@ -353,6 +364,10 @@ drop freq_omid10
 
 *
 save ${szdOHout}final_elemzesi_`w', replace
+
+log close
+
+
 }
 *
 

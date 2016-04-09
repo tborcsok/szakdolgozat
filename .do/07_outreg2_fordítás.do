@@ -46,25 +46,16 @@ foreach dep of local depvar {
     */ from("VARIABLES") to("VALTOZOK") replace
 	
 	filefilter ${stataOUT}tables/eredmenyek_`w'_`ref'_`dep'1.tex" ${stataOUT}tables/eredmenyek_`w'_`ref'_`dep'2.tex", /*
-	*/ from("1.sum10_1of5\43hc.csh_index") to('"1of5xcsh_index"') replace
+	*/ from("1.sum10") to("sum10") replace
 	 
 	filefilter ${stataOUT}tables/eredmenyek_`w'_`ref'_`dep'2.tex" ${stataOUT}tables/eredmenyek_`w'_`ref'_`dep'3.tex", /* 
-	*/ from("1.sum10_2of5\43hc.csh_index") to("2of5xcsh_index")  replace 
+	*/ from("c.csh") to("csh")  replace 
 	
-	filefilter ${stataOUT}tables/eredmenyek_`w'_`ref'_`dep'3.tex" ${stataOUT}tables/eredmenyek_`w'_`ref'_`dep'4.tex", /*
-	*/ from("1.sum10_3of5\43hc.csh_index") to("3of5xcsh_index")  replace 
-	
-	filefilter ${stataOUT}tables/eredmenyek_`w'_`ref'_`dep'4.tex" ${stataOUT}tables/eredmenyek_`w'_`ref'_`dep'5.tex", /*
-	*/ from("1.sum10_4of5\43hc.csh_index") to("4of5xcsh_index")  replace 
-	
-	filefilter ${stataOUT}tables/eredmenyek_`w'_`ref'_`dep'5.tex" ${stataOUT}tables/eredmenyek_`w'_`ref'_`dep'6.tex", /*
-	*/ from("1.sum10_5of5\43hc.csh_index") to("5of5xcsh_index")  replace 
-	
-	filefilter ${stataOUT}tables/eredmenyek_`w'_`ref'_`dep'6.tex" ${stataOUT}tables/eredmenyek_`w'_`ref'_`dep'7.tex", /*
+	filefilter ${stataOUT}tables/eredmenyek_`w'_`ref'_`dep'3.tex" ${stataOUT}tables/eredmenyek_`w'_`ref'_`dep'7.tex", /*
 	*/ from("Constant") to("Konstans")  replace 
 	
 	filefilter ${stataOUT}tables/eredmenyek_`w'_`ref'_`dep'7.tex" ${stataOUT}tables/eredmenyek_`w'_`ref'_`dep'8.tex", /*
-	*/ from("2.nem") to("Fiu")  replace 
+	*/ from("2.nem") to("nem")  replace 
 	
 	filefilter ${stataOUT}tables/eredmenyek_`w'_`ref'_`dep'8.tex" ${stataOUT}tables/eredmenyek_`w'_`ref'_`dep'9.tex", /*
 	*/ from("Observations") to("Megfigyelesek")  replace 
@@ -95,21 +86,12 @@ foreach w of local waaaves {
     */ from("VARIABLES") to("VALTOZOK") replace
 	
 	filefilter ${stataOUT}tables/elso_`w'1.tex" ${stataOUT}tables/elso_`w'2.tex", /*
-	*/ from("1.sum10_1of5\43hc.csh_index") to('"1of5xcsh_index"') replace
+	*/ from("1.sum10") to("sum10") replace
 	 
 	filefilter ${stataOUT}tables/elso_`w'2.tex" ${stataOUT}tables/elso_`w'3.tex", /* 
-	*/ from("1.sum10_2of5\43hc.csh_index") to("2of5xcsh_index")  replace 
+	*/ from("c.csh") to("csh")  replace 
 	
-	filefilter ${stataOUT}tables/elso_`w'3.tex" ${stataOUT}tables/elso_`w'4.tex", /*
-	*/ from("1.sum10_3of5\43hc.csh_index") to("3of5xcsh_index")  replace 
-	
-	filefilter ${stataOUT}tables/elso_`w'4.tex" ${stataOUT}tables/elso_`w'5.tex", /*
-	*/ from("1.sum10_4of5\43hc.csh_index") to("4of5xcsh_index")  replace 
-	
-	filefilter ${stataOUT}tables/elso_`w'5.tex" ${stataOUT}tables/elso_`w'6.tex", /*
-	*/ from("1.sum10_5of5\43hc.csh_index") to("5of5xcsh_index")  replace 
-	
-	filefilter ${stataOUT}tables/elso_`w'6.tex" ${stataOUT}tables/elso_`w'7.tex", /*
+	filefilter ${stataOUT}tables/elso_`w'3.tex" ${stataOUT}tables/elso_`w'7.tex", /*
 	*/ from("Constant") to("Konstans")  replace 
 	
 	filefilter ${stataOUT}tables/elso_`w'7.tex" ${stataOUT}tables/elso_`w'8.tex", /*
@@ -128,7 +110,7 @@ foreach w of local waaaves {
 	*/ from("Wave") to("Kohorsz")  replace
 	
 	filefilter ${stataOUT}tables/elso_`w'12.tex" ${stataOUT}tables/elso_`w'13.tex", /*
-	*/ from("o_zpsc_lag") to("o_zpsc_6")  replace
+	*/ from("lag") to("6")  replace
 	
 	filefilter ${stataOUT}tables/elso_`w'13.tex" ${stataOUT}tables/elso_`w'_jav.tex", /*
 	*/ from("Robust standard errors in parentheses") to("A zarojelekben klaszter-robosztus standard hibak")  replace
