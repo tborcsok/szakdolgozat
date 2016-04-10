@@ -6,6 +6,6 @@ Texmakert használóknak: a lenti kifejezést másoljátók be a Beállítások 
 
 xelatex -synctex=1 -interaction=nonstopmode %.tex|bibtex %|xelatex -synctex=1 -interaction=nonstopmode %.tex|xelatex -synctex=1 -interaction=nonstopmode %.tex|"C:/Program Files (x86)/Adobe/Acrobat Reader DC/Reader/AcroRd32.exe" %.pdf
 
-Ez felülírja, hogy miket futtasson le a Gyorsfordítás (a gombot lásd fent), és pont azt csinálja a program, amire nekünk szükségünk van. Egyébként azért ez a sok macera, hogy legyen Calibri betűtípus ...
+Ez felülírja, hogy miket futtasson le a Gyorsfordítás, és pont azt csinálja a program, amire nekünk szükségünk van. Egyébként azért ez a sok macera, hogy legyen Calibri betűtípus ...
 
 Óriások vállán állva készült el ez a minta, egy közkézen forgó ELTECON template alapján.
