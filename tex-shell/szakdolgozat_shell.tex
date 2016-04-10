@@ -53,7 +53,7 @@ ALAPKÉPZÉS
 \LARGE
 \vspace{60mm}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lr}
   Konzulens: & Készítette: \\
   xy & xy \\
@@ -64,7 +64,7 @@ ALAPKÉPZÉS
 \vskip0pt plus1filll
 2016. április
 \end{center}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \newpage
@@ -88,7 +88,7 @@ Ide jön az absztrakt.
 % A \chapter{} új fejezetet definiál, ezen belül csinálhatsz \section{} és \subsection{} részeket (többek között).
 % A \label{xy} nagyon hasznos, a szövegben \ref{xy} módon hivatkozhatsz az elem számára (1. fejezet pl),
 % a \pageref{xy} az elem oldalszámát adja vissza.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{Bevezetés} \label{ch:bev}
 \setcounter{page}{1} \pagenumbering{arabic}
@@ -101,13 +101,24 @@ Ide jön az absztrakt.
 \chapter{...}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% Ez helyezi el a hivatkozásjegyzéket
 % Zotero-t használóknak: bibtex export segítségével lehet építgetni a saját .bib fájlunkat
 \bibliographystyle{apacite}
-\bibliography{szakdolg} %ez a .tex fájllal egy mappában lévő szakdolg.bib nevű fájlt használja fel a hivatkozásjegyzék item-jeinek forrásaként
+\bibliography{szakdolg}     % ez a .tex fájllal egy mappában lévő szakdolg.bib nevű fájlt használja fel 
+                            % a hivatkozásjegyzék item-jeinek forrásaként
+
 % Hivatkozási parancsok a .bib fájlban szereplő elnevezések alapján:
 % \cite{pete_2013} : (Pete, 2013)         \cite[3.~o.]{pete_2013} : (Pete, 2013, 3. o.)
 % \citeA{pete_2013} : Pete (2013)         \citeA[3.~o.]{pete_2013} : Pete (2013, 3. o.)
@@ -118,6 +129,9 @@ Ide jön az absztrakt.
 \appendix
 
 \chapter{valami}
+
+
+
 
 
 \end{document}
