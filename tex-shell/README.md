@@ -7,3 +7,7 @@ Texmakert használata esetén a követkzőt kell megtenni ahhoz, hogy működjö
 Ez felülírja, hogy miket futtasson le a Gyorsfordítás, és pont azt csinálja a program, amire nekünk szükségünk van.
 
 Óriások vállán állva készült el ez a minta, egy közkézen forgó ELTECON template alapján.
+
+### Stata - LaTeX integráció
+
+Egy rövid fájl leírja, hogy hogyan lehet közös munkára bírni a két platformot. Remélem, hogy lesz aki hasznosnak találja ezt később.
