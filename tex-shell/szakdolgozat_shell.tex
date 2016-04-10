@@ -5,14 +5,16 @@
 
 \usepackage{graphicx}
 \usepackage{amssymb}
-\usepackage[leqno]{amsmath}
+\usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amsthm}
+
 \usepackage[margin=2.5cm,bindingoffset=1cm]{geometry}
 \usepackage{lscape}    %külön elfordítható oldalakhoz
 \usepackage[onehalfspacing]{setspace} %\singlespacing, \doublespacing
 
 \usepackage{apacite}
+
 \usepackage{booktabs}
 \usepackage{tabularx}
 
@@ -23,21 +25,18 @@
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.12}
 
-
 \usepackage{url}
 
 \usepackage{fontspec}
 \usepackage{unicode-math}
 \setmainfont{Calibri}
-\setmathfont{Asana-Math}  % egy esztétikus, és a Calibri-hez illő matek betűtípus
+\setmathfont{Asana-Math}  % a Calibri-hez illő matek betűtípus
                           % innen szedd le a .OTF fájlt: https://www.ctan.org/tex-archive/fonts/Asana-Math/?lang=en
-                          % és telepítsd fel
+                          % és telepítsd fel, ez után elvileg működni fog nálad is
 
-\usepackage{microtype}
-
+\usepackage{microtype} % a betűk harmonikusabb elrendezése
 
 \begin{document}
-
 
 %% Fedőlap
 \thispagestyle{empty}
@@ -54,24 +53,24 @@ ALAPKÉPZÉS
 \LARGE
 \vspace{60mm}
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lr}
   Konzulens: & Készítette: \\
   xy & xy \\
    & NEPTUN kódod \\
    & alkalmazott közgazdaságtan szak
 \end{tabular*}
-
-
 %\vspace{20mm}
 \vskip0pt plus1filll
 2016. április
 \end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \newpage
 \setcounter{page}{1} \pagenumbering{roman}
 
-%% Ide írd a kivonatot - ha nem terveztél ilyet, akkor tervezzél
+%% Ide írd a kivonatot
 \begin{abstract}
 
 Ide jön az absztrakt.
@@ -86,6 +85,9 @@ Ide jön az absztrakt.
 \microtypesetup{protrusion=true}
 
 % Most hogy szépen megvan minden, már csak írni kell
+% A \chapter{} új fejezetet definiál, ezen belül csinálhatsz \section{} és \subsection{} részeket (többek között).
+% A \label{xy} nagyon hasznos, a szövegben \ref{xy} módon hivatkozhatsz az elem számára (1. fejezet pl),
+% a \pageref{xy} az elem oldalszámát adja vissza.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{Bevezetés} \label{ch:bev}
@@ -105,7 +107,12 @@ Ide jön az absztrakt.
 %% Ez helyezi el a hivatkozásjegyzéket
 % Zotero-t használóknak: bibtex export segítségével lehet építgetni a saját .bib fájlunkat
 \bibliographystyle{apacite}
-\bibliography{szakdolg} %ez a .tex fájllal egy mappában lévő szakdolg.bib nevű fájl használja fel a hivatkozásjegyzék item-jeinek forrásaként
+\bibliography{szakdolg} %ez a .tex fájllal egy mappában lévő szakdolg.bib nevű fájlt használja fel a hivatkozásjegyzék item-jeinek forrásaként
+% Hivatkozási parancsok a .bib fájlban szereplő elnevezések alapján:
+% \cite{pete_2013} : (Pete, 2013)         \cite[3.~o.]{pete_2013} : (Pete, 2013, 3. o.)
+% \citeA{pete_2013} : Pete (2013)         \citeA[3.~o.]{pete_2013} : Pete (2013, 3. o.)
+% \citeyear{pete_2013} : (2013)
+% és még mások, amiket nem ismerek...
 
 %% Függelék: innentől kezdve a chapterek függelékként vannak jelölve a szövegben (A. függelék, B. függelék ...)
 \appendix
