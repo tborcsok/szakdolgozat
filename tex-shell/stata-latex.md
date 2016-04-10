@@ -7,12 +7,14 @@ Az outreg2-t ezután utasíthatod arra, hogy ide rakja a táblázatait .tex form
 ### STATA
 
 Táblázat kimentése: 
-  regress y x
-  outreg2 using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/from_stata/tables/eredmenyek.tex", replace tex(fragment pretty)
+
+	regress y x
+	outreg2 using "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/from_stata/tables/eredmenyek.tex", replace tex(fragment pretty)
   
 Ábra kimentése:
-  scatter y x
-  graph export "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/from_stata/images/image.png", as(png) replace
+
+	scatter y x
+	graph export "C:/Users/Tomi/Google Drive/ELTE/SZAKDOLGOZAT/from_stata/images/image.png", as(png) replace
 
 
 ### LATEX
