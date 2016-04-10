@@ -27,8 +27,8 @@ Táblázat beillesztése:
 	\label{<A táblázat címkéje, hogy hivatkozhass rá a szövegben>}
 	\end{table}
 	
-Ugyanez képek esetében:	
-	
+Kép beillesztése:
+
 	\begin{figure}
 	\center
 	\includegraphics[scale=0.8]{./from_stata/images/image.png}
