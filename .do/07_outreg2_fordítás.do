@@ -1,7 +1,5 @@
-*szakdolgozat
-*FINAL COUNTDOWN
-*elemzési idöszak
-*note: igazából a preserve restore nem kell, ugyanazt becsülné
+*outreg2 outputok fordítása magyarra
+*sajnos ékezetek nélkül
 
 //alapbeállítások
 clear

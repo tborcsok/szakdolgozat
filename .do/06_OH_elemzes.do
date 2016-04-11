@@ -39,7 +39,7 @@ global dropnum 30
 
 foreach w of local waves {
 
-*log using "C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal\02_analysis_`w'.txt", replace
+log using "C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal\02_analysis_`w'.txt", replace
 
 use ${szdOHout}elemzesi_`w', clear
 *use ${szdOHout}elemzesi_pooled, clear
@@ -182,7 +182,7 @@ drop freq_omid10
 *
 save ${szdOHout}final_elemzesi_`w', replace
 
-*log close
+log close
 
 }
 *
@@ -195,7 +195,7 @@ local waves2 "pooled"
 
 foreach w of local waves2 {
 
-*log using "C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal\02_analysis_`w'.txt", replace
+log using "C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal\02_analysis_`w'.txt", replace
 
 use ${szdOHout}elemzesi_`w', clear
 *use ${szdOHout}elemzesi_pooled, clear
@@ -333,7 +333,7 @@ drop freq_omid10
 *
 save ${szdOHout}final_elemzesi_`w', replace
 
-*log close
+log close
 
 
 }

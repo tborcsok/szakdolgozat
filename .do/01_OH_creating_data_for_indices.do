@@ -48,24 +48,6 @@ append using ${szdOHout}temp1, force
 sort azon ev
 xtset azon ev
 
-/*
-*kidobni akik iskolát váltottak
-gen isk_valtott = (${iskid}-L2.${iskid} != 0)
-replace isk_valtott = 0 if ev == 2008
-drop if isk_valtott == 1
-drop isk_valtott
-
-
-*balanced panel készítése
-bys azon: gen enc1 = [_n] 			//személyenként egy számláló
-bys azon: egen enc2 = max(enc1)		//ennek a maximuma
-keep if enc2 == 2					//kidobni, ha nem kettö idöpontban van megfigyelés
-drop enc1 enc2						//segédváltozó kidobása
-*/
-
-
-
-
 //változógenerálás
 xtset azon ev
 
@@ -97,24 +79,6 @@ append using ${szdOHout}temp1, force
 //tisztítás
 sort azon ev
 xtset azon ev
-
-/*
-*kidobni akik iskolát váltottak
-gen isk_valtott = (${iskid}-L2.${iskid} != 0)
-replace isk_valtott = 0 if ev == 2009
-drop if isk_valtott == 1
-drop isk_valtott
-
-
-*balanced panel készítése
-bys azon: gen enc1 = [_n]
-bys azon: egen enc2 = max(enc1)
-keep if enc2 == 2
-drop enc1 enc2
-*/
-
-
-
 
 //változógenerálás
 xtset azon ev
@@ -149,25 +113,6 @@ append using ${szdOHout}temp1, force
 sort azon ev
 xtset azon ev
 
-/*
-*kidobni akik iskolát váltottak
-gen isk_valtott = (${iskid}-L2.${iskid} != 0)
-replace isk_valtott = 0 if ev == 2010
-drop if isk_valtott == 1
-drop isk_valtott
-
-
-*balanced panel készítése
-bys azon: gen enc1 = [_n]
-bys azon: egen enc2 = max(enc1)
-keep if enc2 == 2
-drop enc1 enc2
-*/
-
-
-
-
-
 //változógenerálás
 xtset azon ev
 
@@ -201,24 +146,6 @@ append using ${szdOHout}temp1, force
 sort azon ev
 xtset azon ev
 
-/*
-*kidobni akik iskolát váltottak
-gen isk_valtott = (${iskid}-L2.${iskid} != 0)
-replace isk_valtott = 0 if ev == 2011
-drop if isk_valtott == 1
-drop isk_valtott
-
-*balanced panel készítése
-bys azon: gen enc1 = [_n]
-bys azon: egen enc2 = max(enc1)
-keep if enc2 == 2
-drop enc1 enc2
-*/
-
-
-
-
-
 //változógenerálás
 xtset azon ev
 
@@ -250,24 +177,6 @@ append using ${szdOHout}temp1, force
 //tisztítás
 sort azon ev
 xtset azon ev
-
-/*
-*kidobni akik iskolát váltottak
-gen isk_valtott = (${iskid}-L2.${iskid} != 0)
-replace isk_valtott = 0 if ev == 2012
-drop if isk_valtott == 1
-drop isk_valtott
-
-
-*balanced panel készítése
-bys azon: gen enc1 = [_n]
-bys azon: egen enc2 = max(enc1)
-keep if enc2 == 2
-drop enc1 enc2
-*/
-
-
-
 
 //változógenerálás
 xtset azon ev
