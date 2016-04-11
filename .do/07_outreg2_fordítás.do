@@ -46,9 +46,12 @@ foreach dep of local depvar {
     */ from("VARIABLES") to("VALTOZOK") replace
 	
 	filefilter ${stataOUT}tables/eredmenyek_`w'_`ref'_`dep'1.tex" ${stataOUT}tables/eredmenyek_`w'_`ref'_`dep'2.tex", /*
-	*/ from("1.sum10") to("sum10") replace
+	*/ from("1.sum10") to("top10") replace
+	
+	filefilter ${stataOUT}tables/eredmenyek_`w'_`ref'_`dep'2.tex" ${stataOUT}tables/eredmenyek_`w'_`ref'_`dep'22.tex", /*
+	*/ from("sum10") to("top10") replace
 	 
-	filefilter ${stataOUT}tables/eredmenyek_`w'_`ref'_`dep'2.tex" ${stataOUT}tables/eredmenyek_`w'_`ref'_`dep'3.tex", /* 
+	filefilter ${stataOUT}tables/eredmenyek_`w'_`ref'_`dep'22.tex" ${stataOUT}tables/eredmenyek_`w'_`ref'_`dep'3.tex", /* 
 	*/ from("c.csh") to("csh")  replace 
 	
 	filefilter ${stataOUT}tables/eredmenyek_`w'_`ref'_`dep'3.tex" ${stataOUT}tables/eredmenyek_`w'_`ref'_`dep'7.tex", /*

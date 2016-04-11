@@ -2,7 +2,7 @@
 *panel 2008-2010, 2009-2011, 2010-2012
 *hozzáadott érték alapján iskolaminöség
 
-log using "C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal\01_creating_indices.smcl", replace
+log using "C:\Users\Tomi\Google Drive\ELTE\SZAKDOLGOZAT\stata\OH adatokkal\01_creating_indices.txt", replace
 
 //alapbeállítások
 clear
@@ -102,7 +102,7 @@ drop E1_source
 xtset ${iskid}
 // A) Kiigazított- covariate adjustment - modell
 *I1
-xtreg o_zpsc o_zpsc_lag `regressants' , re cluster(omid)
+xtreg o_zpsc o_zpsc_lag `regressants' i.telnagy i.fentip i.isknagy, re cluster(omid)
 estimates store i_1
 predict I1, u
 label variable I1 "I1"
@@ -112,7 +112,7 @@ outreg2 i_1_temp using ${stataOUT}tables/elso_`w'.tex", append ctitle(I1) `1keep
 xtset ${iskid}
 // B) Fejlödés - gain - modell
 *I2
-xtreg o_zpsc_diff `regressants' , re cluster(omid)
+xtreg o_zpsc_diff `regressants' i.telnagy i.fentip i.isknagy, re cluster(omid)
 estimates store i_2
 predict I2, u
 label variable I2 "I2"
