@@ -1,6 +1,6 @@
 ### Az ELTE TáTK formai követelményeinek megfelelő TeX template
 
-Texmakert használata esetén a követkzőt kell megtenni ahhoz, hogy működjön: a lenti kifejezést másoljátók be a Beállítások -> Gyorsfordítás -> Egyéni részbe. Ha nem működik nézzétek meg jobban hogy mi is van a szövegben, és javítsátok az Adobe Reader elérési útvonalát.
+Texmaker használata esetén a követkzőt kell megtenni ahhoz, hogy működjön: a lenti kifejezést másoljátók be a Beállítások -> Gyorsfordítás -> Egyéni részbe. Ha nem működik nézzétek meg jobban hogy mi is van a szövegben, és javítsátok az Adobe Reader elérési útvonalát.
 
     xelatex -synctex=1 -interaction=nonstopmode %.tex|bibtex %|xelatex -synctex=1 -interaction=nonstopmode %.tex|xelatex -synctex=1 -interaction=nonstopmode %.tex|"C:/Program Files (x86)/Adobe/Acrobat Reader DC/Reader/AcroRd32.exe" %.pdf
 
