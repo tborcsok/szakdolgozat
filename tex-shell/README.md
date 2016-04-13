@@ -4,7 +4,7 @@ Texmaker használata esetén a követkzőt kell megtenni ahhoz, hogy működjön
 
     xelatex -synctex=1 -interaction=nonstopmode %.tex|bibtex %|xelatex -synctex=1 -interaction=nonstopmode %.tex|xelatex -synctex=1 -interaction=nonstopmode %.tex|"C:/Program Files (x86)/Adobe/Acrobat Reader DC/Reader/AcroRd32.exe" %.pdf
 
-Ez felülírja, hogy miket futtasson le a Gyorsfordítás, és pont azt csinálja a program, amire nekünk szükségünk van.
+Ez felülírja, hogy miket futtasson le a Gyorsfordítás, és pont azt csinálja a program, amire nekünk szükségünk van. XeLaTeX-et használ, ami a Calibri betűtípus miatt szükséges. Illetve betölti a BibTeX hivatkozáskezelőt.
 
 Óriások vállán állva készült el ez a minta, egy közkézen forgó ELTECON template alapján.
 
