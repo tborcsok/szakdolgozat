@@ -59,7 +59,7 @@ label variable sum${topszpc}_`Y' "Hány évben top ${topszpc}% az iskola az `Y' in
 duplicates drop ${iskid}, force
 keep ${iskid} sum${topszpc}_E1 sum${topszpc}_E2 sum${topszpc}_I1 sum${topszpc}_I2 sum${topszpc}_F1 sum${topszpc}_F2
 
- 
+ /*
 foreach Y of local vars1 {
 gen `Y'_1of5_${topszpc}pc = (sum${topszpc}_`Y'>=1)
 label variable `Y'_1of5_${topszpc}pc "Az öt évböl leglább 1-szer van benne a top${topszpc}%-ban"
@@ -89,6 +89,7 @@ label variable `Y'_5of5_${topszpc}pc_eq "Az öt évböl 5-ször van benne a top${top
 *drop sum${topsz}_`Y'
 }
 *
+*/
 
 sort ${iskid}
 

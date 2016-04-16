@@ -151,7 +151,7 @@ duplicates drop ${iskid}, force
 bysort omid: gen school_avg_index = (E1 + E2 + I1 + I2 + F1 + F2) / 6 if E1 != . & E2 != . & I1 != . & I2 != . & F1 != . & F2 != .
 
 
-quietly scatter school_avg_index school_size, title(`w') xlabel(, grid) xmtick(#20)
+quietly scatter school_avg_index school_size, title(`w') xlabel(, grid) xmtick(#20) ytitle("Az iskola minöségének átlagos méröszáma") xtitle("Az iskolán belüli megfigyelések száma")
 graph export ${stataOUT}images/error_with_small_schools_`w'.png",  as(png) replace
 *keep omid telephely ${iskid} ev E1 E2 I1 I2 F1 F2
 *save ${szdOHout}indices_`w'_nodrop, replace
