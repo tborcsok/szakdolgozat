@@ -32,6 +32,6 @@ Kép beillesztése:
 	\begin{figure}
 	\center
 	\includegraphics[scale=0.8]{./from_stata/images/image.png}
-	\caption{<A táblázat címe>}
-	\label{<A táblázat címkéje, hogy hivatkozhass rá a szövegben>}
+	\caption{<A kép címe>}
+	\label{<A kép címkéje, hogy hivatkozhass rá a szövegben>}
 	\end{figure}
