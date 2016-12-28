@@ -15,6 +15,15 @@
 
 \usepackage{apacite}    % a hivatkozásokat kezelő csomag
                         % leírás: http://ftp.cvut.cz/tex-archive/biblio/bibtex/contrib/apacite/apacite.pdf
+% a hivatkozásjegyzéket magyarra fordító rész:
+\renewcommand{\BRetrieved}[1]{Elérés:~{#1}, forrás:\ }% Websites; note the space.
+\renewcommand{\BRetrievedFrom}{Forrás:\ }% Websites; note the space.
+\renewcommand{\BED}{Szerk.\hbox{}}%          % editor
+\renewcommand{\BEDS}{Szerk.\hbox{}}%        % editors
+\renewcommand{\BBAA}{és}%  between authors in parenthetical cites and ref. list
+\renewcommand{\BBAB}{és}% between authors in in-text citation
+\renewcommand{\BAnd}{és}%  for ``Ed. \& Trans.'' in ref. list
+\renewcommand{\bibnodate}{dátum~nélkül\hbox{}}%   % ``no date''
 
 \usepackage{booktabs}
 \usepackage{tabularx}
