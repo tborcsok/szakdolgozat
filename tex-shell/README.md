@@ -8,6 +8,8 @@ Ez felülírja, hogy miket futtasson le a Gyorsfordítás, és pont azt csinálj
 
 Óriások vállán állva készült el ez a minta, egy közkézen forgó ELTECON template alapján.
 
+Megjegyzés: **Továbbra is a te felelősséged, hogy formailag megfelelt szakdolgozatot adj le**.
+
 ### Stata - LaTeX integráció
 
 Egy rövid fájl leírja, hogy hogyan lehet közös munkára bírni a két platformot. Remélem, hogy lesz aki hasznosnak találja ezt később.
