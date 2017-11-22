@@ -1,7 +1,9 @@
-\documentclass[12pt,a4paper]{report}
-
-\usepackage[T1]{fontenc}
+\documentclass[12pt,a4paper]{article}
 \usepackage[magyar]{babel}
+\usepackage[T1]{fontenc}
+
+\author{<Neved>}
+\title{<A szakdolgozatod címe>}
 
 \usepackage{graphicx}
 \usepackage{amssymb}
@@ -18,27 +20,32 @@
 \usepackage{apacite}    % a hivatkozásokat kezelő csomag
                         % leírás: http://ftp.cvut.cz/tex-archive/biblio/bibtex/contrib/apacite/apacite.pdf
 % a hivatkozásjegyzéket magyarra fordító rész:
-\renewcommand{\BRetrieved}[1]{Elérés:~{#1}, forrás:\ }% Websites; note the space.
-\renewcommand{\BRetrievedFrom}{Forrás:\ }% Websites; note the space.
+\renewcommand{\BRetrieved}[1]{Megtekintés~időpontja:~{#1}.~Hozzáférés:\ }% Websites; note the space.
+\renewcommand{\BRetrievedFrom}{Hozzáférés:\ }% Websites; note the space.
 \renewcommand{\BED}{Szerk.\hbox{}}%          % editor
 \renewcommand{\BEDS}{Szerk.\hbox{}}%        % editors
 \renewcommand{\BBAA}{és}%  between authors in parenthetical cites and ref. list
 \renewcommand{\BBAB}{és}% between authors in in-text citation
-\renewcommand{\BAnd}{és}%  for ``Ed. \& Trans.'' in ref. list
-\renewcommand{\bibnodate}{dátum~nélkül\hbox{}}%   % ``no date''
+\renewcommand{\bibnodate}{n.d.\hbox{}}%   % ``no date''
+
+\addto{\captionsmagyar}{\renewcommand{\abstractname}{Absztrakt}}
 
 \usepackage{booktabs}
 \usepackage{tabularx}
 
 
-%függvényrajzolgatásra (ezt én használtam, de neked nem biztos, hogy kell)
-\usepackage{tikz}
-\usetikzlibrary{shapes,arrows,mindmap,trees}
-\usepackage{pgfplots}
-\pgfplotsset{compat=1.12}
+\usepackage{hyperref}
+\hypersetup{
+	pdfstartview={XYZ null null 1.00},
+	bookmarksopen=true,
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=blue,
+    unicode}
 
-\usepackage{url}
-
+%Calibri betűtípus beállítása
 \usepackage{fontspec}
 \usepackage{unicode-math}
 \setmainfont{Calibri}
@@ -61,21 +68,26 @@ ALAPKÉPZÉS
 
 \vspace{60mm}
 
-\Huge{CÍM}
+\makeatletter
+\Huge{\@title}
+\makeatother
 \LARGE
 \vspace{60mm}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+
 \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lr}
   Konzulens: & Készítette: \\
-  konzulensem neve & saját nevem \\    
+  konzulensem neve & \@author \\    
    & NEPTUN kódod \\
-   & alkalmazott közgazdaságtan szak
+   & <> szak
 \end{tabular*}
 %\vspace{20mm}
 \vskip0pt plus1filll
-2016. április
+20<>. április
 \end{center}
+\makeatother
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -85,32 +97,36 @@ ALAPKÉPZÉS
 %% Ide írd a kivonatot
 \begin{abstract}
 
-Ide jön az absztrakt.
+\noindent Ide jön az absztrakt.
 
 \end{abstract}
+\newpage
 
 %% Tartalomjegyzék, ábrák és táblázatok jegyzéke
 \microtypesetup{protrusion=false} % oldalszámok szebb illeszkedéséhez
 \tableofcontents
+\newpage
 \listoftables
+\newpage
 \listoffigures
 \microtypesetup{protrusion=true}
+\newpage
 
 % Most hogy szépen megvan minden, már csak írni kell
-% A \chapter{} új fejezetet definiál, ezen belül csinálhatsz \section{} és \subsection{} részeket (többek között).
+% A \section{} új fejezetet definiál, a \subsection{} és a \subsubsection{} alfejezeteket
 % A \label{xy} nagyon hasznos, a szövegben \ref{xy} módon hivatkozhatsz az elem számára (1. fejezet pl),
 % a \pageref{xy} az elem oldalszámát adja vissza.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\chapter{Bevezetés} \label{ch:bev}
-\setcounter{page}{1} \pagenumbering{arabic}
+\section{Bevezetés} \label{sec:bev}
+\pagenumbering{arabic}
 %A dolgozat bevezetőjében mindenképpen szerepelnie kell egy konkrét
 %kérdésnek, amire a hallgató a dolgozatban választ keres, illetve a témakör megjelölésének,
 %amellyel kapcsolatos szakirodalmi áttekintést készít. A tartalmi kifejtés során fontos a logikus
 %felépítés, a szakkifejezések megfelelő használata, ha szükséges azok tisztázása. Az összegező
 %befejezésnek tartalmaznia kell egy konklúziót a bevezető kérdéssel kapcsolatban. 
 
-\chapter{...}
+\section{Második fejezet}
 
 
 
@@ -127,6 +143,7 @@ Ide jön az absztrakt.
 
 %% Ez helyezi el a hivatkozásjegyzéket
 % Zotero-t használóknak: bibtex export segítségével lehet építgetni a saját .bib fájlunkat
+\newpage
 \bibliographystyle{apacite}
 \bibliography{szakdolg}     % ez a .tex fájllal egy mappában lévő szakdolg.bib nevű fájlt használja fel 
                             % a hivatkozásjegyzék item-jeinek forrásaként
@@ -138,9 +155,11 @@ Ide jön az absztrakt.
 % és még mások, amiket nem ismerek...
 
 %% Függelék: innentől kezdve a chapterek függelékként vannak jelölve a szövegben (A. függelék, B. függelék ...)
+\newpage
 \appendix
+\section*{Függelék}
 
-\chapter{valami}
+\section{Kiegészítő táblázatok}
 
 
 
